@@ -1,16 +1,16 @@
-PROG := ylaciexpr list-test trie-test
+PROG := tiny-c list-test trie-test
 
 AST_SRCS := AST.h AST.c
 TRIE_SRCS := trie.h trie.c
 LIST_SRCS := list.h list.c
-EXPR_SRCS := expr.y lexer.c interpreter.c
+EXPR_SRCS := parser.y lexer.c interpreter.c
 SRCS := $(AST_SRCS) $(TRIE_SRCS) $(LIST_SRCS) $(EXPR_SRCS)
 
 CC := clang
 CFLAGS=-Wall -std=c99
 
-ylaciexpr: expr.o AST.o trie.o list.o interpreter.c
-	$(CC) $(CFLAGS) -o ylaciexpr expr.o AST.o trie.o list.o interpreter.c
+tiny-c: parser.o AST.o trie.o list.o interpreter.c
+	$(CC) $(CFLAGS) -o tiny-c parser.o AST.o trie.o list.o interpreter.c
 
 test-components: list-test trie-test
 
@@ -31,15 +31,15 @@ trie.o: $(TRIE_SRCS)
 list.o: $(LIST_SRCS)
 	$(CC) $(CFLAGS) -c list.c
 
-expr.o: $(EXPR_SRCS)
-	yacc $(YACCFLAGS) expr.y
-	mv y.tab.c expr.c
-	$(CC) $(CFLAGS) -c expr.c
+parser.o: $(EXPR_SRCS)
+	yacc $(YACCFLAGS) parser.y
+	mv y.tab.c parser.c
+	$(CC) $(CFLAGS) -c parser.c
 
 tarball:
-	mkdir ylaciexpr
-	tar zcvf ylaciexpr.tar.gz $(SRCS) list_test.c trie_test.c Makefile LICENSE.md README.md
-	rm -r ylaciexpr
+	mkdir tiny-c
+	tar zcvf tiny-c.tar.gz $(SRCS) list_test.c trie_test.c Makefile LICENSE.md README.md
+	rm -r tiny-c
 
 clean:
-	rm -f *.o expr.c *~ $(PROG)
+	rm -f *.o parser.c *~ $(PROG)
