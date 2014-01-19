@@ -15,6 +15,8 @@ enum code_ {
     VAL_SYMBOL,
     CODE_ASSIGN,
     CODE_PRINT,
+    CODE_FUNC,
+    CODE_VAR,
     OP_ADD,
     OP_SUB,
     OP_MUL,
@@ -65,13 +67,19 @@ struct AST_ {
 };
 
 
+/* Normal Expression */
 AST *AST_makeValue(int v);
 AST *AST_makeBinary(CodeType type, AST *left, AST *right);
 AST *AST_makeUnary(CodeType type, AST *node);
 
+/* Symbol Definition */
 AST *AST_makeSymbol(const char *name);
 Symbol *AST_lookupSymbol(const char *name);
+/* Declarations */
+AST *AST_makeFunction(AST *name, AST *params, AST *body);
+AST *AST_makeVariable(AST *name, AST *value);
 
+/* List Operation */
 AST *AST_makeList(AST *node);
 AST *AST_addList(AST *p, AST *e);
 AST *AST_getList(AST *p, unsigned long index);
