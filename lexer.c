@@ -6,6 +6,9 @@
 int yylex() {
     int c;
     while (isspace(c = getc(stdin))) { }
+    if (c == EOF) {
+        return 0;
+    }
     switch (c) {
         case '+':
         case '-':
@@ -14,6 +17,8 @@ int yylex() {
         case '=':
         case '(':
         case ')':
+        case '{':
+        case '}':
         case ';':
             return c;
     }
@@ -36,16 +41,21 @@ int yylex() {
         ungetc(c, stdin);
         if (strcmp(str, "print") == 0) {
             return PRINT;
+        } else if (strcmp(str, "var") == 0) {
+            return VAR;
         } else {
             yylval.val = AST_makeSymbol(str);
             return SYMBOL;
         }
         free(str);
     }
-    return 0;
+    fprintf(stderr, "unexpected token %c\n", c);
+    abort();
 }
 
 int yyerror(const char *s) {
   fprintf(stderr, "%s\n", s);
   return 0;
 }
+
+/* vim: set et ts=4 sts=4 sw=4: */
