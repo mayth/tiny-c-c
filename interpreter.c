@@ -5,12 +5,14 @@
 #include "list.h"
 #include "AST.h"
 
+int yydebug;
 int yyparse();
 void executeProgram(const AST *ast);
 
 bool iter_executeStmt(unsigned long i, const void *v);
 
 int main() {
+    yydebug = 1;
     SymbolTable = trie_new();
     int result = yyparse();
     executeProgram(Root);
@@ -82,3 +84,5 @@ bool iter_executeStmt(unsigned long i, const void *v) {
     }
     return true;
 }
+
+/* vim: set et ts=4 sts=4 sw=4: */
