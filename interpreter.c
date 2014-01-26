@@ -18,8 +18,8 @@ int executeProgram(const AST *ast);
 int executeFunction(const AST *body, List *param);
 int callFunction(const AST *ast, List *args);
 int callFunction_(const Symbol *sym, List *args);
-
-bool iter_executeStmt(unsigned long i, const void *v);
+int executeStatements(List *statements);
+bool executeStatement(AST *ast);
 
 int main() {
     yydebug = 1;
@@ -52,7 +52,7 @@ int executeProgram(const AST *ast) {
 
 int executeFunction(const AST *body, List *params) {
     assert(body->code == ETC_LIST);
-    List_each(body->AST_list, iter_executeStmt);
+    executeStatements(body->AST_list);
     return return_value;
 }
 
@@ -100,12 +100,21 @@ void executePrint(AST *ast) {
     printf("%d\n", executeExpression(ast->AST_unary));
 }
 
-bool iter_executeStmt(unsigned long i, const void *v) {
-    AST *ast = (AST *)v;
+int executeStatements(List *statements) {
+    ListIterator *iter = List_iterator(statements);
+    while (ListIter_move_next(iter)) {
+        if (!executeStatement((AST *)ListIter_current(iter)))
+            break;
+    }
+    ListIter_delete(iter);
+    return return_value;
+}
+
+bool executeStatement(AST *ast) {
     switch (ast->code) {
         case ETC_LIST:
             printf("[execStmt] ETC_LIST\n");
-            List_each(ast->AST_list, iter_executeStmt);
+            executeStatements(ast->AST_list);
             break;
         case VAL_NUM:
             printf("[execStmt] VAL_NUM\n");

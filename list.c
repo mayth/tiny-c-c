@@ -10,6 +10,15 @@ ListNode *List_get_node(const List *list, const void *value);
 ListNode *ListNode_new(void *value);
 void ListNode_delete(ListNode *node);
 
+/* default comparer */
+static int List_default_comparer(const void *a, const void *b) {
+    if (a == b) {
+        return 0;
+    } else {
+        return -1;  // any integer except 0 is ok here.
+    }
+}
+
 /* [private]
  * Allocates memory for the new List.
  * Returns: A pointer to the allocated memory if it succeed to allocate; otherwise NULL.
@@ -24,14 +33,17 @@ List *List_alloc() {
  * Returns: A pointer to the new list if it succeed to allocate memory for it; otherwise NULL.
  */
 List *List_new(VALUE_COMPARER comparer) {
-    assert(comparer != NULL);
-
     List *list = List_alloc();
     if (!list) {
         return NULL;
     }
     list->head = NULL;
     list->traversing = 0;
+    if (comparer) {
+        list->comparer = comparer;
+    } else {
+        list->comparer = List_default_comparer;
+    }
     return list;
 }
 
@@ -174,17 +186,8 @@ inline bool List_is_modifiable(const List *list) {
  * * When the given iterator returns false, iteration will be stopped.
  * * While iterating, any functions that make any changes to the list MUST NOT be called.
  */
-void List_each(List *list, LIST_ITERATOR iter) {
-    assert(list != NULL);
-    assert(iter != NULL);
-
-    ++list->traversing;
-    unsigned long i = 0;
-    for (ListNode *p = list->head; p != NULL; p = p->next, ++i) {
-        if (!iter(i, p->value))
-            break;
-    }
-    --list->traversing;
+ListIterator *List_iterator(List *list) {
+    return ListIter_new(list);
 }
 
 /****************************************
@@ -224,6 +227,72 @@ void ListNode_delete(ListNode *node) {
         node->value = NULL;
         node->next = NULL;
         free(node);
+    }
+}
+
+/****************************************
+ *                                      *
+ *             ListIterator             *
+ *                                      *
+ ****************************************/
+
+ListIterator *ListIter_alloc() {
+    ListIterator *p = (ListIterator *)malloc(sizeof(ListIterator));
+    return p;
+}
+
+ListIterator *ListIter_new(List *list) {
+    assert(list != NULL);
+    ListIterator *iter = ListIter_alloc();
+    iter->list = list;
+    iter->current = NULL;
+    iter->state = ITST_BEFORE;
+    return iter;
+}
+
+void ListIter_delete(ListIterator *iter) {
+    if (iter) {
+        iter->list = NULL;
+        iter->current = NULL;
+        iter->state = ITST_UNKNOWN;
+        free(iter);
+    }
+}
+
+void *ListIter_current(ListIterator *iter) {
+    assert(iter != NULL);
+    if (iter->state == ITST_RUNNING) {
+        return iter->current->value;
+    } else {
+        return NULL;
+    }
+}
+
+bool ListIter_move_next(ListIterator *iter) {
+    assert(iter != NULL);
+    switch (iter->state) {
+        case ITST_BEFORE:
+            if (iter->list->head) {
+                iter->current = iter->list->head;
+                iter->state = ITST_RUNNING;
+                return true;
+            } else {
+                iter->state = ITST_AFTER;
+                return false;
+            }
+        case ITST_RUNNING:
+            if (iter->current->next) {
+                iter->current = iter->current->next;
+                return true;
+            } else {
+                iter->current = NULL;
+                iter->state = ITST_AFTER;
+                return false;
+            }
+        case ITST_AFTER:
+            return false;
+        default:
+            abort();    // invalid state
     }
 }
 
