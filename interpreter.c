@@ -74,6 +74,10 @@ int executeExpression(AST *expr) {
         case VAL_NUM:
             return expr->AST_value;
         case VAL_SYMBOL:
+            if (expr->AST_symbol->type == SYM_UNBOUND) {
+                fprintf(stderr, "Used undefined symbol: %s\n", expr->AST_symbol_name);
+                abort();
+            }
             return expr->AST_symbol->SYM_value;
         case OP_ADD:
             return executeExpression(expr->AST_left) + executeExpression(expr->AST_right);
@@ -93,6 +97,12 @@ int executeExpression(AST *expr) {
 
 void executeAssign(AST *sym, AST *expr) {
     Symbol *symbol = sym->AST_symbol;
+    if (symbol->type != SYM_UNBOUND && symbol->type != SYM_VALUE) {
+        fprintf(stderr, "Error: Attempt to assign to the unassignable variable: %s\n",
+                sym->AST_symbol_name);
+        abort();
+    }
+    symbol->type = SYM_VALUE;
     symbol->SYM_value = executeExpression(expr);
 }
 
