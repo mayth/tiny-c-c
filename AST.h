@@ -17,13 +17,16 @@ enum code_ {
     CODE_PRINT,
     CODE_FUNC,
     CODE_VAR,
+    CODE_RETURN,
     OP_ADD,
     OP_SUB,
     OP_MUL,
-    OP_DIV
+    OP_DIV,
+    OP_CALL
 };
 
 typedef enum symbol_type {
+    SYM_UNBOUND,
     SYM_VALUE,
     SYM_FUNC
 } SymbolType;
@@ -75,6 +78,7 @@ AST *AST_makeUnary(CodeType type, AST *node);
 /* Symbol Definition */
 AST *AST_makeSymbol(const char *name);
 Symbol *AST_lookupSymbol(const char *name);
+Symbol *AST_lookupSymbolOrDie(const char *name);
 /* Declarations */
 AST *AST_makeFunction(AST *name, AST *params, AST *body);
 AST *AST_makeVariable(AST *name, AST *value);

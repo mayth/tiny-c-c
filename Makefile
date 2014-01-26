@@ -7,7 +7,7 @@ EXPR_SRCS := parser.y lexer.c interpreter.c
 SRCS := $(AST_SRCS) $(TRIE_SRCS) $(LIST_SRCS) $(EXPR_SRCS)
 
 CC := clang
-CFLAGS=-Wall -std=c99
+CFLAGS=-Wall -std=c99 -g
 
 tiny-c: parser.o AST.o trie.o list.o interpreter.c
 	$(CC) $(CFLAGS) -o tiny-c parser.o AST.o trie.o list.o interpreter.c

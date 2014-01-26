@@ -5,24 +5,68 @@
 #include "list.h"
 #include "AST.h"
 
+typedef struct {
+    Symbol *symbol;
+    int value;
+} Environment;
+
+static int return_value = 0;
+
 int yydebug;
 int yyparse();
-void executeProgram(const AST *ast);
+int executeProgram(const AST *ast);
+int executeFunction(const AST *body, List *param);
+int callFunction(const AST *ast, List *args);
+int callFunction_(const Symbol *sym, List *args);
 
 bool iter_executeStmt(unsigned long i, const void *v);
 
 int main() {
     yydebug = 1;
     SymbolTable = trie_new();
+    printf("*** start parsing ***\n");
     int result = yyparse();
-    executeProgram(Root);
+    if (result != 0) {
+        fprintf(stderr, "!!! Errors on parsing");
+        return EXIT_FAILURE;
+    }
+    printf("*** parsed ***\n");
+    if (Root) {
+        printf("*** start execution ***\n");
+        result = executeProgram(Root);
+        printf("*** finished execution ***\n");
+    } else {
+        printf("!!! Root AST not found\n");
+    }
     return result;
 }
 
-void executeProgram(const AST *ast) {
-    assert(ast->code == ETC_LIST);
-    List *list = ast->AST_list;
-    List_each(list, iter_executeStmt);
+int executeProgram(const AST *ast) {
+    Symbol *main = AST_lookupSymbolOrDie("main");
+    if (main->type != SYM_FUNC) {
+        fprintf(stderr, "'main' is not a function.\n");
+        abort();
+    }
+    return callFunction_(main, NULL);
+}
+
+int executeFunction(const AST *body, List *params) {
+    assert(body->code == ETC_LIST);
+    List_each(body->AST_list, iter_executeStmt);
+    return return_value;
+}
+
+int callFunction_(const Symbol *sym, List *args) {
+    return executeFunction(sym->SYM_body, sym->SYM_param);
+}
+
+int callFunction(const AST *ast, List *args) {
+    Symbol *sym = ast->AST_symbol;
+    if (sym->type == SYM_UNBOUND) {
+        fprintf(stderr, "Used an undefined symbol: %s\n", ast->AST_symbol_name);
+        abort();
+    }
+    return callFunction_(sym, args);
 }
 
 int executeExpression(AST *expr) {
@@ -39,8 +83,10 @@ int executeExpression(AST *expr) {
             return executeExpression(expr->AST_left) * executeExpression(expr->AST_right);
         case OP_DIV:
             return executeExpression(expr->AST_left) / executeExpression(expr->AST_right);
+        case OP_CALL:
+            return callFunction(expr->AST_left, expr->AST_right->AST_list);
         default:
-            fprintf(stderr, "expected expression.\n");
+            fprintf(stderr, "unknown expression (type: %d)\n", expr->code);
             abort();
     }
 }
@@ -58,28 +104,40 @@ bool iter_executeStmt(unsigned long i, const void *v) {
     AST *ast = (AST *)v;
     switch (ast->code) {
         case ETC_LIST:
+            printf("[execStmt] ETC_LIST\n");
             List_each(ast->AST_list, iter_executeStmt);
             break;
         case VAL_NUM:
+            printf("[execStmt] VAL_NUM\n");
             break;
         case VAL_SYMBOL:
+            printf("[execStmt] VAL_SYMBOL\n");
+            // executeSymbol(ast);
             break;
         case CODE_ASSIGN:
+            printf("[execStmt] CODE_ASSIGN\n");
             executeAssign(ast->AST_left, ast->AST_right);
             break;
         case CODE_PRINT:
+            printf("[execStmt] VAL_PRINT\n");
             executePrint(ast);
             break;
+        case CODE_RETURN:
+            if (ast->AST_unary) {
+                return_value = executeExpression(ast->AST_unary);
+            }
+            return false;
         case OP_ADD:
-            break;
         case OP_SUB:
-            break;
         case OP_MUL:
-            break;
         case OP_DIV:
             break;
+        case OP_CALL:
+            printf("[execStmt] OP_CALL\n");
+            executeExpression(ast);
+            break;
         default:
-            fprintf(stderr, "Unknown statement.\n");
+            fprintf(stderr, "Unknown statement (type: %d)\n", ast->code);
             abort();
     }
     return true;
