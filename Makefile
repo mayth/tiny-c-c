@@ -42,4 +42,5 @@ tarball:
 	rm -r tiny-c
 
 clean:
-	rm -f *.o parser.c *~ $(PROG)
+	rm -rf *.dSYM/
+	rm -f *.o parser.c *~$(PROG)
