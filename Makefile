@@ -43,4 +43,4 @@ tarball:
 
 clean:
 	rm -rf *.dSYM/
-	rm -f *.o parser.c *~$(PROG)
+	rm -f *.o parser.c *~ $(PROG)
