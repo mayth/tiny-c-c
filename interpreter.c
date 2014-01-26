@@ -113,22 +113,16 @@ int executeStatements(List *statements) {
 bool executeStatement(AST *ast) {
     switch (ast->code) {
         case ETC_LIST:
-            printf("[execStmt] ETC_LIST\n");
             executeStatements(ast->AST_list);
             break;
         case VAL_NUM:
-            printf("[execStmt] VAL_NUM\n");
             break;
         case VAL_SYMBOL:
-            printf("[execStmt] VAL_SYMBOL\n");
-            // executeSymbol(ast);
             break;
         case CODE_ASSIGN:
-            printf("[execStmt] CODE_ASSIGN\n");
             executeAssign(ast->AST_left, ast->AST_right);
             break;
         case CODE_PRINT:
-            printf("[execStmt] VAL_PRINT\n");
             executePrint(ast);
             break;
         case CODE_RETURN:
@@ -142,7 +136,6 @@ bool executeStatement(AST *ast) {
         case OP_DIV:
             break;
         case OP_CALL:
-            printf("[execStmt] OP_CALL\n");
             executeExpression(ast);
             break;
         default:
