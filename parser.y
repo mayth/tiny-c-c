@@ -1,9 +1,10 @@
-%token PRINT
+%token PRINTLN
 %token VAR
 %token RETURN
 %token FOR
 %token SYMBOL
 %token NUMBER
+%token STRING
 %token OP_EQ
 %token OP_NEQ
 %token OP_LE
@@ -37,7 +38,7 @@
 %type <val> function_definition param_list symbol_list
 %type <val> variable_names
 %type <val> argument_list arguments
-%type <val> SYMBOL NUMBER
+%type <val> SYMBOL NUMBER STRING
 
 %start program
 
@@ -86,7 +87,9 @@ statement: expression ';'
          | RETURN ';' { $$ = AST_makeUnary(CODE_RETURN, NULL); }
          | for_statement
 
-print_statement: PRINT expression { $$ = AST_makeUnary(CODE_PRINT, $2); }
+print_statement: PRINTLN '(' STRING ')' { $$ = AST_makeBinary(CODE_PRINTLN, $3, NULL); }
+               | PRINTLN '(' STRING ',' expression ')'
+               { $$ = AST_makeBinary(CODE_PRINTLN, $3, $5); }
 
 for_statement: FOR '(' expression ';' expression ';' expression ')' stmt_or_block
              { $$ = AST_makeFor($3, $5, $7, $9); }

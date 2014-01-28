@@ -18,7 +18,8 @@ enum code_ {
     ETC_LIST,
     VAL_NUM,
     VAL_SYMBOL,
-    CODE_PRINT,
+    VAL_STRING,
+    CODE_PRINTLN,
     CODE_FUNC,
     CODE_VAR,
     CODE_RETURN,
@@ -74,6 +75,9 @@ struct AST_ {
         /* For value (leaf node) */
         int value;
 
+        /* For string */
+        const char *str;
+
         /* For symbol */
         Symbol *symbol;
 
@@ -96,6 +100,7 @@ struct AST_ {
 };
 
 #define AST_value un.value
+#define AST_string un.str
 /* For Unary Expression */
 #define AST_unary un.unary
 /* For Binary Expression */
@@ -112,6 +117,7 @@ struct AST_ {
 
 /* Normal Expression */
 AST *AST_makeValue(int v);
+AST *AST_makeString(const char *str);
 AST *AST_makeUnary(CodeType type, AST *node);
 AST *AST_makeBinary(CodeType type, AST *left, AST *right);
 AST *AST_makeTrinary(CodeType type, AST *first, AST *second, AST *third);

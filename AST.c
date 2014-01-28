@@ -36,6 +36,13 @@ AST* AST_makeValue(int v) {
   return p;
 }
 
+AST *AST_makeString(const char *str) {
+  AST *p = AST_alloc();
+  p->code = VAL_STRING;
+  p->AST_string = str;
+  return p;
+}
+
 AST *AST_makeUnary(CodeType code, AST *node) {
   AST *p = AST_alloc();
   p->code = code;

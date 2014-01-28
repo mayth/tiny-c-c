@@ -39,7 +39,7 @@ int executeArrayAssign(AST *ast, AST *idx, AST *expr);
 int resolveSymbol(const Symbol *symbol, const size_t index);
 
 int main() {
-    yydebug = 0;
+    yydebug = 1;
     SymbolTable = StrSymMap_new();
     Env = Stack_new();
     printf("*** start parsing ***\n");
@@ -201,8 +201,15 @@ int executeArrayAssign(AST *sym, AST *idx, AST *expr) {
     return arrayAssign(sym->AST_symbol, executeExpression(idx), executeExpression(expr));
 }
 
-void executePrint(AST *ast) {
-    printf("%d\n", executeExpression(ast->AST_unary));
+void executePrintln(AST *ast) {
+    const char *format = ast->AST_left->AST_string;
+    if (ast->AST_right) {
+        const int val = executeExpression(ast->AST_right);
+        printf(format, val);
+    } else {
+        printf(format);
+    }
+    printf("\n");
 }
 
 int executeStatements(ASTVector *statements) {
@@ -232,8 +239,8 @@ bool executeStatement(AST *ast) {
         case ETC_LIST:
             executeStatements(ast->AST_list);
             break;
-        case CODE_PRINT:
-            executePrint(ast);
+        case CODE_PRINTLN:
+            executePrintln(ast);
             break;
         case CODE_RETURN:
             if (ast->AST_unary) {
