@@ -43,6 +43,8 @@ int main() {
     printf("*** start execution ***\n");
     result = executeProgram();
     printf("*** finished execution ***\n");
+    StrSymMap_delete(SymbolTable);
+    SymbolTable = NULL;
     return result;
 }
 
@@ -231,11 +233,27 @@ void AST_declareVariable(AST *symbol_ast, AST *expr) {
     }
 }
 
+void AST_declareArray(AST *name, AST *expr) {
+    Symbol *symbol = name->AST_symbol;
+    int num_elements = executeExpression(expr);
+    if (num_elements < 0) {
+        fprintf(stderr, "The number of elements for array '%s' must be greater than 0.\n", symbol->name);
+        exit(EXIT_FAILURE);
+    }
+    symbol->type = SYM_ARRAY;
+    int *arr = (int *)calloc(num_elements, sizeof(int));
+    if (!arr) {
+        fprintf(stderr, "Cannot allocate memory for array (requested %d elements)\n", num_elements);
+        exit(EXIT_FAILURE);
+    }
+    symbol->SYM_array = arr;
+}
+
 Environment *Environment_new(Symbol *symbol, int value) {
     Environment *env = (Environment *)malloc(sizeof(Environment));
     if (!env) {
         fprintf(stderr, "Cannot allocate memory for Environment.\n");
-        abort();
+        exit(EXIT_FAILURE);
     }
     env->symbol = symbol;
     env->value = value;

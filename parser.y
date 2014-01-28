@@ -28,6 +28,7 @@
 %type <val> assignment print_statement
 %type <val> function_definition param_list symbol_list block
 %type <val> variable_declaration variable_initialize variable_names
+%type <val> array_declaration
 %type <val> argument_list arguments
 %type <val> SYMBOL NUMBER
 
@@ -42,11 +43,13 @@ definitions: definition { $$ = AST_makeList($1); }
 definition: function_definition
           | variable_declaration
           | variable_initialize
+          | array_declaration
 
 variable_declaration: VAR variable_names ';'  { }
 variable_names: SYMBOL                        { AST_declareVariable($1, NULL); }
               | variable_names ',' SYMBOL     { AST_declareVariable($3, NULL); }
 variable_initialize: VAR SYMBOL '=' expression ';' { AST_declareVariable($2, $4); }
+array_declaration: VAR SYMBOL '[' expression ']' ';' { AST_declareArray($2, $4); }
 
 function_definition: SYMBOL '(' param_list ')' block { $$ = AST_makeFunction($1, $3, $5); }
 param_list: /* no params */ { $$ = AST_makeList(NULL); }

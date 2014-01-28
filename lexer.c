@@ -19,6 +19,8 @@ int yylex() {
         case ')':
         case '{':
         case '}':
+        case '[':
+        case ']':
         case ';':
             return c;
     }

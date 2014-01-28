@@ -33,7 +33,8 @@ enum code_ {
 typedef enum symbol_type {
     SYM_UNBOUND,
     SYM_VALUE,
-    SYM_FUNC
+    SYM_FUNC,
+    SYM_ARRAY
 } SymbolType;
 
 struct symbol_ {
@@ -41,6 +42,7 @@ struct symbol_ {
     char *name;
     union {
         int value;
+        int *array;
         struct {
             SymbolVector *params;
             AST *body;
@@ -51,6 +53,7 @@ struct symbol_ {
 #define SYM_value un.value
 #define SYM_param un.func.params
 #define SYM_body  un.func.body
+#define SYM_array un.array
 
 struct AST_ {
     CodeType code;
@@ -107,7 +110,7 @@ extern StrSymMap *SymbolTable;
 
 /* called from parser */
 void AST_declareVariable(AST *name, AST *expr);
-
+void AST_declareArray(AST *name, AST *expr);
 
 #endif
 
