@@ -18,16 +18,16 @@ enum code_ {
     ETC_LIST,
     VAL_NUM,
     VAL_SYMBOL,
-    CODE_ASSIGN,
     CODE_PRINT,
     CODE_FUNC,
     CODE_VAR,
     CODE_RETURN,
-    CODE_ASSIGN_ARRAY,
     OP_ADD,
     OP_SUB,
     OP_MUL,
     OP_DIV,
+    OP_ASSIGN,
+    OP_ASSIGN_ARRAY,
     OP_CALL,
     OP_REF_ARRAY
 };

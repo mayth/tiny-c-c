@@ -34,6 +34,8 @@ int callFunction_(const Symbol *sym, ASTVector *args);
 int executeStatements(ASTVector *statements);
 bool executeStatement(AST *ast);
 int executeExpression(AST *expr);
+int executeAssign(AST *ast, AST *expr);
+int executeArrayAssign(AST *ast, AST *idx, AST *expr);
 int resolveSymbol(const Symbol *symbol, const size_t index);
 
 int main() {
@@ -142,6 +144,10 @@ int executeExpression(AST *expr) {
             return executeExpression(expr->AST_left) * executeExpression(expr->AST_right);
         case OP_DIV:
             return executeExpression(expr->AST_left) / executeExpression(expr->AST_right);
+        case OP_ASSIGN:
+            return executeAssign(expr->AST_left, expr->AST_right);
+        case OP_ASSIGN_ARRAY:
+            return executeArrayAssign(expr->AST_first, expr->AST_second, expr->AST_third);
         case OP_CALL:
             return callFunction(expr->AST_left, expr->AST_right->AST_list);
         case OP_REF_ARRAY:
@@ -163,7 +169,6 @@ int assign(Symbol *symbol, const int value) {
 }
 
 int arrayAssign(Symbol *symbol, const size_t index, const int value) {
-    printf("array assign: %s[%lu] = %d\n", symbol->name, index, value);
     if (symbol->type != SYM_ARRAY) {
         fprintf(stderr, "Error: Attempt to assign to non-array variable %s.\n", symbol->name);
         exit(EXIT_FAILURE);
@@ -202,16 +207,6 @@ bool executeStatement(AST *ast) {
         case ETC_LIST:
             executeStatements(ast->AST_list);
             break;
-        case VAL_NUM:
-            break;
-        case VAL_SYMBOL:
-            break;
-        case CODE_ASSIGN:
-            executeAssign(ast->AST_left, ast->AST_right);
-            break;
-        case CODE_ASSIGN_ARRAY:
-            executeArrayAssign(ast->AST_first, ast->AST_second, ast->AST_third);
-            break;
         case CODE_PRINT:
             executePrint(ast);
             break;
@@ -220,17 +215,19 @@ bool executeStatement(AST *ast) {
                 return_value = executeExpression(ast->AST_unary);
             }
             return false;
-        case CODE_VAR:
-            break;
-        case OP_ADD:
-        case OP_SUB:
-        case OP_MUL:
-        case OP_DIV:
-            break;
+        case OP_ASSIGN:
+        case OP_ASSIGN_ARRAY:
         case OP_CALL:
             executeExpression(ast);
             break;
         case OP_REF_ARRAY:
+        case CODE_VAR:
+        case VAL_NUM:
+        case VAL_SYMBOL:
+        case OP_ADD:
+        case OP_SUB:
+        case OP_MUL:
+        case OP_DIV:
             break;
         default:
             fprintf(stderr, "Unknown statement (type: %d)\n", ast->code);

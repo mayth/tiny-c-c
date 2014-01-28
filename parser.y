@@ -1,12 +1,13 @@
 %token PRINT
 %token VAR
 %token RETURN
+%token FOR
 %token SYMBOL
 %token NUMBER
 
+%right '='
 %left '+' '-'
 %left '*' '/'
-%right '='
 
 %{
 #define YYDEBUG 1
@@ -25,7 +26,7 @@
 
 %type <val> definitions definition
 %type <val> statements statement expression
-%type <val> assignment print_statement
+%type <val> print_statement
 %type <val> function_definition param_list symbol_list block
 %type <val> variable_declaration variable_initialize variable_names
 %type <val> array_declaration
@@ -61,19 +62,18 @@ block: '{' statements '}' { $$ = $2; }
 statements: statement ';' { $$ = AST_makeList($1); }
           | statements statement ';' { $$ = AST_addList($1, $2); }
 statement: expression
-         | assignment
          | print_statement
          | variable_declaration
          | RETURN expression { $$ = AST_makeUnary(CODE_RETURN, $2); }
          | RETURN { $$ = AST_makeUnary(CODE_RETURN, NULL); }
 
-assignment: SYMBOL '=' expression { $$ = AST_makeBinary(CODE_ASSIGN, $1, $3); }
-          | SYMBOL '[' expression ']' '=' expression { $$ = AST_makeTrinary(CODE_ASSIGN_ARRAY, $1, $3, $6); }
 print_statement: PRINT expression { $$ = AST_makeUnary(CODE_PRINT, $2); }
 
 expression: NUMBER
           | SYMBOL /* variable ref */
           | SYMBOL '[' expression ']' { $$ = AST_makeBinary(OP_REF_ARRAY, $1, $3); }
+          | SYMBOL '=' expression     { $$ = AST_makeBinary(OP_ASSIGN, $1, $3); }
+          | SYMBOL '[' expression ']' '=' expression { $$ = AST_makeTrinary(OP_ASSIGN_ARRAY, $1, $3, $6); }
           | expression '+' expression { $$ = AST_makeBinary(OP_ADD, $1, $3); }
           | expression '-' expression { $$ = AST_makeBinary(OP_SUB, $1, $3); }
           | expression '*' expression { $$ = AST_makeBinary(OP_MUL, $1, $3); }
