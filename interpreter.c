@@ -128,7 +128,6 @@ int executeExpression(AST *expr) {
 }
 
 int assign(Symbol *symbol, const int value) {
-    // printf("assign: %s = %d\n", symbol->name, value);
     if (symbol->type != SYM_UNBOUND && symbol->type != SYM_VALUE) {
         fprintf(stderr, "Error: Attempt to assign to the unassignable variable %s.\n", symbol->name);
         abort();
@@ -176,7 +175,6 @@ bool executeStatement(AST *ast) {
             }
             return false;
         case CODE_VAR:
-            printf("declare variables...\n");
             break;
         case OP_ADD:
         case OP_SUB:
@@ -204,6 +202,7 @@ int resolveSymbol(const Symbol *symbol) {
         }
     }
     StackIter_delete(iter);
+    
     // from symbol table
     if (symbol->type == SYM_UNBOUND) {
         fprintf(stderr, "[expr] Used undefined or uninitialized symbol: %s\n", symbol->name);
@@ -224,9 +223,10 @@ int bindSymbol(Symbol *symbol, const int value) {
     return assign(symbol, value);
 }
 
-void AST_declareVariable(AST *symbol, AST *expr) {
+void AST_declareVariable(AST *symbol_ast, AST *expr) {
+    Symbol *symbol = symbol_ast->AST_symbol;
     if (expr) {
-        assign(symbol->AST_symbol, executeExpression(expr));
+        assign(symbol, executeExpression(expr));
     } else {
     }
 }

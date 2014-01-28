@@ -57,12 +57,9 @@ Symbol *AST_lookupSymbol(char *name) {
   StrSymMapIterator it = StrSymMap_find(SymbolTable, name);
   // If the symbol not found
   if (StrSymMap_end(SymbolTable) == it) {
-    Symbol *p = Symbol_new(name);
-    StrSymMap_insert_ref(SymbolTable, name, p, NULL);
-    return p;
-  } else {
-    return StrSymMap_value(it);
+    it = StrSymMap_insert_ref(SymbolTable, name, Symbol_new(name), NULL);
   }
+  return StrSymMap_value(it);
 }
 
 AST *AST_wrapSymbol(Symbol *symbol) {
