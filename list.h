@@ -45,7 +45,7 @@ ListIterator *List_iterator(List *list);
 
 ListIterator *ListIter_new(List *list);
 void ListIter_delete(ListIterator *iter);
-void *ListIter_current(ListIterator *iter);
+void *ListIter_current(const ListIterator *iter);
 bool ListIter_move_next(ListIterator *iter);
 
 #endif

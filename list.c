@@ -277,7 +277,7 @@ void ListIter_delete(ListIterator *iter) {
     }
 }
 
-void *ListIter_current(ListIterator *iter) {
+void *ListIter_current(const ListIterator *iter) {
     assert(iter != NULL);
     if (iter->state == LITST_RUNNING) {
         return iter->current->value;
