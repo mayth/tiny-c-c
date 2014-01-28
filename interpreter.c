@@ -202,6 +202,19 @@ int executeStatements(ASTVector *statements) {
     return return_value;
 }
 
+void executeFor(AST *ast) {
+    ASTVector *for_stmt = ast->AST_left->AST_list;
+    ASTVector *main = ast->AST_right->AST_list;
+    AST *init = ASTVector_at(for_stmt, 0);
+    AST *cond = ASTVector_at(for_stmt, 1);
+    AST *update = ASTVector_at(for_stmt, 2);
+    for (executeExpression(init);
+         executeExpression(cond);
+         executeExpression(update)) {
+        executeStatements(main);
+    }
+}
+
 bool executeStatement(AST *ast) {
     switch (ast->code) {
         case ETC_LIST:
@@ -215,6 +228,9 @@ bool executeStatement(AST *ast) {
                 return_value = executeExpression(ast->AST_unary);
             }
             return false;
+        case CODE_FOR:
+            executeFor(ast);
+            break;
         case OP_ASSIGN:
         case OP_ASSIGN_ARRAY:
         case OP_CALL:
@@ -264,7 +280,7 @@ int resolveSymbol(const Symbol *symbol, const size_t index) {
     return symbol->SYM_value;
 }
 
-void AST_declareVariable(AST *symbol_ast, AST *expr) {
+void AST_initializeVariable(AST *symbol_ast, AST *expr) {
     Symbol *symbol = symbol_ast->AST_symbol;
     if (expr) {
         assign(symbol, executeExpression(expr));

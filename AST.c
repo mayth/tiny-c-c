@@ -61,6 +61,17 @@ AST *AST_makeTrinary(CodeType code, AST *first, AST *second, AST *third) {
   return p;
 }
 
+AST *AST_makeFor(AST *init, AST *cond, AST *update, AST *block) {
+  AST *p = AST_alloc();
+  p->code = CODE_FOR;
+  AST *for_stmt = AST_makeList(init);
+  AST_addList(for_stmt, cond);
+  AST_addList(for_stmt, update);
+  p->AST_left = for_stmt;
+  p->AST_right = block;
+  return p;
+}
+
 Symbol *AST_lookupSymbol(char *name) {
   StrSymMapIterator it = StrSymMap_find(SymbolTable, name);
   // If the symbol not found

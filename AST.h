@@ -22,6 +22,7 @@ enum code_ {
     CODE_FUNC,
     CODE_VAR,
     CODE_RETURN,
+    CODE_FOR,
     OP_ADD,
     OP_SUB,
     OP_MUL,
@@ -109,6 +110,8 @@ AST *AST_makeUnary(CodeType type, AST *node);
 AST *AST_makeBinary(CodeType type, AST *left, AST *right);
 AST *AST_makeTrinary(CodeType type, AST *first, AST *second, AST *third);
 
+AST *AST_makeFor(AST *init, AST *cond, AST *update, AST *block);
+
 /* Symbol Definition */
 AST *AST_makeSymbol(char *name);
 Symbol *AST_lookupSymbol(char *name);
@@ -128,7 +131,7 @@ Symbol *Symbol_new(char *name);
 extern StrSymMap *SymbolTable;
 
 /* called from parser */
-void AST_declareVariable(AST *name, AST *expr);
+void AST_initializeVariable(AST *name, AST *expr);
 void AST_declareArray(AST *name, AST *expr);
 
 #endif

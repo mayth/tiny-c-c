@@ -47,6 +47,8 @@ int yylex() {
             return VAR;
         } else if (strcmp(str, "return") == 0) {
             return RETURN;
+        } else if (strcmp(str, "for") == 0) {
+            return FOR;
         } else {
             yylval.val = AST_makeSymbol(str);
             return SYMBOL;

@@ -24,12 +24,13 @@
   AST* val;
 }
 
-%type <val> definitions definition
+%type <val> global_definitions global_definition
 %type <val> statements statement expression
-%type <val> print_statement
-%type <val> function_definition param_list symbol_list block
-%type <val> variable_declaration variable_initialize variable_names
-%type <val> array_declaration
+%type <val> stmt_or_block block
+%type <val> none_or_statements
+%type <val> print_statement for_statement
+%type <val> function_definition param_list symbol_list
+%type <val> variable_names
 %type <val> argument_list arguments
 %type <val> SYMBOL NUMBER
 
@@ -37,37 +38,53 @@
 
 %%
 program:
-       | definitions 
-definitions: definition { $$ = AST_makeList($1); }
-           | definitions definition { $$ = AST_addList($1, $2); }
+       | global_definitions 
+global_definitions: global_definition { $$ = AST_makeList($1); }
+                  | global_definitions global_definition { $$ = AST_addList($1, $2); }
 
-definition: function_definition
-          | variable_declaration
-          | variable_initialize
-          | array_declaration
+global_definition: function_definition
+                 | VAR variable_names ';'        { }
+                 | VAR SYMBOL '=' expression ';' { AST_initializeVariable($2, $4); }
+                 | VAR SYMBOL '[' expression ']' ';' { AST_declareArray($2, $4); }
 
-variable_declaration: VAR variable_names ';'  { }
-variable_names: SYMBOL                        { AST_declareVariable($1, NULL); }
-              | variable_names ',' SYMBOL     { AST_declareVariable($3, NULL); }
-variable_initialize: VAR SYMBOL '=' expression ';' { AST_declareVariable($2, $4); }
-array_declaration: VAR SYMBOL '[' expression ']' ';' { AST_declareArray($2, $4); }
+variable_names: SYMBOL
+              | variable_names ',' SYMBOL
 
 function_definition: SYMBOL '(' param_list ')' block { $$ = AST_makeFunction($1, $3, $5); }
 param_list: /* no params */ { $$ = AST_makeList(NULL); }
           | symbol_list     { $$ = $1; }
 symbol_list: SYMBOL                 { $$ = AST_makeList($1); }
            | symbol_list ',' SYMBOL  { $$ = AST_addList($1, $3); }
-block: '{' statements '}' { $$ = $2; }
+block: '{' none_or_local_declarations none_or_statements '}' { $$ = $3; }
 
-statements: statement ';' { $$ = AST_makeList($1); }
-          | statements statement ';' { $$ = AST_addList($1, $2); }
-statement: expression
-         | print_statement
-         | variable_declaration
-         | RETURN expression { $$ = AST_makeUnary(CODE_RETURN, $2); }
-         | RETURN { $$ = AST_makeUnary(CODE_RETURN, NULL); }
+stmt_or_block: statement { $$ = AST_makeList($1); }
+             | block
+
+none_or_local_declarations:
+                          | local_declarations
+
+local_declarations: local_declaration
+                  | local_declarations local_declaration
+
+local_declaration: VAR variable_names ';'
+                 | VAR SYMBOL '=' expression ';'
+                 | VAR SYMBOL '[' expression ']' ';'
+
+none_or_statements:             { $$ = AST_makeList(NULL); }
+                  | statements  { $$ = $1; }
+
+statements: statement { $$ = AST_makeList($1); }
+          | statements statement { $$ = AST_addList($1, $2); }
+statement: expression ';'
+         | print_statement ';'
+         | RETURN expression ';' { $$ = AST_makeUnary(CODE_RETURN, $2); }
+         | RETURN ';' { $$ = AST_makeUnary(CODE_RETURN, NULL); }
+         | for_statement
 
 print_statement: PRINT expression { $$ = AST_makeUnary(CODE_PRINT, $2); }
+
+for_statement: FOR '(' expression ';' expression ';' expression ')' stmt_or_block
+             { $$ = AST_makeFor($3, $5, $7, $9); }
 
 expression: NUMBER
           | SYMBOL /* variable ref */
