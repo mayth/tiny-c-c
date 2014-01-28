@@ -23,11 +23,13 @@ enum code_ {
     CODE_FUNC,
     CODE_VAR,
     CODE_RETURN,
+    CODE_ASSIGN_ARRAY,
     OP_ADD,
     OP_SUB,
     OP_MUL,
     OP_DIV,
-    OP_CALL
+    OP_CALL,
+    OP_REF_ARRAY
 };
 
 typedef enum symbol_type {
@@ -42,7 +44,10 @@ struct symbol_ {
     char *name;
     union {
         int value;
-        int *array;
+        struct {
+            int *data;
+            size_t size;
+        } array;
         struct {
             SymbolVector *params;
             AST *body;
@@ -53,7 +58,8 @@ struct symbol_ {
 #define SYM_value un.value
 #define SYM_param un.func.params
 #define SYM_body  un.func.body
-#define SYM_array un.array
+#define SYM_array_data un.array.data
+#define SYM_array_size un.array.size
 
 struct AST_ {
     CodeType code;
@@ -67,18 +73,41 @@ struct AST_ {
         /* For list */
         ASTVector *list;
         
-        /* For others (inner node) */
+        AST *unary;
+
         struct {
             AST *left;
             AST *right;
-        } inner;
+        } binary;
+
+        struct {
+            AST *first;
+            AST *second;
+            AST *third;
+        } trinary;
     } un;
 };
 
+#define AST_value un.value
+/* For Unary Expression */
+#define AST_unary un.unary
+/* For Binary Expression */
+#define AST_left un.binary.left
+#define AST_right un.binary.right
+/* For Trinary Expression */
+#define AST_first un.trinary.first
+#define AST_second un.trinary.second
+#define AST_third un.trinary.third
+/* For List */
+#define AST_list un.list
+/* For Symbol Expression */
+#define AST_symbol un.symbol
+
 /* Normal Expression */
 AST *AST_makeValue(int v);
-AST *AST_makeBinary(CodeType type, AST *left, AST *right);
 AST *AST_makeUnary(CodeType type, AST *node);
+AST *AST_makeBinary(CodeType type, AST *left, AST *right);
+AST *AST_makeTrinary(CodeType type, AST *first, AST *second, AST *third);
 
 /* Symbol Definition */
 AST *AST_makeSymbol(char *name);
@@ -97,16 +126,6 @@ AST *AST_getList(AST *p, unsigned long index);
 Symbol *Symbol_new(char *name);
 
 extern StrSymMap *SymbolTable;
-
-#define AST_value un.value
-/* For Unary Expression */
-#define AST_unary un.inner.left
-/* For Binary Expression */
-#define AST_left un.inner.left
-#define AST_right un.inner.right
-#define AST_list un.list
-/* For Symbol Expression */
-#define AST_symbol un.symbol
 
 /* called from parser */
 void AST_declareVariable(AST *name, AST *expr);

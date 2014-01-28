@@ -68,10 +68,12 @@ statement: expression
          | RETURN { $$ = AST_makeUnary(CODE_RETURN, NULL); }
 
 assignment: SYMBOL '=' expression { $$ = AST_makeBinary(CODE_ASSIGN, $1, $3); }
+          | SYMBOL '[' expression ']' '=' expression { $$ = AST_makeTrinary(CODE_ASSIGN_ARRAY, $1, $3, $6); }
 print_statement: PRINT expression { $$ = AST_makeUnary(CODE_PRINT, $2); }
 
 expression: NUMBER
           | SYMBOL /* variable ref */
+          | SYMBOL '[' expression ']' { $$ = AST_makeBinary(OP_REF_ARRAY, $1, $3); }
           | expression '+' expression { $$ = AST_makeBinary(OP_ADD, $1, $3); }
           | expression '-' expression { $$ = AST_makeBinary(OP_SUB, $1, $3); }
           | expression '*' expression { $$ = AST_makeBinary(OP_MUL, $1, $3); }

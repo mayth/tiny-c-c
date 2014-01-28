@@ -36,6 +36,13 @@ AST* AST_makeValue(int v) {
   return p;
 }
 
+AST *AST_makeUnary(CodeType code, AST *node) {
+  AST *p = AST_alloc();
+  p->code = code;
+  p->AST_unary = node;
+  return p;
+}
+
 AST* AST_makeBinary(CodeType code, AST *left, AST *right) {
   AST *p;
   p = AST_alloc();
@@ -45,11 +52,12 @@ AST* AST_makeBinary(CodeType code, AST *left, AST *right) {
   return p;
 }
 
-AST *AST_makeUnary(CodeType code, AST *node) {
+AST *AST_makeTrinary(CodeType code, AST *first, AST *second, AST *third) {
   AST *p = AST_alloc();
   p->code = code;
-  p->AST_left = node;
-  p->AST_right = NULL;
+  p->AST_first = first;
+  p->AST_second = second;
+  p->AST_third = third;
   return p;
 }
 

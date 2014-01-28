@@ -7,11 +7,19 @@
 #include "AST.h"
 
 typedef struct {
-    Symbol *symbol;
-    int value;
+    SymbolType type;
+    const char *name;
+    union {
+        int value;
+        struct {
+            int *data;
+            size_t size;
+        } array;
+    } un;
 } Environment;
 
-Environment *Environment_new(Symbol *symbol, int value);
+Environment *Environment_new_value(Symbol *symbol, int value);
+Environment *Environment_new_array(Symbol *symbol, size_t n);
 void Environment_delete(Environment *env);
 
 static int return_value = 0;
@@ -26,8 +34,7 @@ int callFunction_(const Symbol *sym, ASTVector *args);
 int executeStatements(ASTVector *statements);
 bool executeStatement(AST *ast);
 int executeExpression(AST *expr);
-int resolveSymbol(const Symbol *symbol);
-int bindSymbol(Symbol *symbol, const int value);
+int resolveSymbol(const Symbol *symbol, const size_t index);
 
 int main() {
     yydebug = 0;
@@ -72,7 +79,7 @@ int bindArgs(ASTVector *args, SymbolVector *params) {
     for (unsigned long i = 0; i < argc; ++i) {
         AST *expr = ASTVector_at(args, i);
         Symbol *symbol = SymbolVector_at(params, i);
-        Environment *e = Environment_new(symbol, executeExpression(expr));
+        Environment *e = Environment_new_value(symbol, executeExpression(expr));
         Stack_push(Env, e);
     }
     return argc;
@@ -101,10 +108,24 @@ int callFunction_(const Symbol *sym, ASTVector *args) {
 int callFunction(const AST *ast, ASTVector *args) {
     Symbol *sym = ast->AST_symbol;
     if (sym->type == SYM_UNBOUND) {
-        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", ast->AST_symbol->name);
+        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", sym->name);
         abort();
     }
     return callFunction_(sym, args);
+}
+
+int referenceArray(AST *ast, AST *expr) {
+    Symbol *array = ast->AST_symbol;
+    if (array->type == SYM_UNBOUND) {
+        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", array->name);
+        abort();
+    }
+    size_t idx = executeExpression(expr);
+    if (array->SYM_array_size <= idx) {
+        fprintf(stderr, "Error: Index out of range.\n");
+        exit(EXIT_FAILURE);
+    }
+    return array->SYM_array_data[idx];
 }
 
 int executeExpression(AST *expr) {
@@ -112,7 +133,7 @@ int executeExpression(AST *expr) {
         case VAL_NUM:
             return expr->AST_value;
         case VAL_SYMBOL:
-            return resolveSymbol(expr->AST_symbol);
+            return resolveSymbol(expr->AST_symbol, 0);
         case OP_ADD:
             return executeExpression(expr->AST_left) + executeExpression(expr->AST_right);
         case OP_SUB:
@@ -123,6 +144,8 @@ int executeExpression(AST *expr) {
             return executeExpression(expr->AST_left) / executeExpression(expr->AST_right);
         case OP_CALL:
             return callFunction(expr->AST_left, expr->AST_right->AST_list);
+        case OP_REF_ARRAY:
+            return referenceArray(expr->AST_left, expr->AST_right);
         default:
             fprintf(stderr, "unknown expression (type: %d)\n", expr->code);
             abort();
@@ -139,8 +162,26 @@ int assign(Symbol *symbol, const int value) {
     return value;
 }
 
+int arrayAssign(Symbol *symbol, const size_t index, const int value) {
+    printf("array assign: %s[%lu] = %d\n", symbol->name, index, value);
+    if (symbol->type != SYM_ARRAY) {
+        fprintf(stderr, "Error: Attempt to assign to non-array variable %s.\n", symbol->name);
+        exit(EXIT_FAILURE);
+    }
+    if (symbol->SYM_array_size <= index) {
+        fprintf(stderr, "Error: Index out of range.\n");
+        exit(EXIT_FAILURE);
+    }
+    symbol->SYM_array_data[index] = value;
+    return value;
+}
+
 int executeAssign(AST *sym, AST *expr) {
     return assign(sym->AST_symbol, executeExpression(expr));
+}
+
+int executeArrayAssign(AST *sym, AST *idx, AST *expr) {
+    return arrayAssign(sym->AST_symbol, executeExpression(idx), executeExpression(expr));
 }
 
 void executePrint(AST *ast) {
@@ -168,6 +209,9 @@ bool executeStatement(AST *ast) {
         case CODE_ASSIGN:
             executeAssign(ast->AST_left, ast->AST_right);
             break;
+        case CODE_ASSIGN_ARRAY:
+            executeArrayAssign(ast->AST_first, ast->AST_second, ast->AST_third);
+            break;
         case CODE_PRINT:
             executePrint(ast);
             break;
@@ -186,6 +230,8 @@ bool executeStatement(AST *ast) {
         case OP_CALL:
             executeExpression(ast);
             break;
+        case OP_REF_ARRAY:
+            break;
         default:
             fprintf(stderr, "Unknown statement (type: %d)\n", ast->code);
             abort();
@@ -193,14 +239,22 @@ bool executeStatement(AST *ast) {
     return true;
 }
 
-int resolveSymbol(const Symbol *symbol) {
+int resolveSymbol(const Symbol *symbol, const size_t index) {
     // find from environment
     StackIterator *iter = Stack_iterator(Env);
     while (StackIter_moveNext(iter)) {
         Environment *e = (Environment *)StackIter_current(iter);
-        if (e->symbol->name == symbol->name) {
+        if (e->name == symbol->name) {
             StackIter_delete(iter);
-            return e->value;
+            switch (e->type) {
+                case SYM_VALUE:
+                    return e->un.value;
+                case SYM_ARRAY:
+                    return e->un.array.data[index];
+                default:
+                    fprintf(stderr, "Error: symbol '%s' found but it has unexpected type (%d).\n", e->name, e->type);
+                    exit(EXIT_FAILURE);
+            }
         }
     }
     StackIter_delete(iter);
@@ -211,18 +265,6 @@ int resolveSymbol(const Symbol *symbol) {
         abort();
     }
     return symbol->SYM_value;
-}
-
-int bindSymbol(Symbol *symbol, const int value) {
-    StackIterator *iter = Stack_iterator(Env);
-    while (StackIter_moveNext(iter)) {
-        Environment *e = (Environment *)StackIter_current(iter);
-        if (e->symbol == symbol) {
-            e->value = value;
-            return value;
-        }
-    }
-    return assign(symbol, value);
 }
 
 void AST_declareVariable(AST *symbol_ast, AST *expr) {
@@ -246,24 +288,54 @@ void AST_declareArray(AST *name, AST *expr) {
         fprintf(stderr, "Cannot allocate memory for array (requested %d elements)\n", num_elements);
         exit(EXIT_FAILURE);
     }
-    symbol->SYM_array = arr;
+    symbol->SYM_array_data = arr;
+    symbol->SYM_array_size = num_elements;
 }
 
-Environment *Environment_new(Symbol *symbol, int value) {
+Environment *Environment_new_value(Symbol *symbol, int value) {
     Environment *env = (Environment *)malloc(sizeof(Environment));
     if (!env) {
         fprintf(stderr, "Cannot allocate memory for Environment.\n");
         exit(EXIT_FAILURE);
     }
-    env->symbol = symbol;
-    env->value = value;
+    env->name = symbol->name;
+    env->type = SYM_VALUE;
+    env->un.value = value;
+    return env;
+}
+
+Environment *Environment_new_array(Symbol *symbol, const size_t n) {
+    Environment *env = (Environment *)malloc(sizeof(Environment));
+    if (!env) {
+        fprintf(stderr, "Cannot allocate memory for Environment.\n");
+        exit(EXIT_FAILURE);
+    }
+    env->name = symbol->name;
+    env->type = SYM_ARRAY;
+    int *arr = (int *)calloc(n, sizeof(int));
+    if (!arr) {
+        fprintf(stderr, "Cannot allocate memory for Environment (array).\n");
+        exit(EXIT_FAILURE);
+    }
+    env->un.array.data = arr;
+    env->un.array.size = n;
     return env;
 }
 
 void Environment_delete(Environment *env) {
     if (env) {
-        env->symbol = NULL;
-        env->value = 0;
+        switch(env->type) {
+            case SYM_VALUE:
+                env->un.value = 0;
+                break;
+            case SYM_ARRAY:
+                free(env->un.array.data);
+                env->un.array.data = NULL;
+                env->un.array.size = -1;
+                break;
+            default:
+                break;
+        }
         free(env);
     }
 }
