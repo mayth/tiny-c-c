@@ -82,7 +82,8 @@ Symbol *AST_lookupSymbol(char *name);
 Symbol *AST_lookupSymbolOrDie(char *name);
 /* Declarations */
 AST *AST_makeFunction(AST *name, AST *params, AST *body);
-AST *AST_makeVariable(AST *name, AST *value);
+AST *AST_defineVariables(AST *name);
+AST *AST_defineVariable(AST *name, AST *expr);
 
 /* List Operation */
 AST *AST_makeList(AST *node);
@@ -93,7 +94,6 @@ AST *AST_getList(AST *p, unsigned long index);
 Symbol *Symbol_new(char *name);
 
 extern Trie *SymbolTable;
-extern AST *Root;
 
 #define AST_value un.value
 /* For Unary Expression */
@@ -105,6 +105,9 @@ extern AST *Root;
 /* For Symbol Expression */
 #define AST_symbol_name un.symbol.name
 #define AST_symbol un.symbol.symbol
+
+/* called from parser */
+void AST_declareVariable(AST *name, AST *expr);
 
 #endif
 

@@ -5,7 +5,6 @@
 #include "trie.h"
 
 Trie *SymbolTable;
-AST *Root;
 
 int AST_comparer(const void *a, const void *b) {
   if (a == b) {
@@ -49,6 +48,7 @@ AST *AST_makeUnary(CodeType code, AST *node) {
 }
 
 Symbol *AST_lookupSymbol(char *name) {
+  fprintf(stderr, "lookup symbol: %s\n", name);
   Symbol *p = trie_search_leaf(SymbolTable, name);
   if (!p) {
     p = Symbol_new(name);
@@ -67,6 +67,7 @@ Symbol *AST_lookupSymbolOrDie(char *name) {
 }
 
 Symbol *AST_newSymbol(char *name) {
+  fprintf(stderr, "new symbol: %s\n", name);
   Symbol *p = trie_search_leaf(SymbolTable, name);
   if (p) {
     fprintf(stderr, "Symbol %s already exists.\n", name);
@@ -95,8 +96,8 @@ AST *AST_makeFunction(AST *name, AST *params, AST *body) {
   return name;
 }
 
-AST *AST_makeVariable(AST *name, AST *value) {
-  return NULL;
+AST *AST_defineVariables(AST *vars) {
+  return vars;
 }
 
 AST *AST_makeList(AST *node) {

@@ -24,21 +24,30 @@
   AST* val;
 }
 
-%type <val> program definitions
+%type <val> definitions definition
 %type <val> statements statement expression
 %type <val> assignment print_statement
 %type <val> function_definition param_list symbol_list block
-%type <val> variable_declaration variable_names
+%type <val> variable_declaration variable_initialize variable_names
 %type <val> argument_list arguments
 %type <val> SYMBOL NUMBER
 
 %start program
 
 %%
-program:             { Root = NULL; }
-       | definitions { Root = $1; }
-definitions: function_definition { $$ = AST_makeList($1); }
-           | definitions function_definition { $$ = AST_addList($1, $2); }
+program:
+       | definitions 
+definitions: definition { $$ = AST_makeList($1); }
+           | definitions definition { $$ = AST_addList($1, $2); }
+
+definition: function_definition
+          | variable_declaration
+          | variable_initialize
+
+variable_declaration: VAR variable_names ';'  { }
+variable_names: SYMBOL                        { AST_declareVariable($1, NULL); }
+              | variable_names ',' SYMBOL     { AST_declareVariable($3, NULL); }
+variable_initialize: VAR SYMBOL '=' expression ';' { AST_declareVariable($2, $4); }
 
 function_definition: SYMBOL '(' param_list ')' block { $$ = AST_makeFunction($1, $3, $5); }
 param_list: /* no params */ { $$ = AST_makeList(NULL); }
@@ -58,9 +67,6 @@ statement: expression
 
 assignment: SYMBOL '=' expression { $$ = AST_makeBinary(CODE_ASSIGN, $1, $3); }
 print_statement: PRINT expression { $$ = AST_makeUnary(CODE_PRINT, $2); }
-variable_declaration: VAR variable_names      { $$ = $2; }
-variable_names: SYMBOL ';'                    { $$ = AST_makeList($1); }
-              | variable_names ',' SYMBOL ';' { $$ = AST_addList($1, $3); }
 
 expression: NUMBER
           | SYMBOL /* variable ref */

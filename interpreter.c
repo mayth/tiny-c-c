@@ -19,7 +19,7 @@ static Stack *Env = NULL;
 
 int yydebug;
 int yyparse();
-int executeProgram(const AST *ast);
+int executeProgram();
 int executeFunction(const AST *body, List *args, List *param);
 int callFunction(const AST *ast, List *args);
 int callFunction_(const Symbol *sym, List *args);
@@ -40,17 +40,13 @@ int main() {
         return EXIT_FAILURE;
     }
     printf("*** parsed ***\n");
-    if (Root) {
-        printf("*** start execution ***\n");
-        result = executeProgram(Root);
-        printf("*** finished execution ***\n");
-    } else {
-        printf("!!! Root AST not found\n");
-    }
+    printf("*** start execution ***\n");
+    result = executeProgram();
+    printf("*** finished execution ***\n");
     return result;
 }
 
-int executeProgram(const AST *ast) {
+int executeProgram() {
     Symbol *main = AST_lookupSymbolOrDie("main");
     if (main->type != SYM_FUNC) {
         fprintf(stderr, "'main' is not a function.\n");
@@ -103,7 +99,7 @@ int callFunction_(const Symbol *sym, List *args) {
 int callFunction(const AST *ast, List *args) {
     Symbol *sym = ast->AST_symbol;
     if (sym->type == SYM_UNBOUND) {
-        fprintf(stderr, "[func] Used an undefined symbol: %s\n", ast->AST_symbol_name);
+        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", ast->AST_symbol_name);
         abort();
     }
     return callFunction_(sym, args);
@@ -132,6 +128,7 @@ int executeExpression(AST *expr) {
 }
 
 int assign(Symbol *symbol, const int value) {
+    // printf("assign: %s = %d\n", symbol->name, value);
     if (symbol->type != SYM_UNBOUND && symbol->type != SYM_VALUE) {
         fprintf(stderr, "Error: Attempt to assign to the unassignable variable %s.\n", symbol->name);
         abort();
@@ -179,6 +176,9 @@ bool executeStatement(AST *ast) {
                 return_value = executeExpression(ast->AST_unary);
             }
             return false;
+        case CODE_VAR:
+            printf("declare variables...\n");
+            break;
         case OP_ADD:
         case OP_SUB:
         case OP_MUL:
@@ -207,7 +207,7 @@ int resolveSymbol(const Symbol *symbol) {
     StackIter_delete(iter);
     // from symbol table
     if (symbol->type == SYM_UNBOUND) {
-        fprintf(stderr, "[expr] Used undefined symbol: %s\n", symbol->name);
+        fprintf(stderr, "[expr] Used undefined or uninitialized symbol: %s\n", symbol->name);
         abort();
     }
     return symbol->SYM_value;
@@ -223,6 +223,13 @@ int bindSymbol(Symbol *symbol, const int value) {
         }
     }
     return assign(symbol, value);
+}
+
+void AST_declareVariable(AST *symbol, AST *expr) {
+    if (expr) {
+        assign(symbol->AST_symbol, executeExpression(expr));
+    } else {
+    }
 }
 
 Environment *Environment_new(Symbol *symbol, int value) {
