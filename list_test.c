@@ -12,9 +12,13 @@ int main(int argc, char const* argv[])
   List *l = List_new(comparer);
   ListIterator *iter;
   srand(393939);
+  printf("empty? %s\n", (List_is_empty(l) ? "yes" : "no"));
   for (int i = 0; i < 10; ++i) {
     List_add(l, (void *)((unsigned long)rand()));
   }
+  printf("size: %lu\n", List_size(l));
+  printf("empty? %s\n", (List_is_empty(l) ? "yes" : "no"));
+
   printf("-----\n");
   iter = List_iterator(l);
   while (ListIter_move_next(iter)) {
@@ -22,7 +26,9 @@ int main(int argc, char const* argv[])
   }
   ListIter_delete(iter);
   List_remove_at(l, 5);
+  printf("size: %lu\n", List_size(l));
   printf("-----\n");
+
   iter = List_iterator(l);
   while (ListIter_move_next(iter)) {
     printf("%d\n", (int)ListIter_current(iter));

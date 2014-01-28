@@ -9,6 +9,7 @@ typedef struct list_node ListNode;
 
 typedef struct list_ {
     ListNode* head;
+    unsigned long size;
     VALUE_COMPARER comparer;
     unsigned int traversing;
 } List;
@@ -33,6 +34,8 @@ typedef struct {
 
 List *List_new(VALUE_COMPARER comparer);
 void List_delete(List *list);
+const unsigned long List_size(const List *list);
+const bool List_is_empty(const List *list);
 bool List_add(List *list, void *value);
 void *List_get(const List *list, const void *value);
 void *List_get_at(const List *list, const unsigned long index);

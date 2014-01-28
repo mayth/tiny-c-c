@@ -44,6 +44,7 @@ List *List_new(VALUE_COMPARER comparer) {
     } else {
         list->comparer = List_default_comparer;
     }
+    list->size = 0;
     return list;
 }
 
@@ -61,8 +62,22 @@ void List_delete(List *list) {
         }
         list->head = NULL;
         list->comparer = NULL;
+        list->size = -1;
         free(list);
     }
+}
+
+/* [public]
+ * Gets the size of the list.
+ */
+inline const unsigned long List_size(const List *list) {
+    assert(list != NULL);
+    return list->size;
+}
+
+inline const bool List_is_empty(const List *list) {
+    assert(list != NULL);
+    return List_size(list) == 0;
 }
 
 /* [public]
@@ -88,6 +103,7 @@ bool List_add(List *list, void *value) {
     } else {
         list->head = new;
     }
+    ++list->size;
     return true;
 }
 
@@ -148,6 +164,7 @@ bool List_remove(List *list, void *value) {
                 prev->next = p->next;
             }
             ListNode_delete(p);
+            --list->size;
             return true;
         }
     }
@@ -171,6 +188,7 @@ bool List_remove_at(List* list, unsigned long index) {
             prev->next = p->next;
         }
         ListNode_delete(p);
+        --list->size;
         return true;
     }
     return false;
