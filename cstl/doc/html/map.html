@@ -1,0 +1,1545 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: map</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>map</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc">CSTL_MAP_INTERFACE</a>(Name, KeyType, ValueType)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">map用インターフェイスマクロ  <a href="#6104b678d6a7cf3a11c4f9c22f6030bc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e">CSTL_MAP_IMPLEMENT</a>(Name, KeyType, ValueType, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">map用実装マクロ  <a href="#dbaca65c0bf135072c6c8af5a2de3f5e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3">CSTL_MULTIMAP_INTERFACE</a>(Name, KeyType, ValueType)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">multimap用インターフェイスマクロ  <a href="#eda3d4bc511ae6b5b0f011568f5573e3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#fc55ebb3d23b8945bde09551d52724b6">CSTL_MULTIMAP_IMPLEMENT</a>(Name, KeyType, ValueType, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">multimap用実装マクロ  <a href="#fc55ebb3d23b8945bde09551d52724b6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#b259d85f7b994c66cf246b0533e5cac6">CSTL_LESS</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &lt; (y) ? -1 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">昇順指定  <a href="#b259d85f7b994c66cf246b0533e5cac6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#aae9080a257d1a3a880210d66d98d556">CSTL_GREATER</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &gt; (y) ? -1 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">降順指定  <a href="#aae9080a257d1a3a880210d66d98d556"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">map/multimapの型  <a href="#767ff9e0c58d27b070f30636b66d2603"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータ  <a href="#1f7e92c9fe44b8adfa664f2a2e9fa1b1"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#e507231b7ae1724e44f06a20109c0d0f">Map_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#e507231b7ae1724e44f06a20109c0d0f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#35bef41e646d77dbd6f1528c3f3c4649">Map_delete</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#35bef41e646d77dbd6f1528c3f3c4649"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#0eca2fbbb2f55df47ab523e5dc9cedc0">Map_size</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#0eca2fbbb2f55df47ab523e5dc9cedc0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#8e9eaef7ae12ce2ccc88757183943cd1">Map_empty</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#8e9eaef7ae12ce2ccc88757183943cd1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#2f2f6abbe1cabcb68be37b0d900baf8f">Map_begin</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のイテレータ  <a href="#2f2f6abbe1cabcb68be37b0d900baf8f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#b76ac49d1626650143206869c3693e59">Map_end</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素の次のイテレータ  <a href="#b76ac49d1626650143206869c3693e59"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#f82c3caf2a09132410420451e20eaf8c">Map_rbegin</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素のイテレータ  <a href="#f82c3caf2a09132410420451e20eaf8c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#e1040d984f2e5afba902767cdae26006">Map_rend</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素の前のイテレータ  <a href="#e1040d984f2e5afba902767cdae26006"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#b681d2070ddb847ff141b341198e1b93">Map_next</a> (<a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のイテレータ  <a href="#b681d2070ddb847ff141b341198e1b93"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#462792ce24fbb748751d8e3ada344d4e">Map_prev</a> (<a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">前のイテレータ  <a href="#462792ce24fbb748751d8e3ada344d4e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">KeyT const *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#551c86613135092ccf30c389da6cb179">Map_key</a> (<a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素のキーのアクセス  <a href="#551c86613135092ccf30c389da6cb179"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">ValueT *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#6e0f68dcd2822c525f95208d4bd005d8">Map_value</a> (<a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素の値のアクセス  <a href="#6e0f68dcd2822c525f95208d4bd005d8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">ValueT *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#af6899cbae14b425ba3f9ed331e763c5">Map_at</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">キーとペアになる値のアクセス(map専用)  <a href="#af6899cbae14b425ba3f9ed331e763c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#5fced953fc7f1f95a1e8e22b6bdb0759">Map_insert</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key, ValueT value, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(map専用)  <a href="#5fced953fc7f1f95a1e8e22b6bdb0759"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#e719f5cf6f6b771ce9dc913ae3dfb32d">Map_insert_ref</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key, ValueT const *value, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入(map専用)  <a href="#e719f5cf6f6b771ce9dc913ae3dfb32d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#a389bb1c36186fd7cb53643d1e281c73">Map_insert</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key, ValueT value)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(multimap専用)  <a href="#a389bb1c36186fd7cb53643d1e281c73"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#37d715630b32146c7c7d3ada64cc3040">Map_insert_ref</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key, ValueT const *value)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入(multimap専用)  <a href="#37d715630b32146c7c7d3ada64cc3040"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#608ca47f8a8bef21c62e5019e4f3845d">Map_insert_range</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> first, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#608ca47f8a8bef21c62e5019e4f3845d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#24c570fb4c75ea6c47b440799ebf9848">Map_erase</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#24c570fb4c75ea6c47b440799ebf9848"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#c5cb95a0ae43b1d3d0d320cb0bbc0edb">Map_erase_range</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> first, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を削除  <a href="#c5cb95a0ae43b1d3d0d320cb0bbc0edb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#c6c88aae21866722eff17fe141087a47">Map_erase_key</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素を削除  <a href="#c6c88aae21866722eff17fe141087a47"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#e7320e3fd0364a832700a1f536606802">Map_clear</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#e7320e3fd0364a832700a1f536606802"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#048ed3e48c2477bb46e7ce9e80d828de">Map_swap</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, <a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#048ed3e48c2477bb46e7ce9e80d828de"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#4aeda3494f94b8b5bf2623845d704750">Map_count</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素をカウント  <a href="#4aeda3494f94b8b5bf2623845d704750"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#8616878fc75cbed2f5a8c53edf234a2a">Map_find</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素を検索  <a href="#8616878fc75cbed2f5a8c53edf234a2a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#250e0cdcbd6c0e9ea0b81ad0b0662027">Map_lower_bound</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の位置の検索  <a href="#250e0cdcbd6c0e9ea0b81ad0b0662027"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#076d49ac51b3f17d48261b904d142248">Map_upper_bound</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の位置の検索  <a href="#076d49ac51b3f17d48261b904d142248"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="map.html#13ffeab3df48c9b6f2295b0b160b787b">Map_equal_range</a> (<a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *self, KeyT key, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> *first, <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> *last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素の範囲を取得  <a href="#13ffeab3df48c9b6f2295b0b160b787b"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+mapはキーと値のペアを要素とする連想コンテナである。 要素を挿入すると、キーによって自動的にソートされる。同じキーの要素を2個以上挿入することはできない。 挿入した要素のキーは読み出し専用となる。 要素の挿入・削除・キーの検索の計算量はO(log N)である。<p>
+multimapはキーの重複が許されることと、キーとペアになる値の直接アクセスが不可能であることを除き、mapと同じである。<p>
+map/multimapを使うには、&lt;cstl/map.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/map.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_MAP_INTERFACE(Name, KeyType, ValueType)</span>
+<span class="preprocessor"></span><span class="preprocessor">#define CSTL_MAP_IMPLEMENT(Name, KeyType, ValueType, Compare)</span>
+<span class="preprocessor"></span>
+<span class="preprocessor">#define CSTL_MULTIMAP_INTERFACE(Name, KeyType, ValueType)</span>
+<span class="preprocessor">#define CSTL_MULTIMAP_IMPLEMENT(Name, KeyType, ValueType, Compare)</span>
+</pre></div><p>
+<b><a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE()</a></b> は任意の名前と要素の型のmapのインターフェイスを展開する。 <b><a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<b><a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE()</a></b> は任意の名前と要素の型のmultimapのインターフェイスを展開する。 <b><a class="el" href="map.html#fc55ebb3d23b8945bde09551d52724b6" title="multimap用実装マクロ">CSTL_MULTIMAP_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;string.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/map.h&gt;</span>
+
+<span class="comment">/* mapのインターフェイスと実装を展開 */</span>
+<a class="code" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE</a>(StrIntMap, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>)
+<a class="code" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT</a>(StrIntMap, const <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, strcmp)
+
+<span class="comment">/* multimapのインターフェイスと実装を展開 */</span>
+<a class="code" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE</a>(IntIntMMap, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>)
+<a class="code" href="map.html#fc55ebb3d23b8945bde09551d52724b6" title="multimap用実装マクロ">CSTL_MULTIMAP_IMPLEMENT</a>(IntIntMMap, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <a class="code" href="set.html#b259d85f7b994c66cf246b0533e5cac6" title="昇順指定">CSTL_LESS</a>)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    { <span class="comment">/* map */</span>
+        <span class="comment">/* イテレータ */</span>
+        StrIntMapIterator pos;
+        <span class="comment">/* キーが文字列、値がintのmapを生成。</span>
+<span class="comment">         * 型名・関数のプレフィックスはStrIntMapとなる。 */</span>
+        StrIntMap *map = StrIntMap_new();
+
+        <span class="comment">/* 要素を挿入 */</span>
+        StrIntMap_insert(map, <span class="stringliteral">"aaa"</span>, 1, NULL);
+        StrIntMap_insert(map, <span class="stringliteral">"bbb"</span>, 2, NULL);
+        <span class="comment">/* キーによる値の読み書き */</span>
+        printf(<span class="stringliteral">"%d\n"</span>, *StrIntMap_at(map, <span class="stringliteral">"aaa"</span>));
+        *StrIntMap_at(map, <span class="stringliteral">"bbb"</span>) = 3;
+        *StrIntMap_at(map, <span class="stringliteral">"ccc"</span>) = 4; <span class="comment">/* 存在しないキーの要素は自動的に挿入 */</span>
+        <span class="comment">/* 要素数 */</span>
+        printf(<span class="stringliteral">"size: %d\n"</span>, StrIntMap_size(map));
+        <span class="keywordflow">for</span> (pos = StrIntMap_begin(map); pos != StrIntMap_end(map); 
+                pos = StrIntMap_next(pos)) {
+            <span class="comment">/* イテレータによる要素の読み書き */</span>
+            printf(<span class="stringliteral">"%s: %d,"</span>, *StrIntMap_key(pos), *StrIntMap_value(pos));
+            *StrIntMap_value(pos) += 1;
+            printf(<span class="stringliteral">"%d\n"</span>, *StrIntMap_value(pos));
+        }
+
+        <span class="comment">/* 使い終わったら破棄 */</span>
+        StrIntMap_delete(map);
+    }
+    { <span class="comment">/* multimap */</span>
+        <span class="comment">/* イテレータ */</span>
+        IntIntMMapIterator pos;
+        <span class="comment">/* キーがint、値がintのmultimapを生成。</span>
+<span class="comment">         * 型名・関数のプレフィックスはIntIntMMapとなる。 */</span>
+        IntIntMMap *map = IntIntMMap_new();
+
+        <span class="comment">/* 要素を挿入 */</span>
+        IntIntMMap_insert(map, 1, 1);
+        IntIntMMap_insert(map, 2, 2);
+        IntIntMMap_insert(map, 1, 3); <span class="comment">/* 重複したキーを挿入できる */</span>
+        <span class="comment">/* 要素数 */</span>
+        printf(<span class="stringliteral">"size: %d\n"</span>, IntIntMMap_size(map));
+
+        <span class="comment">/* キーが1の要素を探索 */</span>
+        <span class="keywordflow">for</span> (pos = IntIntMMap_lower_bound(map, 1); 
+                pos != IntIntMMap_upper_bound(map, 1); 
+                pos = IntIntMMap_next(pos)) {
+            <span class="comment">/* イテレータによる要素の読み書き */</span>
+            printf(<span class="stringliteral">"%d: %d,"</span>, *IntIntMMap_key(pos), *IntIntMMap_value(pos));
+            *IntIntMMap_value(pos) += 1;
+            printf(<span class="stringliteral">"%d\n"</span>, *IntIntMMap_value(pos));
+        }
+
+        <span class="comment">/* 使い終わったら破棄 */</span>
+        IntIntMMap_delete(map);
+    }
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE(Name, KeyType, ValueType)</a></b> , <b><a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE(Name, KeyType, ValueType)</a></b> の<em>Name</em> に<b>Map</b> , <em>KeyType</em> に<b>KeyT</b> , <em>ValueType</em> に<b>ValueT</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>map専用/multimap専用と記した関数以外の関数は、map/multimap共通の関数である。 <p>
+コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="6104b678d6a7cf3a11c4f9c22f6030bc"></a><!-- doxytag: member="map::CSTL_MAP_INTERFACE" ref="6104b678d6a7cf3a11c4f9c22f6030bc" args="(Name, KeyType, ValueType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MAP_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+map用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のmapのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。mapの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>KeyType</em>&nbsp;</td><td>任意の要素のキーの型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ValueType</em>&nbsp;</td><td>任意の要素の値の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT()</a>の引数と同じものを指定すること。 <p>
+<em>KeyType</em> , <em>ValueType</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>KeyType</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="dbaca65c0bf135072c6c8af5a2de3f5e"></a><!-- doxytag: member="map::CSTL_MAP_IMPLEMENT" ref="dbaca65c0bf135072c6c8af5a2de3f5e" args="(Name, KeyType, ValueType, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MAP_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+map用実装マクロ 
+<p>
+<a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。mapの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>KeyType</em>&nbsp;</td><td>任意の要素のキーの型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ValueType</em>&nbsp;</td><td>任意の要素の値の型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Compare</em>&nbsp;</td><td>要素のキーを比較する関数またはマクロ</td></tr>
+  </table>
+</dl>
+<ul>
+<li><em>KeyType</em> が整数型の場合、 要素のソートの順序を昇順にするならば CSTL_LESS を、降順にするならば CSTL_GREATER を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> が文字列型(const char *)の場合、 strcmp を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> がワイド文字列型(const wchar_t *)の場合、 wcscmp を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> がその他の型の場合、 <div class="fragment"><pre class="fragment">   <span class="keywordtype">int</span> comp(KeyType x, KeyType y);
+</pre></div> のような引数と戻り値を持ち、 x == yならば0を、x &lt; yならば正または負の整数を、x &gt; yならばx &lt; yの場合と逆の符号の整数を 返す比較関数またはマクロを<em>Compare</em> に指定する。</li></ul>
+<p>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd><em>Compare</em> 以外の引数は <a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE()</a>の引数と同じものを指定すること。 <p>
+<em>KeyType</em> , <em>ValueType</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>KeyType</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eda3d4bc511ae6b5b0f011568f5573e3"></a><!-- doxytag: member="map::CSTL_MULTIMAP_INTERFACE" ref="eda3d4bc511ae6b5b0f011568f5573e3" args="(Name, KeyType, ValueType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MULTIMAP_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+multimap用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のmultimapのインターフェイスを展開する。<p>
+使用方法は <a class="el" href="map.html#6104b678d6a7cf3a11c4f9c22f6030bc" title="map用インターフェイスマクロ">CSTL_MAP_INTERFACE()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="fc55ebb3d23b8945bde09551d52724b6"></a><!-- doxytag: member="map::CSTL_MULTIMAP_IMPLEMENT" ref="fc55ebb3d23b8945bde09551d52724b6" args="(Name, KeyType, ValueType, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MULTIMAP_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+multimap用実装マクロ 
+<p>
+<a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+使用方法は <a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="b259d85f7b994c66cf246b0533e5cac6"></a><!-- doxytag: member="map::CSTL_LESS" ref="b259d85f7b994c66cf246b0533e5cac6" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_LESS          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &lt; (y) ? -1 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+昇順指定 
+<p>
+要素を昇順にソートする場合、 <a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT()</a> , <a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目のキー</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負の値</em>&nbsp;</td><td><em>x</em> &lt; <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>正の値</em>&nbsp;</td><td><em>x</em> &gt; <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="aae9080a257d1a3a880210d66d98d556"></a><!-- doxytag: member="map::CSTL_GREATER" ref="aae9080a257d1a3a880210d66d98d556" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_GREATER          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &gt; (y) ? -1 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+降順指定 
+<p>
+要素を降順にソートする場合、 <a class="el" href="map.html#dbaca65c0bf135072c6c8af5a2de3f5e" title="map用実装マクロ">CSTL_MAP_IMPLEMENT()</a> , <a class="el" href="map.html#eda3d4bc511ae6b5b0f011568f5573e3" title="multimap用インターフェイスマクロ">CSTL_MULTIMAP_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目のキー</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負の値</em>&nbsp;</td><td><em>x</em> &gt; <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>正の値</em>&nbsp;</td><td><em>x</em> &lt; <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="767ff9e0c58d27b070f30636b66d2603"></a><!-- doxytag: member="map::Map" ref="767ff9e0c58d27b070f30636b66d2603" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> <a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+map/multimapの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 <a class="el" href="map.html#e507231b7ae1724e44f06a20109c0d0f" title="生成">Map_new()</a> から返されたMap構造体へのポインタをmapオブジェクトという。 
+</div>
+</div><p>
+<a class="anchor" name="1f7e92c9fe44b8adfa664f2a2e9fa1b1"></a><!-- doxytag: member="map::MapIterator" ref="1f7e92c9fe44b8adfa664f2a2e9fa1b1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータ 
+<p>
+要素の位置を示す。 イテレータ同士の比較は、 == , != が使用できる。&lt; , &gt; , &lt;= , &gt;= は使用できない。<p>
+以下、関数から返されたイテレータを有効なイテレータという。 未初期化のイテレータ、または削除された要素のイテレータ、または値が0のイテレータを無効なイテレータという。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="e507231b7ae1724e44f06a20109c0d0f"></a><!-- doxytag: member="map::Map_new" ref="e507231b7ae1724e44f06a20109c0d0f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a>* Map_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のmap/multimapを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、mapオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="35bef41e646d77dbd6f1528c3f3c4649"></a><!-- doxytag: member="map::Map_delete" ref="35bef41e646d77dbd6f1528c3f3c4649" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0eca2fbbb2f55df47ab523e5dc9cedc0"></a><!-- doxytag: member="map::Map_size" ref="0eca2fbbb2f55df47ab523e5dc9cedc0" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Map_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8e9eaef7ae12ce2ccc88757183943cd1"></a><!-- doxytag: member="map::Map_empty" ref="8e9eaef7ae12ce2ccc88757183943cd1" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Map_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2f2f6abbe1cabcb68be37b0d900baf8f"></a><!-- doxytag: member="map::Map_begin" ref="2f2f6abbe1cabcb68be37b0d900baf8f" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b76ac49d1626650143206869c3693e59"></a><!-- doxytag: member="map::Map_end" ref="b76ac49d1626650143206869c3693e59" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素の次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素の次のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f82c3caf2a09132410420451e20eaf8c"></a><!-- doxytag: member="map::Map_rbegin" ref="f82c3caf2a09132410420451e20eaf8c" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_rbegin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e1040d984f2e5afba902767cdae26006"></a><!-- doxytag: member="map::Map_rend" ref="e1040d984f2e5afba902767cdae26006" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_rend           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素の前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素の前のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b681d2070ddb847ff141b341198e1b93"></a><!-- doxytag: member="map::Map_next" ref="b681d2070ddb847ff141b341198e1b93" args="(MapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="map.html#b76ac49d1626650143206869c3693e59" title="最後の要素の次のイテレータ">Map_end()</a> または <a class="el" href="map.html#e1040d984f2e5afba902767cdae26006" title="最初の要素の前のイテレータ">Map_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="462792ce24fbb748751d8e3ada344d4e"></a><!-- doxytag: member="map::Map_prev" ref="462792ce24fbb748751d8e3ada344d4e" args="(MapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_prev           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の前のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="map.html#b76ac49d1626650143206869c3693e59" title="最後の要素の次のイテレータ">Map_end()</a> または <a class="el" href="map.html#e1040d984f2e5afba902767cdae26006" title="最初の要素の前のイテレータ">Map_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="551c86613135092ccf30c389da6cb179"></a><!-- doxytag: member="map::Map_key" ref="551c86613135092ccf30c389da6cb179" args="(MapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyT const* Map_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素のキーのアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素のキーへのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="map.html#b76ac49d1626650143206869c3693e59" title="最後の要素の次のイテレータ">Map_end()</a> または <a class="el" href="map.html#e1040d984f2e5afba902767cdae26006" title="最初の要素の前のイテレータ">Map_rend()</a> でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値のポインタの参照先はconstである。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6e0f68dcd2822c525f95208d4bd005d8"></a><!-- doxytag: member="map::Map_value" ref="6e0f68dcd2822c525f95208d4bd005d8" args="(MapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueT* Map_value           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素の値のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の値へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="map.html#b76ac49d1626650143206869c3693e59" title="最後の要素の次のイテレータ">Map_end()</a> または <a class="el" href="map.html#e1040d984f2e5afba902767cdae26006" title="最初の要素の前のイテレータ">Map_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="af6899cbae14b425ba3f9ed331e763c5"></a><!-- doxytag: member="map::Map_at" ref="af6899cbae14b425ba3f9ed331e763c5" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueT* Map_at           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+キーとペアになる値のアクセス(map専用) 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>key</em> というキーの要素の値へのポインタを返す。 <p>
+<em>self</em> が<em>key</em> というキーの要素を持っていない場合、<em>key</em> というキーの新しい要素(値は不定)を挿入し、その要素の値へのポインタを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わずNULLを返す。</dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>新しい要素を挿入しようとしてメモリ不足で失敗した場合、戻り値のNULLポインタを逆参照しないように注意すること。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5fced953fc7f1f95a1e8e22b6bdb0759"></a><!-- doxytag: member="map::Map_insert" ref="5fced953fc7f1f95a1e8e22b6bdb0759" args="(Map *self, KeyT key, ValueT value, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(map専用) 
+<p>
+<em>key</em> と<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>key</em> というキーの要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e719f5cf6f6b771ce9dc913ae3dfb32d"></a><!-- doxytag: member="map::Map_insert_ref" ref="e719f5cf6f6b771ce9dc913ae3dfb32d" args="(Map *self, KeyT key, ValueT const *value, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT const *&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入(map専用) 
+<p>
+<em>key</em> と*<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>key</em> というキーの要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>value</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmapのみで提供される。 <p>
+ValueT が構造体型の場合、 <a class="el" href="map.html#5fced953fc7f1f95a1e8e22b6bdb0759" title="要素を挿入(map専用)">Map_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a389bb1c36186fd7cb53643d1e281c73"></a><!-- doxytag: member="map::Map_insert" ref="a389bb1c36186fd7cb53643d1e281c73" args="(Map *self, KeyT key, ValueT value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(multimap専用) 
+<p>
+<em>key</em> と<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。 <em>self</em> が既に<em>key</em> というキーの要素を持っている場合、そのキーの一番最後の位置に挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmultimapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="37d715630b32146c7c7d3ada64cc3040"></a><!-- doxytag: member="map::Map_insert_ref" ref="37d715630b32146c7c7d3ada64cc3040" args="(Map *self, KeyT key, ValueT const *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT const *&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入(multimap専用) 
+<p>
+<em>key</em> と*<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。 <em>self</em> が既に<em>key</em> というキーの要素を持っている場合、そのキーの一番最後の位置に挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>value</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmultimapのみで提供される。 <p>
+ValueT が構造体型の場合、 <a class="el" href="map.html#5fced953fc7f1f95a1e8e22b6bdb0759" title="要素を挿入(map専用)">Map_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="608ca47f8a8bef21c62e5019e4f3845d"></a><!-- doxytag: member="map::Map_insert_range" ref="608ca47f8a8bef21c62e5019e4f3845d" args="(Map *self, MapIterator first, MapIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Map_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+[<em>first</em>, <em>last</em>)の範囲の要素のコピーを<em>self</em> に挿入する。 multimapの場合、[<em>first</em>, <em>last</em>)の要素は<em>self</em> が持つ要素でもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>コピー元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>コピー元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="24c570fb4c75ea6c47b440799ebf9848"></a><!-- doxytag: member="map::Map_erase" ref="24c570fb4c75ea6c47b440799ebf9848" args="(Map *self, MapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>pos</em> が示す位置の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>削除する要素の位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="map.html#b76ac49d1626650143206869c3693e59" title="最後の要素の次のイテレータ">Map_end()</a> または <a class="el" href="map.html#e1040d984f2e5afba902767cdae26006" title="最初の要素の前のイテレータ">Map_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c5cb95a0ae43b1d3d0d320cb0bbc0edb"></a><!-- doxytag: member="map::Map_erase_range" ref="c5cb95a0ae43b1d3d0d320cb0bbc0edb" args="(Map *self, MapIterator first, MapIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_erase_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を削除 
+<p>
+<em>self</em> の[<em>first</em>, <em>last</em>)の範囲の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>削除する範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>削除する範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>last</em> </dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c6c88aae21866722eff17fe141087a47"></a><!-- doxytag: member="map::Map_erase_key" ref="c6c88aae21866722eff17fe141087a47" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Map_erase_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素を削除 
+<p>
+<em>self</em> の<em>key</em> というキーの要素をすべて削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>削除する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e7320e3fd0364a832700a1f536606802"></a><!-- doxytag: member="map::Map_clear" ref="e7320e3fd0364a832700a1f536606802" args="(Map *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="048ed3e48c2477bb46e7ce9e80d828de"></a><!-- doxytag: member="map::Map_swap" ref="048ed3e48c2477bb46e7ce9e80d828de" args="(Map *self, Map *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するmapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4aeda3494f94b8b5bf2623845d704750"></a><!-- doxytag: member="map::Map_count" ref="4aeda3494f94b8b5bf2623845d704750" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Map_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素をカウント 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>カウントする要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>key</em> というキーの要素の数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8616878fc75cbed2f5a8c53edf234a2a"></a><!-- doxytag: member="map::Map_find" ref="8616878fc75cbed2f5a8c53edf234a2a" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_find           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素を検索 
+<p>
+<em>self</em> の<em>key</em> というキーの最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Map_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="250e0cdcbd6c0e9ea0b81ad0b0662027"></a><!-- doxytag: member="map::Map_lower_bound" ref="250e0cdcbd6c0e9ea0b81ad0b0662027" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_lower_bound           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の位置の検索 
+<p>
+ソートの基準に従い、<em>self</em> の<em>key</em> <b>以上</b> のキーの最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Map_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="076d49ac51b3f17d48261b904d142248"></a><!-- doxytag: member="map::Map_upper_bound" ref="076d49ac51b3f17d48261b904d142248" args="(Map *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> Map_upper_bound           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の位置の検索 
+<p>
+ソートの基準に従い、<em>self</em> の<em>key</em> <b>より大きい</b> キーの最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Map_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="13ffeab3df48c9b6f2295b0b160b787b"></a><!-- doxytag: member="map::Map_equal_range" ref="13ffeab3df48c9b6f2295b0b160b787b" args="(Map *self, KeyT key, MapIterator *first, MapIterator *last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map_equal_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map.html#767ff9e0c58d27b070f30636b66d2603">Map</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="map.html#1f7e92c9fe44b8adfa664f2a2e9fa1b1">MapIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素の範囲を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td><em>key</em> というキーの最初の要素のイテレータを格納する変数へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td><em>key</em> というキーの最後の要素の次のイテレータを格納する変数へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> がNULLでないこと。 <p>
+<em>last</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>self</em> が<em>key</em> というキーの要素を持たない場合、*<em>first</em> , *<em>last</em> ともにMap_end(<em>self</em>)が格納される。 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

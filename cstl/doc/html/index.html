@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: CSTL リファレンスマニュアル</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li class="current"><a href="index.html"><span>メインページ</span></a></li>
+    <li><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>CSTL リファレンスマニュアル</h1>
+<p>
+<h3 align="center">0.7.0 </h3><h2><a class="anchor" name="s1">
+概要</a></h2>
+CSTLは、C++のSTLを模倣したC言語用のコンテナライブラリである。 CSTLは以下の特長を持つ。<ul>
+<li>STLと同様なデータ構造・アルゴリズムを提供。</li><li>STLに似たインターフェイス。</li><li>任意の型の要素に対応。</li><li>大抵のC89準拠の処理系に移植可能。</li></ul>
+<h2><a class="anchor" name="s2">
+インストール</a></h2>
+<ul>
+<li>手動でコピーする方法<br>
+ <a href="http://sourceforge.jp/projects/cstl/files/">SourceForge.JP</a> からtarballをダウンロードする。 tarballを展開し、cstlディレクトリをインクルードパスの通ったディレクトリにコピーする。</li></ul>
+<p>
+<ul>
+<li><a href="http://svn.sourceforge.jp/svnroot/cstl/">SVNリポジトリ</a>からチェックアウトする方法<br>
+ インクルードパスの通ったディレクトリに移動し、以下のコマンドを実行する。<ul>
+<li>最新スナップショットをチェックアウトする場合 <div class="fragment"><pre class="fragment">  svn checkout http:<span class="comment">//svn.sourceforge.jp/svnroot/cstl/trunk/cstl ./cstl</span>
+</pre></div></li><li>特定のバージョンをチェックアウトする場合(x.x.xはバージョン番号) <div class="fragment"><pre class="fragment">  svn checkout http:<span class="comment">//svn.sourceforge.jp/svnroot/cstl/tags/rel-x.x.x/cstl ./cstl</span>
+</pre></div></li></ul>
+</li></ul>
+<p>
+ヘッダファイルのみなのでビルドする必要はない。<h2><a class="anchor" name="s3">
+コンテナ</a></h2>
+CSTLは以下のコンテナを提供する。<p>
+<ul>
+<li><a href="vector.html">vector</a><br>
+ 可変長配列。末尾での要素の挿入・削除が高速。インデックスによる要素のランダムアクセスが可能。 <a href="algorithm.html">アルゴリズム</a>が使用可能。</li></ul>
+<p>
+<ul>
+<li><a href="deque.html">deque</a><br>
+ 可変長両端キュー。先頭と末尾での要素の挿入・削除が高速。インデックスによる要素のランダムアクセスが可能。 <a href="algorithm.html">アルゴリズム</a>が使用可能。</li></ul>
+<p>
+<ul>
+<li><a href="list.html">list</a><br>
+ 双方向リンクリスト。任意の位置での要素の挿入・削除が高速だが、要素のランダムアクセスはできない。</li></ul>
+<p>
+<ul>
+<li><a href="set.html">set / multiset</a><br>
+ 集合。要素は値によって自動的にソートされる。multisetは要素の重複を許す。</li></ul>
+<p>
+<ul>
+<li><a href="map.html">map / multimap</a><br>
+ キーと値のペアを要素とする連想コンテナ。要素はキーによって自動的にソートされる。multimapは要素のキーの重複を許す。</li></ul>
+<p>
+<ul>
+<li><a href="unordered__set.html">unordered_set / unordered_multiset</a><br>
+ ハッシュテーブルを用いたset。要素はソートされない。unordered_multisetは要素の重複を許す。</li></ul>
+<p>
+<ul>
+<li><a href="unordered__map.html">unordered_map / unordered_multimap</a><br>
+ ハッシュテーブルを用いたmap。要素はソートされない。unordered_multimapは要素のキーの重複を許す。</li></ul>
+<p>
+<ul>
+<li><a href="string.html">string</a><br>
+ 文字列処理に有用な機能を持つコンテナ。 <a href="algorithm.html">アルゴリズム</a>が使用可能。</li></ul>
+<h2><a class="anchor" name="s4">
+STLとの主な違い</a></h2>
+<ul>
+<li>オブジェクトの生成/破棄は、必ずnew/deleteに相当する関数でしなければならない。</li><li>要素の挿入/削除時、自動的にコンストラクタ/デストラクタに相当する関数が呼ばれることはない。</li><li>vector, deque, stringはインデックスで要素にアクセスするため、イテレータをサポートしない。</li><li>vector, stringのshrink()は許容量の縮小ができる。</li><li>stringのreserve()は許容量の縮小ができない。</li><li>set, mapのinsert()は重複による成否を引数で返す。</li><li>set, multiset, map, multimapのerase()は削除した次の位置のイテレータを返す。</li><li>set, multiset, map, multimapのerase_range()は削除した次の位置のイテレータを返す。</li><li>未対応なメンバ関数あり。</li><li>vector, deque, stringのみアルゴリズムをサポートする。</li><li>アルゴリズムのbinary_search()は見つかったインデックスを返す。</li><li>未対応なアルゴリズムあり。</li></ul>
+<h2><a class="anchor" name="s5">
+ライセンス</a></h2>
+CSTLは、修正BSDライセンスに従う。<p>
+Copyright (c) 2006-2010, KATO Noriaki All rights reserved.<p>
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<p>
+<ol type=1>
+<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li><li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li></ol>
+<p>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<h3><a class="anchor" name="s6">
+日本語訳(参考)</a></h3>
+Copyright (c) 2006-2010, KATO Noriaki All rights reserved.<p>
+ソースコード形式かバイナリ形式か、変更するかしないかを問わず、以下の条件を満た す場合に限り、再頒布および使用が許可されます。<p>
+<ol type=1>
+<li>ソースコードを再頒布する場合、上記の著作権表示、本条件一覧、および下記免責 条項を含めること。</li><li>バイナリ形式で再頒布する場合、頒布物に付属のドキュメント等の資料に、上記の 著作権表示、本条件一覧、および下記免責条項を含めること。</li></ol>
+<p>
+本ソフトウェアは、著作権者によって「現状のまま」提供されており、明示黙示を問わ ず、商業的な使用可能性、および特定の目的に対する適合性に関する暗黙の保証も含 め、またそれに限定されない、いかなる保証もありません。著作権者は、事由のいかん を問わず、損害発生の原因いかんを問わず、かつ責任の根拠が契約であるか厳格責任で あるか（過失その他の）不法行為であるかを問わず、仮にそのような損害が発生する可 能性を知らされていたとしても、本ソフトウェアの使用によって発生した（代替品また は代用サービスの調達、使用の喪失、データの喪失、利益の喪失、業務の中断も含め、 またそれに限定されない）直接損害、間接損害、偶発的な損害、特別損害、懲罰的損 害、または結果損害について、一切責任を負わないものとします。<h2><a class="anchor" name="s7">
+作者</a></h2>
+KATO Noriaki &lt;<a href="mailto:katono@users.sourceforge.jp">katono@users.sourceforge.jp</a>&gt; <hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

@@ -1,0 +1,982 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: algorithm</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>algorithm</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#627e4e204a2075ca1a3556d2fecfa1be">Containor_sort</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ソート  <a href="#627e4e204a2075ca1a3556d2fecfa1be"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#cf3ce836e689e3f698b4a69e4b8c8831">Containor_stable_sort</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">安定ソート  <a href="#cf3ce836e689e3f698b4a69e4b8c8831"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#d422831cc47bd5df342bef069685fa80">Containor_partial_sort</a> (Containor *self, size_t idx, size_t sort_n, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">部分ソート  <a href="#d422831cc47bd5df342bef069685fa80"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#0ca7516e098635855c4cb8a30b4c4603">Containor_binary_search</a> (Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">二分探索  <a href="#0ca7516e098635855c4cb8a30b4c4603"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#8dc2b6e9a2340e89326ca18b5fcec1a0">Containor_lower_bound</a> (Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の位置の検索  <a href="#8dc2b6e9a2340e89326ca18b5fcec1a0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#b71efc89b056e11728cb01cdefb71af9">Containor_upper_bound</a> (Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の位置の検索  <a href="#b71efc89b056e11728cb01cdefb71af9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#f084dec0f6ae0a77dd6c4ba45d0617bd">Containor_reverse</a> (Containor *self, size_t idx, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">逆順に並べ替え  <a href="#f084dec0f6ae0a77dd6c4ba45d0617bd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#9f9499b8e909a9834b8f61a4beab0c40">Containor_rotate</a> (Containor *self, size_t first, size_t middle, size_t last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">回転  <a href="#9f9499b8e909a9834b8f61a4beab0c40"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#90a349280848fd3139a72bbd14e67d01">Containor_merge</a> (Containor *self, size_t idx, Containor *x, size_t xidx, size_t xn, Containor *y, size_t yidx, size_t yn, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">マージ  <a href="#90a349280848fd3139a72bbd14e67d01"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#14b5d2c9c3aeee7e0a7968fcf97b45fc">Containor_inplace_merge</a> (Containor *self, size_t first, size_t middle, size_t last, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">連続する範囲のマージ  <a href="#14b5d2c9c3aeee7e0a7968fcf97b45fc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#a77dc175bfe440b6529c9ea43ef75d44">Containor_make_heap</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ヒープに変換  <a href="#a77dc175bfe440b6529c9ea43ef75d44"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#827a5de565ef14ef4e24f1ea6f8c4216">Containor_sort_heap</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ヒープソート  <a href="#827a5de565ef14ef4e24f1ea6f8c4216"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#74bffd2f4a6a45dd7d54b22a4a4eb7f7">Containor_push_heap</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ヒープに追加  <a href="#74bffd2f4a6a45dd7d54b22a4a4eb7f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="algorithm.html#f72895947d61155504675340154dee3d">Containor_pop_heap</a> (Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ヒープから削除  <a href="#f72895947d61155504675340154dee3d"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+<a href="vector.html">vector</a>, <a href="deque.html">deque</a>, <a href="string.html">string</a> において、共通なアルゴリズムを提供する。<p>
+アルゴリズムを使うには、<b>CSTL_XXX_INTERFACE()</b> (XXXは、VECTOR, DEQUE, STRINGのいずれか)を展開する前に、 &lt;cstl/algorithm.h&gt;というヘッダファイルをインクルードする必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/algorithm.h&gt;</span>
+</pre></div><p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<span class="preprocessor">#include &lt;time.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/vector.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/algorithm.h&gt;</span> <span class="comment">/* CSTL_VECTOR_INTERFACE()の前にインクルード */</span>
+
+<span class="comment">/* vectorのインターフェイスと実装を展開 */</span>
+<a class="code" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE</a>(IntVector, <span class="keywordtype">int</span>)
+<a class="code" href="vector.html#d10a71aa4b5f9a4ec9232461e3140c8f" title="実装マクロ">CSTL_VECTOR_IMPLEMENT</a>(IntVector, <span class="keywordtype">int</span>)
+
+<span class="comment">/* intの比較関数 */</span>
+<span class="keywordtype">int</span> int_less(const <span class="keywordtype">void</span> *p1, const <span class="keywordtype">void</span> *p2)
+{
+    <span class="keywordflow">if</span> (*(<span class="keywordtype">int</span>*)p1 &lt; *(<span class="keywordtype">int</span>*)p2) {
+        <span class="keywordflow">return</span> -1;
+    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*(<span class="keywordtype">int</span>*)p1 &gt; *(<span class="keywordtype">int</span>*)p2) {
+        <span class="keywordflow">return</span> 1;
+    } <span class="keywordflow">else</span> {
+        <span class="keywordflow">return</span> 0;
+    }
+}
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    <span class="keywordtype">int</span> i;
+    <span class="keywordtype">size_t</span> idx;
+    <span class="comment">/* intのvectorを生成。</span>
+<span class="comment">     * 型名・関数のプレフィックスはIntVectorとなる。 */</span>
+    IntVector *vec = IntVector_new();
+
+    srand(time(0));
+    <span class="keywordflow">for</span> (i = 0; i &lt; 64; i++) {
+        <span class="comment">/* 末尾から100未満のランダムな値の要素を追加 */</span>
+        IntVector_push_back(vec, rand() % 100);
+    }
+    <span class="comment">/* ソート */</span>
+    IntVector_sort(vec, 0, IntVector_size(vec), int_less);
+    <span class="keywordflow">for</span> (i = 0; i &lt; IntVector_size(vec); i++) {
+        printf(<span class="stringliteral">"%d, "</span>, *IntVector_at(vec, i));
+    }
+    printf(<span class="stringliteral">"\n"</span>);
+    <span class="comment">/* 50以上の最初の要素のインデックス */</span>
+    idx = IntVector_lower_bound(vec, 0, IntVector_size(vec), 50, int_less);
+    <span class="comment">/* 先頭から50未満の要素までを逆順に並べ替え */</span>
+    IntVector_reverse(vec, 0, idx);
+    <span class="keywordflow">for</span> (i = 0; i &lt; IntVector_size(vec); i++) {
+        printf(<span class="stringliteral">"%d, "</span>, *IntVector_at(vec, i));
+    }
+
+    <span class="comment">/* 使い終わったら破棄 */</span>
+    IntVector_delete(vec);
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する関数は、 <b>CSTL_XXX_INTERFACE(Name, Type)</b> の<em>Name</em> に<b>Container</b> , <em>Type</em> に<b>T</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>関数</h2>
+<a class="anchor" name="627e4e204a2075ca1a3556d2fecfa1be"></a><!-- doxytag: member="algorithm::Containor_sort" ref="627e4e204a2075ca1a3556d2fecfa1be" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_sort           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ソート 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を比較関数<em>comp</em> に従ってソートする。 このソートは安定でない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ソート開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ソートする要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量は平均的にはO(N * log N)である。最悪な場合はO(N^2)となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cf3ce836e689e3f698b4a69e4b8c8831"></a><!-- doxytag: member="algorithm::Containor_stable_sort" ref="cf3ce836e689e3f698b4a69e4b8c8831" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_stable_sort           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+安定ソート 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を比較関数<em>comp</em> に従ってソートする。 このソートは安定である。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ソート開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ソートする要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はメモリに十分な空き領域がある場合はO(N * log N)である。空き領域がない場合はO(N * log N * log N)となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d422831cc47bd5df342bef069685fa80"></a><!-- doxytag: member="algorithm::Containor_partial_sort" ref="d422831cc47bd5df342bef069685fa80" args="(Containor *self, size_t idx, size_t sort_n, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_partial_sort           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>sort_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+部分ソート 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素の内、最初の<em>sort_n</em> 個が正しい順序になるように比較関数<em>comp</em> に従ってソートする。 <em>self</em> の<em>idx</em> + <em>sort_n</em> 番目から<em>n</em> - <em>sort_n</em> 個の要素の順序は未定義である。 このソートは安定でない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ソート開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sort_n</em>&nbsp;</td><td>この関数実行の結果、ソート済みになる要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ソート対象の要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>sort_n</em> が<em>n</em> 以下の値であること。 <p>
+<em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N * log N)である。 <p>
+<em>sort_n</em> が<em>n</em> に等しい場合、<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素をソートする。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0ca7516e098635855c4cb8a30b4c4603"></a><!-- doxytag: member="algorithm::Containor_binary_search" ref="0ca7516e098635855c4cb8a30b4c4603" args="(Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Containor_binary_search           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+二分探索 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素において、比較関数<em>comp</em> に従って<em>value</em> に <b>一致</b> する要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>検索開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>検索する要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>検索する値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のインデックスを返す。 複数見つかった場合、最初の要素のインデックスを返す。 <p>
+見つからない場合、<em>idx</em> + <em>n</em> を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素が比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8dc2b6e9a2340e89326ca18b5fcec1a0"></a><!-- doxytag: member="algorithm::Containor_lower_bound" ref="8dc2b6e9a2340e89326ca18b5fcec1a0" args="(Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Containor_lower_bound           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の位置の検索 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素において、比較関数<em>comp</em> に従って<em>value</em> <b>以上</b> の最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>検索開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>検索する要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>検索する値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のインデックスを返す。 <p>
+見つからない場合、<em>idx</em> + <em>n</em> を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素が比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b71efc89b056e11728cb01cdefb71af9"></a><!-- doxytag: member="algorithm::Containor_upper_bound" ref="b71efc89b056e11728cb01cdefb71af9" args="(Containor *self, size_t idx, size_t n, T value, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Containor_upper_bound           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の位置の検索 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素において、比較関数<em>comp</em> に従って<em>value</em> <b>より大きい</b> 最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>検索開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>検索する要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>検索する値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のインデックスを返す。 <p>
+見つからない場合、<em>idx</em> + <em>n</em> を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素が比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f084dec0f6ae0a77dd6c4ba45d0617bd"></a><!-- doxytag: member="algorithm::Containor_reverse" ref="f084dec0f6ae0a77dd6c4ba45d0617bd" args="(Containor *self, size_t idx, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_reverse           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+逆順に並べ替え 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を逆順に並べ替える。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>並べ替え開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>並べ替える要素数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9f9499b8e909a9834b8f61a4beab0c40"></a><!-- doxytag: member="algorithm::Containor_rotate" ref="9f9499b8e909a9834b8f61a4beab0c40" args="(Containor *self, size_t first, size_t middle, size_t last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_rotate           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>middle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+回転 
+<p>
+<em>self</em> の<em>middle</em> 番目から<em>last</em> - 1番目までの要素を<em>first</em> 番目の位置に移動する。 <em>first</em> 番目から<em>middle</em> - 1番目までにあった要素は後ろにずらされる。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td><em>middle</em> 番目から<em>last</em> - 1番目までの要素の移動先 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>middle</em>&nbsp;</td><td>移動元の範囲の開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>移動元の範囲の終了インデックス</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> &lt;= <em>middle</em> &lt;= <em>last</em> &lt;= <em>self</em> の要素数、であること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="90a349280848fd3139a72bbd14e67d01"></a><!-- doxytag: member="algorithm::Containor_merge" ref="90a349280848fd3139a72bbd14e67d01" args="(Containor *self, size_t idx, Containor *x, size_t xidx, size_t xn, Containor *y, size_t yidx, size_t yn, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Containor_merge           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>xidx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>xn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>yidx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>yn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+マージ 
+<p>
+<em>x</em> の<em>xidx</em> 番目から<em>xn</em> 個の要素と<em>y</em> の<em>yidx</em> 番目から<em>yn</em> 個の要素のコピーを比較関数<em>comp</em> に従ってマージし、<em>self</em> の<em>idx</em> 番目の位置に挿入する。 <em>self</em> の<em>idx</em> 番目から<em>xn</em> + <em>yn</em> 個の要素はソートされた状態になる。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目のマージ元のオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>xidx</em>&nbsp;</td><td><em>x</em> のマージ開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>xn</em>&nbsp;</td><td><em>x</em> のマージする要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目のマージ元のオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>yidx</em>&nbsp;</td><td><em>y</em> のマージ開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>yn</em>&nbsp;</td><td><em>y</em> のマージする要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>xidx</em> + <em>xn</em> が<em>x</em> の要素数以下の値であること。 <p>
+<em>yidx</em> + <em>yn</em> が<em>y</em> の要素数以下の値であること。 <p>
+<em>self</em> と<em>x</em> 、<em>self</em> と<em>y</em> は同じオブジェクトでないこと。 <p>
+<em>x</em> の<em>xidx</em> 番目から<em>xn</em> 個の要素が比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>y</em> の<em>yidx</em> 番目から<em>yn</em> 個の要素が比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="14b5d2c9c3aeee7e0a7968fcf97b45fc"></a><!-- doxytag: member="algorithm::Containor_inplace_merge" ref="14b5d2c9c3aeee7e0a7968fcf97b45fc" args="(Containor *self, size_t first, size_t middle, size_t last, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_inplace_merge           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>middle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+連続する範囲のマージ 
+<p>
+<em>self</em> の連続する2つの範囲<em>first</em> 番目から<em>middle</em> - 1番目までと<em>middle</em> 番目から<em>last</em> - 1番目までの要素を比較関数<em>comp</em> に従ってマージする。 <em>self</em> の<em>first</em> 番目から<em>last</em> - 1番目までの要素はソートされた状態になる。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>1つ目のマージ範囲の開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>middle</em>&nbsp;</td><td>1つ目のマージ範囲の終了インデックス、かつ2つ目のマージ範囲の開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>2つ目のマージ範囲の終了インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> &lt;= <em>middle</em> &lt;= <em>last</em> &lt;= <em>self</em> の要素数、であること。 <p>
+<em>self</em> の<em>first</em> 番目から<em>middle</em> - 1番目までの要素は比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>self</em> の<em>middle</em> 番目から<em>last</em> - 1番目までの要素は比較関数<em>comp</em> に従ってソートされていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はメモリに十分な空き領域がある場合はO(N)である。空き領域がない場合はO(N * log N)となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a77dc175bfe440b6529c9ea43ef75d44"></a><!-- doxytag: member="algorithm::Containor_make_heap" ref="a77dc175bfe440b6529c9ea43ef75d44" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_make_heap           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ヒープに変換 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を比較関数<em>comp</em> に従ってヒープに変換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>変換開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>変換する要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="827a5de565ef14ef4e24f1ea6f8c4216"></a><!-- doxytag: member="algorithm::Containor_sort_heap" ref="827a5de565ef14ef4e24f1ea6f8c4216" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_sort_heap           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ヒープソート 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を比較関数<em>comp</em> に従ってソートする。 このソートは安定でない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ソート開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ソートする要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素が比較関数<em>comp</em> に従ってヒープになっていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(N * log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="74bffd2f4a6a45dd7d54b22a4a4eb7f7"></a><!-- doxytag: member="algorithm::Containor_push_heap" ref="74bffd2f4a6a45dd7d54b22a4a4eb7f7" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_push_heap           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ヒープに追加 
+<p>
+<em>self</em> の<em>idx</em> + <em>n</em> - 1番目の要素を、<em>self</em> の<em>idx</em> 番目から<em>n</em> - 1個の範囲のヒープに追加して、<em>idx</em> 番目から<em>n</em> 個の要素を一つのヒープとして再構成する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ヒープ開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>この関数実行の結果、ヒープになる要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> - 1個の要素が比較関数<em>comp</em> に従ってヒープになっていること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f72895947d61155504675340154dee3d"></a><!-- doxytag: member="algorithm::Containor_pop_heap" ref="f72895947d61155504675340154dee3d" args="(Containor *self, size_t idx, size_t n, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Containor_pop_heap           </td>
+          <td>(</td>
+          <td class="paramtype">Containor *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ヒープから削除 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の範囲のヒープから、ヒープの最初の要素とヒープの最後の要素を交換し、<em>self</em> の<em>idx</em> 番目から<em>n</em> - 1個の要素を一つのヒープとして再構成する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>オブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>ヒープ開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ヒープの要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素が比較関数<em>comp</em> に従ってヒープになっていること。 <p>
+<em>n</em> が1以上であること。 <p>
+<em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様)</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>計算量はO(log N)である。 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

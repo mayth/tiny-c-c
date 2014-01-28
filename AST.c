@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "cstl/unordered_map.h"
+#include "cstl/vector.h"
 #include "AST.h"
-#include "trie.h"
 
-Trie *SymbolTable;
+CSTL_VECTOR_IMPLEMENT(ASTVector, AST)
+CSTL_VECTOR_IMPLEMENT(SymbolVector, Symbol)
+CSTL_UNORDERED_MAP_IMPLEMENT(StrSymMap, const char *, Symbol, StrSymMap_hash_string, strcmp)
+
+StrSymMap *SymbolTable;
 
 int AST_comparer(const void *a, const void *b) {
   if (a == b) {
@@ -12,6 +17,7 @@ int AST_comparer(const void *a, const void *b) {
   }
   return -1;
 }
+
 
 AST *AST_alloc() {
   AST *p = (AST *)malloc(sizeof(AST));
@@ -48,50 +54,43 @@ AST *AST_makeUnary(CodeType code, AST *node) {
 }
 
 Symbol *AST_lookupSymbol(char *name) {
-  fprintf(stderr, "lookup symbol: %s\n", name);
-  Symbol *p = trie_search_leaf(SymbolTable, name);
-  if (!p) {
-    p = Symbol_new(name);
-    trie_store(SymbolTable, name, p);
+  StrSymMapIterator it = StrSymMap_find(SymbolTable, name);
+  // If the symbol not found
+  if (StrSymMap_end(SymbolTable) == it) {
+    Symbol *p = Symbol_new(name);
+    StrSymMap_insert_ref(SymbolTable, name, p, NULL);
+    return p;
+  } else {
+    return StrSymMap_value(it);
   }
-  return p;
 }
 
-Symbol *AST_lookupSymbolOrDie(char *name) {
-  Symbol *p = trie_search_leaf(SymbolTable, name);
-  if (!p) {
-    fprintf(stderr, "Could not find the symbol '%s'\n", name);
-    abort();
-  }
-  return p;
-}
-
-Symbol *AST_newSymbol(char *name) {
-  fprintf(stderr, "new symbol: %s\n", name);
-  Symbol *p = trie_search_leaf(SymbolTable, name);
-  if (p) {
-    fprintf(stderr, "Symbol %s already exists.\n", name);
-    abort();
-  }
-  p = Symbol_new(name);
-  trie_store(SymbolTable, name, p);
+AST *AST_wrapSymbol(Symbol *symbol) {
+  AST *p = AST_alloc();
+  p->code = VAL_SYMBOL;
+  p->AST_symbol = symbol;
   return p;
 }
 
 AST *AST_makeSymbol(char *name) {
-  AST *p = AST_alloc();
-  p->code = VAL_SYMBOL;
-  p->AST_symbol_name = name;
-  p->AST_symbol = AST_lookupSymbol(name);
-  return p;
+  return AST_wrapSymbol(AST_lookupSymbol(name));
+}
+
+SymbolVector * AST_to_symbol_vector(ASTVector *ast_vec) {
+  const size_t n = ASTVector_size(ast_vec);
+  SymbolVector *v = SymbolVector_new_reserve(n);
+  for (size_t i = 0; i < n; ++i) {
+    SymbolVector_push_back_ref(v, ASTVector_at(ast_vec, i)->AST_symbol);
+  }
+  return v;
 }
 
 AST *AST_makeFunction(AST *name, AST *params, AST *body) {
   assert(name->code == VAL_SYMBOL);
   assert(params->code == ETC_LIST);
-  Symbol *sym = AST_lookupSymbol(name->AST_symbol_name);
+  Symbol *sym = AST_lookupSymbol(name->AST_symbol->name);
   sym->type = SYM_FUNC;
-  sym->SYM_param = params->AST_list;
+  sym->SYM_param = AST_to_symbol_vector(params->AST_list);
   sym->SYM_body  = body;
   return name;
 }
@@ -103,7 +102,7 @@ AST *AST_defineVariables(AST *vars) {
 AST *AST_makeList(AST *node) {
   AST *p = AST_alloc();
   p->code = ETC_LIST;
-  p->AST_list = List_new(AST_comparer);
+  p->AST_list = ASTVector_new();
   if (node) {
     AST_addList(p, node);
   }
@@ -112,13 +111,13 @@ AST *AST_makeList(AST *node) {
 
 AST *AST_addList(AST *p, AST *e) {
   assert(p->code == ETC_LIST);
-  List_add(p->AST_list, e);
+  ASTVector_push_back_ref(p->AST_list, e);
   return p;
 }
 
 AST *AST_getList(AST *p, unsigned long index) {
   assert(p->code == ETC_LIST);
-  return List_get_at(p->AST_list, index);
+  return ASTVector_at(p->AST_list, index);
 }
 
 void AST_free(AST *ast) {

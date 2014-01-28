@@ -1,0 +1,1870 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: unordered_set</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>unordered_set</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd">CSTL_UNORDERED_SET_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_set用インターフェイスマクロ  <a href="#f10e3c44909bc037c6b9b05d4e20bdcd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c">CSTL_UNORDERED_SET_IMPLEMENT</a>(Name, Type, Hasher, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_set用実装マクロ  <a href="#374e6acb2e3ebdbba66d20f6ac6cb51c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#a15a6af3f1686ced66399a909778c750">CSTL_UNORDERED_MULTISET_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_multiset用インターフェイスマクロ  <a href="#a15a6af3f1686ced66399a909778c750"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f">CSTL_UNORDERED_MULTISET_IMPLEMENT</a>(Name, Type, Hasher, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_multiset用実装マクロ  <a href="#ba224c50f0c341012be66cc28573143f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#f4ba8cc04fed7b21bc61e4aeaea816a9">CSTL_EQUAL_TO</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">整数比較  <a href="#f4ba8cc04fed7b21bc61e4aeaea816a9"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <br>
+<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_set/unordered_multisetの型  <a href="#b77f32f23760d15112734ca5cac38a69"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータ  <a href="#81ef6b7f2896b3ad0b03eeb92a6e67b4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ローカルイテレータ  <a href="#1762767b207c18299224fb45b3173809"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#0bb05740fa9752c1d6eb89574aa0642f">UnorderedSet_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#0bb05740fa9752c1d6eb89574aa0642f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#157de3d8b2628f8c7a334b694e89590e">UnorderedSet_new_rehash</a> (size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケット数を指定して生成  <a href="#157de3d8b2628f8c7a334b694e89590e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#6b130457d3c0036f876b60b51da9fd25">UnorderedSet_delete</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#6b130457d3c0036f876b60b51da9fd25"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#8b08fac855a3cdc33f68052560f8bbac">UnorderedSet_size</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#8b08fac855a3cdc33f68052560f8bbac"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#ca4ece323ab2855f802c93d8e2c28e1e">UnorderedSet_empty</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#ca4ece323ab2855f802c93d8e2c28e1e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#2d20b324cc1f1a138ca8d44f3decb52f">UnorderedSet_begin</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のイテレータ  <a href="#2d20b324cc1f1a138ca8d44f3decb52f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#2f410522091645808da67e8b3b12765b">UnorderedSet_end</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素の次のイテレータ  <a href="#2f410522091645808da67e8b3b12765b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#1138306969cf513b75a632c1fd717509">UnorderedSet_next</a> (<a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のイテレータ  <a href="#1138306969cf513b75a632c1fd717509"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T const *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#6b5e84b588328f4f86b61a9fe00d082d">UnorderedSet_data</a> (<a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素のアクセス  <a href="#6b5e84b588328f4f86b61a9fe00d082d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e928223c30ee5cbbc1cd29e637f7b80b">UnorderedSet_insert</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(unordered_set専用)  <a href="#e928223c30ee5cbbc1cd29e637f7b80b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#68a575405acc4a63efa3c2c6e0157f31">UnorderedSet_insert</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(unordered_multiset専用)  <a href="#68a575405acc4a63efa3c2c6e0157f31"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#847a37a0c4b82b21d4e1a9bdbc330353">UnorderedSet_insert_range</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> first, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#847a37a0c4b82b21d4e1a9bdbc330353"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#7e2cbc31d476afc6d3cbe90b4b92f4b8">UnorderedSet_erase</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#7e2cbc31d476afc6d3cbe90b4b92f4b8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#ddd1a66a5ce8864d3d935ba7a8e199f1">UnorderedSet_erase_range</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> first, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を削除  <a href="#ddd1a66a5ce8864d3d935ba7a8e199f1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#02d23c02bbe9b8da161a2118d839c10e">UnorderedSet_erase_key</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素を削除  <a href="#02d23c02bbe9b8da161a2118d839c10e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#2c5ad86e4fc2fe6e4e921a747bd0f4b8">UnorderedSet_clear</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#2c5ad86e4fc2fe6e4e921a747bd0f4b8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e9e082874dec19d832d2e2731ba8c20f">UnorderedSet_swap</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, <a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#e9e082874dec19d832d2e2731ba8c20f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#73012d74c71149b9c81f7f61f3f1689e">UnorderedSet_count</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素をカウント  <a href="#73012d74c71149b9c81f7f61f3f1689e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#a6f577ed4f2c7a347a2d98113cd110f3">UnorderedSet_find</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素を検索  <a href="#a6f577ed4f2c7a347a2d98113cd110f3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#310ec96a2c3b6ada43e32ff31c8d7945">UnorderedSet_equal_range</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> *first, <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> *last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素の範囲を取得  <a href="#310ec96a2c3b6ada43e32ff31c8d7945"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#ef2646d9e498512616afa07b2d6bf343">UnorderedSet_bucket_count</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケット数を取得  <a href="#ef2646d9e498512616afa07b2d6bf343"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e66423aea31e63c52672a7bf6e7bd545">UnorderedSet_bucket_size</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の要素数を取得  <a href="#e66423aea31e63c52672a7bf6e7bd545"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#f162ef6ef31cc8c3539bd0668765e9c8">UnorderedSet_bucket</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケットのインデックスを取得  <a href="#f162ef6ef31cc8c3539bd0668765e9c8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#cbe64b133bb64226d226d674b84da80f">UnorderedSet_bucket_begin</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の最初の要素のローカルイテレータ  <a href="#cbe64b133bb64226d226d674b84da80f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#f087f887e5d6851225f9e170acdbc8e5">UnorderedSet_bucket_end</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の最後の要素の次のローカルイテレータ  <a href="#f087f887e5d6851225f9e170acdbc8e5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#1b2ee3babe6617a0dc3c017fbe22d3c7">UnorderedSet_bucket_next</a> (<a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のローカルイテレータ  <a href="#1b2ee3babe6617a0dc3c017fbe22d3c7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e5312c1f9a3d76f5b822ff5da115128d">UnorderedSet_load_factor</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターを取得  <a href="#e5312c1f9a3d76f5b822ff5da115128d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#25c6322373d826386b061ccd3cad8228">UnorderedSet_get_max_load_factor</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターの上限を取得  <a href="#25c6322373d826386b061ccd3cad8228"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#0d9af99dd053cec39838741c896f1713">UnorderedSet_set_max_load_factor</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, float z)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターの上限を設定  <a href="#0d9af99dd053cec39838741c896f1713"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#8d6529b42f4af44b7c819f0ef309078f">UnorderedSet_rehash</a> (<a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *self, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケットを拡張して再ハッシュ  <a href="#8d6529b42f4af44b7c819f0ef309078f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e0378417b2d80f4cd95e8c833f5d30bf">UnorderedSet_hash_string</a> (const char *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文字列用ハッシュ関数  <a href="#e0378417b2d80f4cd95e8c833f5d30bf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#34613a605b43bd3b51b2c6b260ad742a">UnorderedSet_hash_wstring</a> (const wchar_t *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワイド文字列用ハッシュ関数  <a href="#34613a605b43bd3b51b2c6b260ad742a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#f8f3f5242298da00ddf84300908aba08">UnorderedSet_hash_char</a> (char data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">char用ハッシュ関数  <a href="#f8f3f5242298da00ddf84300908aba08"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#564f64965343f8c4bbde12e4fecea811">UnorderedSet_hash_schar</a> (signed char data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">signed char用ハッシュ関数  <a href="#564f64965343f8c4bbde12e4fecea811"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#112fb10677713f56435ab0ec1b2d5e6d">UnorderedSet_hash_uchar</a> (unsigned char data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned char用ハッシュ関数  <a href="#112fb10677713f56435ab0ec1b2d5e6d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#0959d9709e00138367cdabd7f498656b">UnorderedSet_hash_short</a> (short data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">short用ハッシュ関数  <a href="#0959d9709e00138367cdabd7f498656b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#76cbcd36b226ff5a2f0b3af4c2abaa03">UnorderedSet_hash_ushort</a> (unsigned short data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned short用ハッシュ関数  <a href="#76cbcd36b226ff5a2f0b3af4c2abaa03"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#069ad6d9b277ca96eab0239955cf38ee">UnorderedSet_hash_int</a> (int data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">int用ハッシュ関数  <a href="#069ad6d9b277ca96eab0239955cf38ee"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#7f5d658f843887b4da50b39c768bf957">UnorderedSet_hash_uint</a> (unsigned int data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned int用ハッシュ関数  <a href="#7f5d658f843887b4da50b39c768bf957"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#e1870b7cf9511878a92a1ff811905c63">UnorderedSet_hash_long</a> (long data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">long用ハッシュ関数  <a href="#e1870b7cf9511878a92a1ff811905c63"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__set.html#7cfb689b71e21b811f1545422459cd74">UnorderedSet_hash_ulong</a> (unsigned long data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned long用ハッシュ関数  <a href="#7cfb689b71e21b811f1545422459cd74"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+unordered_setはsetと同様に、要素の集合を実現する連想コンテナである。 setは二分木で実装されるのに対し、unordered_setはハッシュテーブルで実装される。 同じ値の要素を2個以上挿入することはできない。 挿入した要素は読み出し専用となる。 要素の挿入・削除・検索の計算量は大抵の場合O(1)であるが、最悪の場合O(N)となる。<p>
+unordered_multisetは要素の重複が許されることを除き、unordered_setと同じである。<p>
+ハッシュテーブルの実装において、ハッシュ値の衝突はチェイン法によって解決する。 チェイン法で使われるリンクリストを<b>バケット</b> と呼ぶこととする。 また、バケットの平均要素数(全要素数 / バケット数)を<b>ロードファクター</b> と呼ぶ。 要素挿入後のロードファクターが、設定されているロードファクターの上限を超える場合、 自動的にバケットを拡張して再ハッシュが行われる。<p>
+unordered_set/unordered_multisetを使うには、&lt;cstl/unordered_set.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/unordered_set.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_UNORDERED_SET_INTERFACE(Name, Type)</span>
+<span class="preprocessor"></span><span class="preprocessor">#define CSTL_UNORDERED_SET_IMPLEMENT(Name, Type, Haser, Compare)</span>
+<span class="preprocessor"></span>
+<span class="preprocessor">#define CSTL_UNORDERED_MULTISET_INTERFACE(Name, Type)</span>
+<span class="preprocessor">#define CSTL_UNORDERED_MULTISET_IMPLEMENT(Name, Type, Haser, Compare)</span>
+</pre></div><p>
+<b><a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE()</a></b> は任意の名前と要素の型のunordered_setのインターフェイスを展開する。 <b><a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<b><a class="el" href="unordered__set.html#a15a6af3f1686ced66399a909778c750" title="unordered_multiset用インターフェイスマクロ">CSTL_UNORDERED_MULTISET_INTERFACE()</a></b> は任意の名前と要素の型のunordered_multisetのインターフェイスを展開する。 <b><a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/unordered_set.h&gt;</span>
+
+<span class="comment">/* unordered_setのインターフェイスと実装を展開 */</span>
+<a class="code" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE</a>(IntUSet, <span class="keywordtype">int</span>)
+<a class="code" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT</a>(IntUSet, <span class="keywordtype">int</span>, IntUSet_hash_int, <a class="code" href="unordered__set.html#f4ba8cc04fed7b21bc61e4aeaea816a9" title="整数比較">CSTL_EQUAL_TO</a>)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    <span class="keywordtype">int</span> i;
+    <span class="comment">/* イテレータ */</span>
+    IntUSetIterator pos;
+    <span class="comment">/* intのunordered_setを生成。</span>
+<span class="comment">     * 型名・関数のプレフィックスはIntUSetとなる。 */</span>
+    IntUSet *uset = IntUSet_new();
+
+    <span class="comment">/* 要素を挿入 */</span>
+    <span class="keywordflow">for</span> (i = 0; i &lt; 64; i++) {
+        IntUSet_insert(uset, i, NULL);
+    }
+    <span class="comment">/* 要素数 */</span>
+    printf(<span class="stringliteral">"size: %d\n"</span>, IntUSet_size(uset));
+    <span class="keywordflow">for</span> (pos = IntUSet_begin(uset); pos != IntUSet_end(uset); 
+            pos = IntUSet_next(pos)) {
+        <span class="comment">/* イテレータによる要素の読み出し(書き換えはできない) */</span>
+        printf(<span class="stringliteral">"%d, "</span>, *IntUSet_data(pos));
+    }
+    printf(<span class="stringliteral">"\n"</span>);
+
+    <span class="comment">/* 3以上の要素を削除 */</span>
+    IntUSet_erase_range(uset, IntUSet_find(uset, 3), IntUSet_end(uset));
+
+    <span class="keywordflow">for</span> (pos = IntUSet_begin(uset); pos != IntUSet_end(uset); 
+            pos = IntUSet_next(pos)) {
+        <span class="comment">/* イテレータによる要素の読み出し(書き換えはできない) */</span>
+        printf(<span class="stringliteral">"%d, "</span>, *IntUSet_data(pos));
+    }
+    printf(<span class="stringliteral">"\n"</span>);
+
+    <span class="comment">/* 使い終わったら破棄 */</span>
+    IntUSet_delete(uset);
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE(Name, Type)</a></b> , <b><a class="el" href="unordered__set.html#a15a6af3f1686ced66399a909778c750" title="unordered_multiset用インターフェイスマクロ">CSTL_UNORDERED_MULTISET_INTERFACE(Name, Type)</a></b> の<em>Name</em> に<b>UnorderedSet</b> , <em>Type</em> に<b>T</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>unordered_set専用/unordered_multiset専用と記した関数以外の関数は、unordered_set/unordered_multiset共通の関数である。 <p>
+コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="f10e3c44909bc037c6b9b05d4e20bdcd"></a><!-- doxytag: member="unordered_set::CSTL_UNORDERED_SET_INTERFACE" ref="f10e3c44909bc037c6b9b05d4e20bdcd" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_SET_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_set用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のunordered_setのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。unordered_setの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>Type</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="374e6acb2e3ebdbba66d20f6ac6cb51c"></a><!-- doxytag: member="unordered_set::CSTL_UNORDERED_SET_IMPLEMENT" ref="374e6acb2e3ebdbba66d20f6ac6cb51c" args="(Name, Type, Hasher, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_SET_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Hasher,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_set用実装マクロ 
+<p>
+<a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。unordered_setの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Hasher</em>&nbsp;</td><td>ハッシュ関数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Compare</em>&nbsp;</td><td>要素を比較する関数またはマクロ</td></tr>
+  </table>
+</dl>
+<ul>
+<li><em>Type</em> が整数型の場合、 CSTL_EQUAL_TO を<em>Compare</em> に指定する。 <em>Hasher</em> には以下のハッシュ関数を指定する(ハッシュ関数の<b>Name</b> は引数に指定した<em>Name</em> に置き換えること)。<ul>
+<li><em>Type</em> がcharの場合、<b>Name_hash_char。</b> </li><li><em>Type</em> がsigned charの場合、<b>Name_hash_schar。</b> </li><li><em>Type</em> がunsigned charの場合、<b>Name_hash_uchar。</b> </li><li><em>Type</em> がshortの場合、<b>Name_hash_short。</b> </li><li><em>Type</em> がunsigned shortの場合、<b>Name_hash_ushort。</b> </li><li><em>Type</em> がintの場合、<b>Name_hash_int。</b> </li><li><em>Type</em> がunsigned intの場合、<b>Name_hash_uint。</b> </li><li><em>Type</em> がlongの場合、<b>Name_hash_long。</b> </li><li><em>Type</em> がunsigned longの場合、<b>Name_hash_ulong。</b> </li></ul>
+</li></ul>
+<p>
+<ul>
+<li><em>Type</em> が文字列型(const char *)の場合、 strcmp を<em>Compare</em> に指定する。 <b>Name_hash_string</b> を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>Type</em> がワイド文字列型(const wchar_t *)の場合、 wcscmp を<em>Compare</em> に指定する。 <b>Name_hash_wstring</b> を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>Type</em> がその他の型の場合、 <div class="fragment"><pre class="fragment">   <span class="keywordtype">int</span> comp(Type x, Type y);
+</pre></div> のような引数と戻り値を持ち、 x == yならば0を、x != yならば非0の整数を返す比較関数またはマクロを<em>Compare</em> に指定する。 <div class="fragment"><pre class="fragment">   <span class="keywordtype">size_t</span> hash(Type x);
+</pre></div> のような引数と戻り値を持つハッシュ関数を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd><em>Hasher</em> と <em>Compare</em> 以外の引数は <a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE()</a> の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>Type</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a15a6af3f1686ced66399a909778c750"></a><!-- doxytag: member="unordered_set::CSTL_UNORDERED_MULTISET_INTERFACE" ref="a15a6af3f1686ced66399a909778c750" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MULTISET_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_multiset用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のunordered_multisetのインターフェイスを展開する。<p>
+使用方法は <a class="el" href="unordered__set.html#f10e3c44909bc037c6b9b05d4e20bdcd" title="unordered_set用インターフェイスマクロ">CSTL_UNORDERED_SET_INTERFACE()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="ba224c50f0c341012be66cc28573143f"></a><!-- doxytag: member="unordered_set::CSTL_UNORDERED_MULTISET_IMPLEMENT" ref="ba224c50f0c341012be66cc28573143f" args="(Name, Type, Hasher, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MULTISET_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Hasher,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_multiset用実装マクロ 
+<p>
+<a class="el" href="unordered__set.html#a15a6af3f1686ced66399a909778c750" title="unordered_multiset用インターフェイスマクロ">CSTL_UNORDERED_MULTISET_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+使用方法は <a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="f4ba8cc04fed7b21bc61e4aeaea816a9"></a><!-- doxytag: member="unordered_set::CSTL_EQUAL_TO" ref="f4ba8cc04fed7b21bc61e4aeaea816a9" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_EQUAL_TO          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+整数比較 
+<p>
+要素の値に整数型を指定した場合、 <a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#a15a6af3f1686ced66399a909778c750" title="unordered_multiset用インターフェイスマクロ">CSTL_UNORDERED_MULTISET_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目の値</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>非0</em>&nbsp;</td><td><em>x</em> != <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="b77f32f23760d15112734ca5cac38a69"></a><!-- doxytag: member="unordered_set::UnorderedSet" ref="b77f32f23760d15112734ca5cac38a69" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> <a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_set/unordered_multisetの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 UnorderedSet_new*() から返されたUnorderedSet構造体へのポインタをunordered_setオブジェクトという。 
+</div>
+</div><p>
+<a class="anchor" name="81ef6b7f2896b3ad0b03eeb92a6e67b4"></a><!-- doxytag: member="unordered_set::UnorderedSetIterator" ref="81ef6b7f2896b3ad0b03eeb92a6e67b4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータ 
+<p>
+要素の位置を示す。 イテレータ同士の比較は、 == , != が使用できる。&lt; , &gt; , &lt;= , &gt;= は使用できない。<p>
+以下、関数から返されたイテレータを有効なイテレータという。 未初期化のイテレータ、または削除された要素のイテレータ、または値が0のイテレータを無効なイテレータという。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<a class="anchor" name="1762767b207c18299224fb45b3173809"></a><!-- doxytag: member="unordered_set::UnorderedSetLocalIterator" ref="1762767b207c18299224fb45b3173809" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ローカルイテレータ 
+<p>
+一つのバケットの中の要素を巡回するためのイテレータ。 複数のバケットにまたがって巡回することはできない。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="0bb05740fa9752c1d6eb89574aa0642f"></a><!-- doxytag: member="unordered_set::UnorderedSet_new" ref="0bb05740fa9752c1d6eb89574aa0642f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a>* UnorderedSet_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のunordered_set/unordered_multisetを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、unordered_setオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="157de3d8b2628f8c7a334b694e89590e"></a><!-- doxytag: member="unordered_set::UnorderedSet_new_rehash" ref="157de3d8b2628f8c7a334b694e89590e" args="(size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a>* UnorderedSet_new_rehash           </td>
+          <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケット数を指定して生成 
+<p>
+少なくとも <em>n</em> 個のバケットを確保し、 要素数が0のunordered_set/unordered_multisetを生成する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>バケット数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、unordered_setオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6b130457d3c0036f876b60b51da9fd25"></a><!-- doxytag: member="unordered_set::UnorderedSet_delete" ref="6b130457d3c0036f876b60b51da9fd25" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedSet_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8b08fac855a3cdc33f68052560f8bbac"></a><!-- doxytag: member="unordered_set::UnorderedSet_size" ref="8b08fac855a3cdc33f68052560f8bbac" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ca4ece323ab2855f802c93d8e2c28e1e"></a><!-- doxytag: member="unordered_set::UnorderedSet_empty" ref="ca4ece323ab2855f802c93d8e2c28e1e" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedSet_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2d20b324cc1f1a138ca8d44f3decb52f"></a><!-- doxytag: member="unordered_set::UnorderedSet_begin" ref="2d20b324cc1f1a138ca8d44f3decb52f" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2f410522091645808da67e8b3b12765b"></a><!-- doxytag: member="unordered_set::UnorderedSet_end" ref="2f410522091645808da67e8b3b12765b" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素の次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素の次のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1138306969cf513b75a632c1fd717509"></a><!-- doxytag: member="unordered_set::UnorderedSet_next" ref="1138306969cf513b75a632c1fd717509" args="(UnorderedSetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__set.html#2f410522091645808da67e8b3b12765b" title="最後の要素の次のイテレータ">UnorderedSet_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6b5e84b588328f4f86b61a9fe00d082d"></a><!-- doxytag: member="unordered_set::UnorderedSet_data" ref="6b5e84b588328f4f86b61a9fe00d082d" args="(UnorderedSetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const* UnorderedSet_data           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ。<em>pos</em> の型は UnorderedSetLocalIterator でもよい。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__set.html#2f410522091645808da67e8b3b12765b" title="最後の要素の次のイテレータ">UnorderedSet_end()</a> または <a class="el" href="unordered__set.html#f087f887e5d6851225f9e170acdbc8e5" title="一つのバケットの中の最後の要素の次のローカルイテレータ...">UnorderedSet_bucket_end()</a> でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値のポインタの参照先はconstである。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e928223c30ee5cbbc1cd29e637f7b80b"></a><!-- doxytag: member="unordered_set::UnorderedSet_insert" ref="e928223c30ee5cbbc1cd29e637f7b80b" args="(UnorderedSet *self, T data, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(unordered_set専用) 
+<p>
+<em>data</em> のコピーを<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>data</em> という値の要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_setのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="68a575405acc4a63efa3c2c6e0157f31"></a><!-- doxytag: member="unordered_set::UnorderedSet_insert" ref="68a575405acc4a63efa3c2c6e0157f31" args="(UnorderedSet *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(unordered_multiset専用) 
+<p>
+<em>data</em> のコピーを<em>self</em> に挿入する。 <em>self</em> が既に<em>data</em> という値の要素を持っている場合、その要素と同じバケットに挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_multisetのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="847a37a0c4b82b21d4e1a9bdbc330353"></a><!-- doxytag: member="unordered_set::UnorderedSet_insert_range" ref="847a37a0c4b82b21d4e1a9bdbc330353" args="(UnorderedSet *self, UnorderedSetIterator first, UnorderedSetIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedSet_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+[<em>first</em>, <em>last</em>)の範囲の要素のコピーを<em>self</em> に挿入する。 unordered_multisetの場合、[<em>first</em>, <em>last</em>)の要素は<em>self</em> が持つ要素でもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>コピー元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>コピー元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7e2cbc31d476afc6d3cbe90b4b92f4b8"></a><!-- doxytag: member="unordered_set::UnorderedSet_erase" ref="7e2cbc31d476afc6d3cbe90b4b92f4b8" args="(UnorderedSet *self, UnorderedSetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>pos</em> が示す位置の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>削除する要素の位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__set.html#2f410522091645808da67e8b3b12765b" title="最後の要素の次のイテレータ">UnorderedSet_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ddd1a66a5ce8864d3d935ba7a8e199f1"></a><!-- doxytag: member="unordered_set::UnorderedSet_erase_range" ref="ddd1a66a5ce8864d3d935ba7a8e199f1" args="(UnorderedSet *self, UnorderedSetIterator first, UnorderedSetIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_erase_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を削除 
+<p>
+<em>self</em> の[<em>first</em>, <em>last</em>)の範囲の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>削除する範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>削除する範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>last</em> </dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="02d23c02bbe9b8da161a2118d839c10e"></a><!-- doxytag: member="unordered_set::UnorderedSet_erase_key" ref="02d23c02bbe9b8da161a2118d839c10e" args="(UnorderedSet *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_erase_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素を削除 
+<p>
+<em>self</em> の<em>data</em> という値の要素をすべて削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>削除する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2c5ad86e4fc2fe6e4e921a747bd0f4b8"></a><!-- doxytag: member="unordered_set::UnorderedSet_clear" ref="2c5ad86e4fc2fe6e4e921a747bd0f4b8" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedSet_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e9e082874dec19d832d2e2731ba8c20f"></a><!-- doxytag: member="unordered_set::UnorderedSet_swap" ref="e9e082874dec19d832d2e2731ba8c20f" args="(UnorderedSet *self, UnorderedSet *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedSet_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するunordered_setオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="73012d74c71149b9c81f7f61f3f1689e"></a><!-- doxytag: member="unordered_set::UnorderedSet_count" ref="73012d74c71149b9c81f7f61f3f1689e" args="(UnorderedSet *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素をカウント 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>カウントする要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>data</em> という値の要素の数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a6f577ed4f2c7a347a2d98113cd110f3"></a><!-- doxytag: member="unordered_set::UnorderedSet_find" ref="a6f577ed4f2c7a347a2d98113cd110f3" args="(UnorderedSet *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> UnorderedSet_find           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素を検索 
+<p>
+<em>self</em> の<em>data</em> という値の最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 UnorderedSet_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="310ec96a2c3b6ada43e32ff31c8d7945"></a><!-- doxytag: member="unordered_set::UnorderedSet_equal_range" ref="310ec96a2c3b6ada43e32ff31c8d7945" args="(UnorderedSet *self, T data, UnorderedSetIterator *first, UnorderedSetIterator *last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedSet_equal_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#81ef6b7f2896b3ad0b03eeb92a6e67b4">UnorderedSetIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素の範囲を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td><em>data</em> という値の最初の要素のイテレータを格納する変数へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td><em>data</em> という値の最後の要素の次のイテレータを格納する変数へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> がNULLでないこと。 <p>
+<em>last</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>self</em> が<em>data</em> という値の要素を持たない場合、*<em>first</em> , *<em>last</em> ともにUnorderedSet_end(<em>self</em>)が格納される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ef2646d9e498512616afa07b2d6bf343"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket_count" ref="ef2646d9e498512616afa07b2d6bf343" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_bucket_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケット数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> のバケット数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e66423aea31e63c52672a7bf6e7bd545"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket_size" ref="e66423aea31e63c52672a7bf6e7bd545" args="(UnorderedSet *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_bucket_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の要素数</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedSet_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f162ef6ef31cc8c3539bd0668765e9c8"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket" ref="f162ef6ef31cc8c3539bd0668765e9c8" args="(UnorderedSet *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_bucket           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケットのインデックスを取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>data</em> という値が挿入されるバケットのインデックス </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cbe64b133bb64226d226d674b84da80f"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket_begin" ref="cbe64b133bb64226d226d674b84da80f" args="(UnorderedSet *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a> UnorderedSet_bucket_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の最初の要素のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の最初の要素のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedSet_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f087f887e5d6851225f9e170acdbc8e5"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket_end" ref="f087f887e5d6851225f9e170acdbc8e5" args="(UnorderedSet *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a> UnorderedSet_bucket_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の最後の要素の次のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の最後の要素の次のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedSet_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1b2ee3babe6617a0dc3c017fbe22d3c7"></a><!-- doxytag: member="unordered_set::UnorderedSet_bucket_next" ref="1b2ee3babe6617a0dc3c017fbe22d3c7" args="(UnorderedSetLocalIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a> UnorderedSet_bucket_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#1762767b207c18299224fb45b3173809">UnorderedSetLocalIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>ローカルイテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なローカルイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__set.html#2f410522091645808da67e8b3b12765b" title="最後の要素の次のイテレータ">UnorderedSet_end()</a> または <a class="el" href="unordered__set.html#f087f887e5d6851225f9e170acdbc8e5" title="一つのバケットの中の最後の要素の次のローカルイテレータ...">UnorderedSet_bucket_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e5312c1f9a3d76f5b822ff5da115128d"></a><!-- doxytag: member="unordered_set::UnorderedSet_load_factor" ref="e5312c1f9a3d76f5b822ff5da115128d" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnorderedSet_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターを取得 
+<p>
+バケットの平均要素数(全要素数 / バケット数)をロードファクターと呼ぶ。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> のロードファクター </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="25c6322373d826386b061ccd3cad8228"></a><!-- doxytag: member="unordered_set::UnorderedSet_get_max_load_factor" ref="25c6322373d826386b061ccd3cad8228" args="(UnorderedSet *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnorderedSet_get_max_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターの上限を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ロードファクターの上限 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0d9af99dd053cec39838741c896f1713"></a><!-- doxytag: member="unordered_set::UnorderedSet_set_max_load_factor" ref="0d9af99dd053cec39838741c896f1713" args="(UnorderedSet *self, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedSet_set_max_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターの上限を設定 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>設定するロードファクターの上限 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8d6529b42f4af44b7c819f0ef309078f"></a><!-- doxytag: member="unordered_set::UnorderedSet_rehash" ref="8d6529b42f4af44b7c819f0ef309078f" args="(UnorderedSet *self, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedSet_rehash           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__set.html#b77f32f23760d15112734ca5cac38a69">UnorderedSet</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケットを拡張して再ハッシュ 
+<p>
+バケット数を 少なくとも <em>n</em> 個に拡張し、全要素をハッシュ関数によって再び振り分ける。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>バケット数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>バケットの拡張に成功した場合、非0を返す。 <p>
+<em>n</em> が<em>self</em> の現在のバケット数以下の場合、<em>self</em> の変更を行わず非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e0378417b2d80f4cd95e8c833f5d30bf"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_string" ref="e0378417b2d80f4cd95e8c833f5d30bf" args="(const char *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_string           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+文字列用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に const char * を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="34613a605b43bd3b51b2c6b260ad742a"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_wstring" ref="34613a605b43bd3b51b2c6b260ad742a" args="(const wchar_t *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_wstring           </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ワイド文字列用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に const wchar_t * を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f8f3f5242298da00ddf84300908aba08"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_char" ref="f8f3f5242298da00ddf84300908aba08" args="(char data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_char           </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="564f64965343f8c4bbde12e4fecea811"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_schar" ref="564f64965343f8c4bbde12e4fecea811" args="(signed char data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_schar           </td>
+          <td>(</td>
+          <td class="paramtype">signed char&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+signed char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に signed char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="112fb10677713f56435ab0ec1b2d5e6d"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_uchar" ref="112fb10677713f56435ab0ec1b2d5e6d" args="(unsigned char data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_uchar           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に unsigned char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0959d9709e00138367cdabd7f498656b"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_short" ref="0959d9709e00138367cdabd7f498656b" args="(short data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_short           </td>
+          <td>(</td>
+          <td class="paramtype">short&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+short用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に short を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="76cbcd36b226ff5a2f0b3af4c2abaa03"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_ushort" ref="76cbcd36b226ff5a2f0b3af4c2abaa03" args="(unsigned short data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_ushort           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned short用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に unsigned short を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="069ad6d9b277ca96eab0239955cf38ee"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_int" ref="069ad6d9b277ca96eab0239955cf38ee" args="(int data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_int           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+int用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に int を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7f5d658f843887b4da50b39c768bf957"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_uint" ref="7f5d658f843887b4da50b39c768bf957" args="(unsigned int data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_uint           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned int用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に unsigned int を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e1870b7cf9511878a92a1ff811905c63"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_long" ref="e1870b7cf9511878a92a1ff811905c63" args="(long data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_long           </td>
+          <td>(</td>
+          <td class="paramtype">long&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+long用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に long を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7cfb689b71e21b811f1545422459cd74"></a><!-- doxytag: member="unordered_set::UnorderedSet_hash_ulong" ref="7cfb689b71e21b811f1545422459cd74" args="(unsigned long data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedSet_hash_ulong           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>data</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned long用ハッシュ関数 
+<p>
+<a class="el" href="unordered__set.html#374e6acb2e3ebdbba66d20f6ac6cb51c" title="unordered_set用実装マクロ">CSTL_UNORDERED_SET_IMPLEMENT()</a> , <a class="el" href="unordered__set.html#ba224c50f0c341012be66cc28573143f" title="unordered_multiset用実装マクロ">CSTL_UNORDERED_MULTISET_IMPLEMENT()</a> の引数<em>Type</em> に unsigned long を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>要素の値 </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

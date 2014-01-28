@@ -1,0 +1,1645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: list</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>list</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#8ed1dbc214101b7224c8887402696ba0">CSTL_LIST_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">インターフェイスマクロ  <a href="#8ed1dbc214101b7224c8887402696ba0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#73c659df00cce91b10410f68d17a419e">CSTL_LIST_IMPLEMENT</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">実装マクロ  <a href="#73c659df00cce91b10410f68d17a419e"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">listの型  <a href="#61366e7da8638d66a464a4a6f4799199"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータ  <a href="#af352721e31827d0e03c8116decba48e"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#35c5162e0d65a50719f6603764691608">List_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#35c5162e0d65a50719f6603764691608"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#d85e84b7c671f0d1ca0df6bcc0e3be2a">List_delete</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#d85e84b7c671f0d1ca0df6bcc0e3be2a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#e8555376c3eef14e0686e7b047dd73bc">List_size</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#e8555376c3eef14e0686e7b047dd73bc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#ab3a174abfabeeba67101fb1690a90b2">List_empty</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#ab3a174abfabeeba67101fb1690a90b2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#d2b917788b1067f5a92d81b60aaa9d08">List_begin</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のイテレータ  <a href="#d2b917788b1067f5a92d81b60aaa9d08"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#e3df9dbddd82f29f7504ea1222f3669e">List_end</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素の次のイテレータ  <a href="#e3df9dbddd82f29f7504ea1222f3669e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#b2c9aa2e9715ca9e2623494f7afc6eb2">List_rbegin</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素のイテレータ  <a href="#b2c9aa2e9715ca9e2623494f7afc6eb2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#f9dc99f16b869f2f5a071ff6530cdb4a">List_rend</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素の前のイテレータ  <a href="#f9dc99f16b869f2f5a071ff6530cdb4a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#79153b6b75d4c60c68b64373f2afd205">List_next</a> (<a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のイテレータ  <a href="#79153b6b75d4c60c68b64373f2afd205"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#4639e6e138c1635e5cb69b12052dddb9">List_prev</a> (<a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">前のイテレータ  <a href="#4639e6e138c1635e5cb69b12052dddb9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#3c470c345b1c58aaa0133ec604ab3c54">List_data</a> (<a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素のアクセス  <a href="#3c470c345b1c58aaa0133ec604ab3c54"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#08b1981f4efeb46b18c2712a66e6cf70">List_front</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のアクセス  <a href="#08b1981f4efeb46b18c2712a66e6cf70"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#3cf626f8ece36167c7fdcc8bf4bbbf0e">List_back</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素のアクセス  <a href="#3cf626f8ece36167c7fdcc8bf4bbbf0e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#ea2c7e74aefaaf893ae2b202733be0cd">List_insert</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入  <a href="#ea2c7e74aefaaf893ae2b202733be0cd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#3b2ae6535f185e1b4ab0483f4e1c7e99">List_insert_ref</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入  <a href="#3b2ae6535f185e1b4ab0483f4e1c7e99"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#b0c844b48d45673662d83c6a0be8ee3b">List_insert_n</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, size_t n, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数個の要素を挿入  <a href="#b0c844b48d45673662d83c6a0be8ee3b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#517170390c37cd2c06651887fb0c66e1">List_insert_n_ref</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, size_t n, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで複数個の要素を挿入  <a href="#517170390c37cd2c06651887fb0c66e1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#029e084798d15299e02fcaadbddb0ee7">List_insert_array</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, T const *data, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">配列の要素を挿入  <a href="#029e084798d15299e02fcaadbddb0ee7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#d294f0151e3daf430578578a911da639">List_insert_range</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> first, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#d294f0151e3daf430578578a911da639"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#94d4af9300680eeddb0d8110703dc21d">List_push_front</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">先頭に要素を挿入  <a href="#94d4af9300680eeddb0d8110703dc21d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#3d130fbf7eb927fd32574dcf74918857">List_push_front_ref</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで先頭に要素を挿入  <a href="#3d130fbf7eb927fd32574dcf74918857"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#9eff28c4f9977e12d19ccadc8fbefd0b">List_push_back</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">末尾に要素を挿入  <a href="#9eff28c4f9977e12d19ccadc8fbefd0b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#d1bef57aa2ffcf8debef1e3304672d4b">List_push_back_ref</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで末尾に要素を挿入  <a href="#d1bef57aa2ffcf8debef1e3304672d4b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#f2e46b9e396ef39787cc04bd96e81ccd">List_erase</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#f2e46b9e396ef39787cc04bd96e81ccd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#b28192b221a1bd4e1ad068d2acf71d44">List_erase_range</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> first, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を削除  <a href="#b28192b221a1bd4e1ad068d2acf71d44"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#b3d7708c753e03a899682ec24a90562e">List_pop_front</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素を削除  <a href="#b3d7708c753e03a899682ec24a90562e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#2dac51d5a378013cfbbdaead6d36634d">List_pop_back</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素を削除  <a href="#2dac51d5a378013cfbbdaead6d36634d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#92f1453accb1f29be48155f8b27f4638">List_clear</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#92f1453accb1f29be48155f8b27f4638"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#8c2b4362f230d705784d9e17b463909d">List_resize</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, size_t n, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を変更  <a href="#8c2b4362f230d705784d9e17b463909d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#1c4a07faeb23a65a2daf819d01f9b3c5">List_swap</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#1c4a07faeb23a65a2daf819d01f9b3c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#d5774c47b06033335d3c7824e8e81a73">List_splice</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> pos, <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *x, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> first, <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">つなぎ換え  <a href="#d5774c47b06033335d3c7824e8e81a73"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#5e286813c24955634be696310a6f1684">List_sort</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, int(*comp)(const void *p1, const void *p2))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ソート  <a href="#5e286813c24955634be696310a6f1684"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#81811cacde61f6f246aaa43e54157518">List_reverse</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">逆順に並べ替え  <a href="#81811cacde61f6f246aaa43e54157518"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="list.html#74a21c553e965ebeab48ffbf3c59abdf">List_merge</a> (<a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *self, <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *x, int(*comp)(const void *p1, const void p2 *))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">マージ  <a href="#74a21c553e965ebeab48ffbf3c59abdf"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+listは双方向リンクリストである。 任意の位置での要素の挿入・削除の計算量がO(1)であるが、要素のランダムアクセスはできない。<p>
+listを使うには、&lt;cstl/list.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/list.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_LIST_INTERFACE(Name, Type)</span>
+<span class="preprocessor">#define CSTL_LIST_IMPLEMENT(Name, Type)</span>
+</pre></div><p>
+<b><a class="el" href="list.html#8ed1dbc214101b7224c8887402696ba0" title="インターフェイスマクロ">CSTL_LIST_INTERFACE()</a></b> は任意の名前と要素の型のlistのインターフェイスを展開する。 <b><a class="el" href="list.html#73c659df00cce91b10410f68d17a419e" title="実装マクロ">CSTL_LIST_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;string.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/list.h&gt;</span>
+
+<span class="keyword">typedef</span> <span class="keyword">struct </span>{
+    <span class="keywordtype">char</span> *key;
+    <span class="keywordtype">int</span> value;
+} Hoge;
+
+Hoge *Hoge_new(<span class="keywordtype">char</span> *key, <span class="keywordtype">int</span> value)
+{
+    Hoge *<span class="keyword">self</span> = malloc(<span class="keyword">sizeof</span>(Hoge));
+    <span class="keyword">self</span>-&gt;key = key;
+    <span class="keyword">self</span>-&gt;value = value;
+    <span class="keywordflow">return</span> <span class="keyword">self</span>;
+}
+
+<span class="keywordtype">void</span> Hoge_delete(Hoge *<span class="keyword">self</span>)
+{
+    free(<span class="keyword">self</span>);
+}
+
+<span class="keywordtype">void</span> Hoge_print(Hoge *<span class="keyword">self</span>)
+{
+    printf(<span class="stringliteral">"%s: %d\n"</span>, self-&gt;key, self-&gt;value);
+}
+
+<span class="comment">/* listのインターフェイスと実装を展開 */</span>
+<a class="code" href="list.html#8ed1dbc214101b7224c8887402696ba0" title="インターフェイスマクロ">CSTL_LIST_INTERFACE</a>(HogeList, Hoge *)
+<a class="code" href="list.html#73c659df00cce91b10410f68d17a419e" title="実装マクロ">CSTL_LIST_IMPLEMENT</a>(HogeList, Hoge *)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    Hoge *hoge;
+    <span class="comment">/* イテレータ */</span>
+    HogeListIterator pos;
+    <span class="comment">/* (Hoge *)のlistを生成。</span>
+<span class="comment">     * 型名・関数のプレフィックスはHogeListとなる。 */</span>
+    HogeList *lst = HogeList_new();
+
+    <span class="comment">/* 末尾から追加 */</span>
+    hoge = Hoge_new(<span class="stringliteral">"aaa"</span>, 1);
+    HogeList_push_back(lst, hoge);
+    hoge = Hoge_new(<span class="stringliteral">"bbb"</span>, 2);
+    HogeList_push_back(lst, hoge);
+
+    <span class="comment">/* 先頭から追加 */</span>
+    hoge = Hoge_new(<span class="stringliteral">"ccc"</span>, 3);
+    HogeList_push_front(lst, hoge);
+    hoge = Hoge_new(<span class="stringliteral">"ddd"</span>, 4);
+    HogeList_push_front(lst, hoge);
+
+    <span class="comment">/* 要素数 */</span>
+    printf(<span class="stringliteral">"size: %d\n"</span>, HogeList_size(lst));
+
+    <span class="keywordflow">for</span> (pos = HogeList_begin(lst); pos != HogeList_end(lst); 
+            pos = HogeList_next(pos)) {
+        <span class="comment">/* イテレータによる要素のアクセス */</span>
+        Hoge_print(*HogeList_data(pos));
+        (*HogeList_data(pos))-&gt;value++;
+        Hoge_print(*HogeList_data(pos));
+    }
+    <span class="keywordflow">for</span> (pos = HogeList_begin(lst); pos != HogeList_end(lst); 
+            pos = HogeList_next(pos)) {
+        Hoge *h = *HogeList_data(pos);
+        <span class="keywordflow">if</span> (!strcmp(h-&gt;key, <span class="stringliteral">"bbb"</span>)) {
+            hoge = Hoge_new(<span class="stringliteral">"eee"</span>, 5);
+            <span class="comment">/* 要素の挿入 */</span>
+            HogeList_insert(lst, pos, hoge);
+        }
+    }
+    <span class="keywordflow">for</span> (pos = HogeList_begin(lst); pos != HogeList_end(lst);) {
+        Hoge *h = *HogeList_data(pos);
+        <span class="keywordflow">if</span> (!strcmp(h-&gt;key, <span class="stringliteral">"bbb"</span>)) {
+            Hoge_delete(h);
+            <span class="comment">/* 要素の削除 */</span>
+            pos = HogeList_erase(lst, pos);
+        } <span class="keywordflow">else</span> {
+            pos = HogeList_next(pos);
+        }
+    }
+
+    <span class="comment">/* 先頭から全要素を削除 */</span>
+    <span class="keywordflow">while</span> (!HogeList_empty(lst)) {
+        Hoge *h = *HogeList_front(lst);
+        Hoge_print(h);
+        Hoge_delete(h);
+        HogeList_pop_front(lst);
+    }
+
+    <span class="comment">/* 使い終わったら破棄 */</span>
+    HogeList_delete(lst);
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="list.html#8ed1dbc214101b7224c8887402696ba0" title="インターフェイスマクロ">CSTL_LIST_INTERFACE(Name, Type)</a></b> の<em>Name</em> に<b>List</b> , <em>Type</em> に<b>T</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="8ed1dbc214101b7224c8887402696ba0"></a><!-- doxytag: member="list::CSTL_LIST_INTERFACE" ref="8ed1dbc214101b7224c8887402696ba0" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_LIST_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+インターフェイスマクロ 
+<p>
+任意の名前と要素の型のlistのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。listの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="list.html#73c659df00cce91b10410f68d17a419e" title="実装マクロ">CSTL_LIST_IMPLEMENT()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="73c659df00cce91b10410f68d17a419e"></a><!-- doxytag: member="list::CSTL_LIST_IMPLEMENT" ref="73c659df00cce91b10410f68d17a419e" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_LIST_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+実装マクロ 
+<p>
+<a class="el" href="list.html#8ed1dbc214101b7224c8887402696ba0" title="インターフェイスマクロ">CSTL_LIST_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。listの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="list.html#8ed1dbc214101b7224c8887402696ba0" title="インターフェイスマクロ">CSTL_LIST_INTERFACE()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="61366e7da8638d66a464a4a6f4799199"></a><!-- doxytag: member="list::List" ref="61366e7da8638d66a464a4a6f4799199" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> <a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+listの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 <a class="el" href="list.html#35c5162e0d65a50719f6603764691608" title="生成">List_new()</a> から返されたList構造体へのポインタをlistオブジェクトという。 
+</div>
+</div><p>
+<a class="anchor" name="af352721e31827d0e03c8116decba48e"></a><!-- doxytag: member="list::ListIterator" ref="af352721e31827d0e03c8116decba48e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータ 
+<p>
+要素の位置を示す。 イテレータ同士の比較は、 == , != が使用できる。&lt; , &gt; , &lt;= , &gt;= は使用できない。<p>
+以下、関数から返されたイテレータを有効なイテレータという。 未初期化のイテレータ、または削除された要素のイテレータ、または値が0のイテレータを無効なイテレータという。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="35c5162e0d65a50719f6603764691608"></a><!-- doxytag: member="list::List_new" ref="35c5162e0d65a50719f6603764691608" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a>* List_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のlistを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、listオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d85e84b7c671f0d1ca0df6bcc0e3be2a"></a><!-- doxytag: member="list::List_delete" ref="d85e84b7c671f0d1ca0df6bcc0e3be2a" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e8555376c3eef14e0686e7b047dd73bc"></a><!-- doxytag: member="list::List_size" ref="e8555376c3eef14e0686e7b047dd73bc" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t List_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ab3a174abfabeeba67101fb1690a90b2"></a><!-- doxytag: member="list::List_empty" ref="ab3a174abfabeeba67101fb1690a90b2" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d2b917788b1067f5a92d81b60aaa9d08"></a><!-- doxytag: member="list::List_begin" ref="d2b917788b1067f5a92d81b60aaa9d08" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e3df9dbddd82f29f7504ea1222f3669e"></a><!-- doxytag: member="list::List_end" ref="e3df9dbddd82f29f7504ea1222f3669e" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素の次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素の次のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b2c9aa2e9715ca9e2623494f7afc6eb2"></a><!-- doxytag: member="list::List_rbegin" ref="b2c9aa2e9715ca9e2623494f7afc6eb2" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_rbegin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f9dc99f16b869f2f5a071ff6530cdb4a"></a><!-- doxytag: member="list::List_rend" ref="f9dc99f16b869f2f5a071ff6530cdb4a" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_rend           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素の前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素の前のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="79153b6b75d4c60c68b64373f2afd205"></a><!-- doxytag: member="list::List_next" ref="79153b6b75d4c60c68b64373f2afd205" args="(ListIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="list.html#e3df9dbddd82f29f7504ea1222f3669e" title="最後の要素の次のイテレータ">List_end()</a> または <a class="el" href="list.html#f9dc99f16b869f2f5a071ff6530cdb4a" title="最初の要素の前のイテレータ">List_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4639e6e138c1635e5cb69b12052dddb9"></a><!-- doxytag: member="list::List_prev" ref="4639e6e138c1635e5cb69b12052dddb9" args="(ListIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_prev           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の前のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="list.html#e3df9dbddd82f29f7504ea1222f3669e" title="最後の要素の次のイテレータ">List_end()</a> または <a class="el" href="list.html#f9dc99f16b869f2f5a071ff6530cdb4a" title="最初の要素の前のイテレータ">List_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3c470c345b1c58aaa0133ec604ab3c54"></a><!-- doxytag: member="list::List_data" ref="3c470c345b1c58aaa0133ec604ab3c54" args="(ListIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* List_data           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="list.html#e3df9dbddd82f29f7504ea1222f3669e" title="最後の要素の次のイテレータ">List_end()</a> または <a class="el" href="list.html#f9dc99f16b869f2f5a071ff6530cdb4a" title="最初の要素の前のイテレータ">List_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="08b1981f4efeb46b18c2712a66e6cf70"></a><!-- doxytag: member="list::List_front" ref="08b1981f4efeb46b18c2712a66e6cf70" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* List_front           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3cf626f8ece36167c7fdcc8bf4bbbf0e"></a><!-- doxytag: member="list::List_back" ref="3cf626f8ece36167c7fdcc8bf4bbbf0e" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* List_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ea2c7e74aefaaf893ae2b202733be0cd"></a><!-- doxytag: member="list::List_insert" ref="ea2c7e74aefaaf893ae2b202733be0cd" args="(List *self, ListIterator pos, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、<em>data</em> のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3b2ae6535f185e1b4ab0483f4e1c7e99"></a><!-- doxytag: member="list::List_insert_ref" ref="3b2ae6535f185e1b4ab0483f4e1c7e99" args="(List *self, ListIterator pos, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、*<em>data</em> のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="list.html#ea2c7e74aefaaf893ae2b202733be0cd" title="要素を挿入">List_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b0c844b48d45673662d83c6a0be8ee3b"></a><!-- doxytag: member="list::List_insert_n" ref="b0c844b48d45673662d83c6a0be8ee3b" args="(List *self, ListIterator pos, size_t n, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_insert_n           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数個の要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、<em>data</em> のコピーを<em>n</em> 個挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="517170390c37cd2c06651887fb0c66e1"></a><!-- doxytag: member="list::List_insert_n_ref" ref="517170390c37cd2c06651887fb0c66e1" args="(List *self, ListIterator pos, size_t n, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_insert_n_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで複数個の要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、*<em>data</em> のコピーを<em>n</em> 個挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="list.html#b0c844b48d45673662d83c6a0be8ee3b" title="複数個の要素を挿入">List_insert_n()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="029e084798d15299e02fcaadbddb0ee7"></a><!-- doxytag: member="list::List_insert_array" ref="029e084798d15299e02fcaadbddb0ee7" args="(List *self, ListIterator pos, T const *data, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_insert_array           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+配列の要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、<em>data</em> という配列から<em>n</em> 個の要素のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータの配列 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d294f0151e3daf430578578a911da639"></a><!-- doxytag: member="list::List_insert_range" ref="d294f0151e3daf430578578a911da639" args="(List *self, ListIterator pos, ListIterator first, ListIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、[<em>first</em>, <em>last</em>)の範囲の要素のコピーを挿入する。 [<em>first</em>, <em>last</em>)の要素は<em>self</em> が持つ要素でもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>コピー元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>コピー元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+[<em>first</em>, <em>last</em>)が有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="94d4af9300680eeddb0d8110703dc21d"></a><!-- doxytag: member="list::List_push_front" ref="94d4af9300680eeddb0d8110703dc21d" args="(List *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_push_front           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+先頭に要素を挿入 
+<p>
+<em>data</em> のコピーを<em>self</em> の最初の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3d130fbf7eb927fd32574dcf74918857"></a><!-- doxytag: member="list::List_push_front_ref" ref="3d130fbf7eb927fd32574dcf74918857" args="(List *self, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_push_front_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで先頭に要素を挿入 
+<p>
+*<em>data</em> のコピーを<em>self</em> の最初の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="list.html#94d4af9300680eeddb0d8110703dc21d" title="先頭に要素を挿入">List_push_front()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9eff28c4f9977e12d19ccadc8fbefd0b"></a><!-- doxytag: member="list::List_push_back" ref="9eff28c4f9977e12d19ccadc8fbefd0b" args="(List *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_push_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+末尾に要素を挿入 
+<p>
+<em>data</em> のコピーを<em>self</em> の最後の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d1bef57aa2ffcf8debef1e3304672d4b"></a><!-- doxytag: member="list::List_push_back_ref" ref="d1bef57aa2ffcf8debef1e3304672d4b" args="(List *self, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_push_back_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで末尾に要素を挿入 
+<p>
+*<em>data</em> のコピーを<em>self</em> の最後の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="list.html#9eff28c4f9977e12d19ccadc8fbefd0b" title="末尾に要素を挿入">List_push_back()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f2e46b9e396ef39787cc04bd96e81ccd"></a><!-- doxytag: member="list::List_erase" ref="f2e46b9e396ef39787cc04bd96e81ccd" args="(List *self, ListIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>pos</em> が示す位置の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>削除する要素の位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="list.html#e3df9dbddd82f29f7504ea1222f3669e" title="最後の要素の次のイテレータ">List_end()</a> または <a class="el" href="list.html#f9dc99f16b869f2f5a071ff6530cdb4a" title="最初の要素の前のイテレータ">List_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b28192b221a1bd4e1ad068d2acf71d44"></a><!-- doxytag: member="list::List_erase_range" ref="b28192b221a1bd4e1ad068d2acf71d44" args="(List *self, ListIterator first, ListIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a> List_erase_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を削除 
+<p>
+<em>self</em> の[<em>first</em>, <em>last</em>)の範囲の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>削除する範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>削除する範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>last</em> </dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b3d7708c753e03a899682ec24a90562e"></a><!-- doxytag: member="list::List_pop_front" ref="b3d7708c753e03a899682ec24a90562e" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_pop_front           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素を削除 
+<p>
+<em>self</em> の最初の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2dac51d5a378013cfbbdaead6d36634d"></a><!-- doxytag: member="list::List_pop_back" ref="2dac51d5a378013cfbbdaead6d36634d" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_pop_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素を削除 
+<p>
+<em>self</em> の最後の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="92f1453accb1f29be48155f8b27f4638"></a><!-- doxytag: member="list::List_clear" ref="92f1453accb1f29be48155f8b27f4638" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8c2b4362f230d705784d9e17b463909d"></a><!-- doxytag: member="list::List_resize" ref="8c2b4362f230d705784d9e17b463909d" args="(List *self, size_t n, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List_resize           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を変更 
+<p>
+<em>self</em> の要素数を<em>n</em> 個に変更する。 <em>n</em> が<em>self</em> の現在の要素数以下の場合、要素数が<em>n</em> 個になるまで末尾から要素が削除される。 <em>n</em> が<em>self</em> の現在の要素数より大きい場合、要素数が<em>n</em> 個になるまで<em>data</em> のコピーが末尾から挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>要素数の変更に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1c4a07faeb23a65a2daf819d01f9b3c5"></a><!-- doxytag: member="list::List_swap" ref="1c4a07faeb23a65a2daf819d01f9b3c5" args="(List *self, List *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するlistオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d5774c47b06033335d3c7824e8e81a73"></a><!-- doxytag: member="list::List_splice" ref="d5774c47b06033335d3c7824e8e81a73" args="(List *self, ListIterator pos, List *x, ListIterator first, ListIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_splice           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#af352721e31827d0e03c8116decba48e">ListIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+つなぎ換え 
+<p>
+<em>self</em> の<em>pos</em> が示す位置に、<em>x</em> の[<em>first</em>, <em>last</em>)の範囲の要素を移動する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>つなぎ換え先 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>[<em>first</em>, <em>last</em>)の要素を持つlistオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>つなぎ換え元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>つなぎ換え元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+[<em>first</em>, <em>last</em>)が<em>x</em> の有効なイテレータであること。 <p>
+<em>self</em> と<em>x</em> が同一ならば<em>pos</em> は[<em>first</em>, <em>last</em>)の範囲外であること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5e286813c24955634be696310a6f1684"></a><!-- doxytag: member="list::List_sort" ref="5e286813c24955634be696310a6f1684" args="(List *self, int(*comp)(const void *p1, const void *p2))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_sort           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void *p2)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ソート 
+<p>
+<em>self</em> のすべての要素を比較関数<em>comp</em> に従ってソートする。 このソートは安定である。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様) </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="81811cacde61f6f246aaa43e54157518"></a><!-- doxytag: member="list::List_reverse" ref="81811cacde61f6f246aaa43e54157518" args="(List *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_reverse           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+逆順に並べ替え 
+<p>
+<em>self</em> のすべての要素を逆順に並べ替える。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="74a21c553e965ebeab48ffbf3c59abdf"></a><!-- doxytag: member="list::List_merge" ref="74a21c553e965ebeab48ffbf3c59abdf" args="(List *self, List *x, int(*comp)(const void *p1, const void p2 *))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void List_merge           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="list.html#61366e7da8638d66a464a4a6f4799199">List</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *p1, const void p2 *)&nbsp;</td>
+          <td class="paramname"> <em>comp</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+マージ 
+<p>
+ソートされた状態である<em>self</em> と<em>x</em> において、<em>x</em> のすべての要素を比較関数<em>comp</em> に従って<em>self</em> にマージする。 <em>self</em> はソートされた状態になり、<em>x</em> は空になる。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>listオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> にマージされるlistオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>comp</em>&nbsp;</td><td>比較関数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>comp</em> には、*p1 == *p2ならば0を、*p1 &lt; *p2ならば正または負の整数を、*p1 &gt; *p2ならば*p1 &lt; *p2の場合と逆の符号の整数を返す関数を指定すること。 (C標準関数のqsort(), bsearch()に使用する関数ポインタと同じ仕様) <p>
+selfとxがcompに従ってソートされていること。 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

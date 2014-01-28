@@ -1,0 +1,2119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: unordered_map</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>unordered_map</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5">CSTL_UNORDERED_MAP_INTERFACE</a>(Name, KeyType, ValueType)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_map用インターフェイスマクロ  <a href="#74ca754231304c0372dadb0d17a3e4c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c">CSTL_UNORDERED_MAP_IMPLEMENT</a>(Name, KeyType, ValueType, Hasher, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_map用実装マクロ  <a href="#87717f51ffa27ca81972343f910b046c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7">CSTL_UNORDERED_MULTIMAP_INTERFACE</a>(Name, KeyType, ValueType)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_multimap用インターフェイスマクロ  <a href="#6f4b3230a7045f70e36b2a092485d8c7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6">CSTL_UNORDERED_MULTIMAP_IMPLEMENT</a>(Name, KeyType, ValueType, Hasher, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_multimap用実装マクロ  <a href="#b5086171f513bdac4858157e1a4cd9b6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#f4ba8cc04fed7b21bc61e4aeaea816a9">CSTL_EQUAL_TO</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">整数比較  <a href="#f4ba8cc04fed7b21bc61e4aeaea816a9"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <br>
+<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unordered_map/unordered_multimapの型  <a href="#7d298e24bd6615c0c24ac1dabb6dc511"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータ  <a href="#e6ef81fadbb5bd4f71a6e0dfc201eac7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ローカルイテレータ  <a href="#938a0197324ad839394f9fb2c9a820a8"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#4e57903631e8b6eaa232eea2b6414cd7">UnorderedMap_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#4e57903631e8b6eaa232eea2b6414cd7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#335cb2d840b83a26b30b7b98b8e5bb22">UnorderedMap_new_rehash</a> (size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケット数を指定して生成  <a href="#335cb2d840b83a26b30b7b98b8e5bb22"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#2730eaf179741d2b055f4679a0d53c1c">UnorderedMap_delete</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#2730eaf179741d2b055f4679a0d53c1c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#52fdaa818f20945ed1ad248c564a1125">UnorderedMap_size</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#52fdaa818f20945ed1ad248c564a1125"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#d7802550119c22fd193543442b2ceb85">UnorderedMap_empty</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#d7802550119c22fd193543442b2ceb85"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#bee8c2e0af21e4bd1503dcb793411d62">UnorderedMap_begin</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のイテレータ  <a href="#bee8c2e0af21e4bd1503dcb793411d62"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839">UnorderedMap_end</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素の次のイテレータ  <a href="#f68976489ba2ad2e11a83ead7a2cf839"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#6c7cba39bb67f197acb706fb3b7ca0d7">UnorderedMap_next</a> (<a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のイテレータ  <a href="#6c7cba39bb67f197acb706fb3b7ca0d7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">KeyT const *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#5976c69ef7b261ba06e67a546700e6af">UnorderedMap_key</a> (<a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素のキーのアクセス  <a href="#5976c69ef7b261ba06e67a546700e6af"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">ValueT *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#058fb2bc4fbea650b7b48009e73b1d79">UnorderedMap_value</a> (<a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素の値のアクセス  <a href="#058fb2bc4fbea650b7b48009e73b1d79"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">ValueT *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#060550af0e60c61134456a45713d7127">UnorderedMap_at</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">キーとペアになる値のアクセス(unordered_map専用)  <a href="#060550af0e60c61134456a45713d7127"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#d4663c04d03a49d9035c1c8ef03efd25">UnorderedMap_insert</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key, ValueT value, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(unordered_map専用)  <a href="#d4663c04d03a49d9035c1c8ef03efd25"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#fc9ace0a4cdcc19f7a1d9c028ed36db0">UnorderedMap_insert_ref</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key, ValueT const *value, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入(unordered_map専用)  <a href="#fc9ace0a4cdcc19f7a1d9c028ed36db0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#eb8122c6936f0aeafca22f70204e45b3">UnorderedMap_insert</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key, ValueT value)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(unordered_multimap専用)  <a href="#eb8122c6936f0aeafca22f70204e45b3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#9cb62269f67c57f165e8292a0de94b99">UnorderedMap_insert_ref</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key, ValueT const *value)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入(unordered_multimap専用)  <a href="#9cb62269f67c57f165e8292a0de94b99"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#48cc486aa8024197560073ba3508ef68">UnorderedMap_insert_range</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> first, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#48cc486aa8024197560073ba3508ef68"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#2c78df970169c7020efa0903cac84908">UnorderedMap_erase</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#2c78df970169c7020efa0903cac84908"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#5235980236bc2dc6fadfb2fb5017c5ae">UnorderedMap_erase_range</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> first, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を削除  <a href="#5235980236bc2dc6fadfb2fb5017c5ae"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#808ddb76f9e5e3a91eb899462eb9534a">UnorderedMap_erase_key</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素を削除  <a href="#808ddb76f9e5e3a91eb899462eb9534a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#6aa95fb8ad4226ec0ed83614f4479217">UnorderedMap_clear</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#6aa95fb8ad4226ec0ed83614f4479217"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#388d23dc24aceef0850909e1e050662a">UnorderedMap_swap</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, <a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#388d23dc24aceef0850909e1e050662a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#d19c1af4de698ae962e6713fafc3595e">UnorderedMap_count</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素をカウント  <a href="#d19c1af4de698ae962e6713fafc3595e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#ec0ef886670d5215c383d7aaeade4634">UnorderedMap_find</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素を検索  <a href="#ec0ef886670d5215c383d7aaeade4634"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#8ff726619b90269d1daf216821f60bb1">UnorderedMap_equal_range</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> *first, <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> *last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定キーの要素の範囲を取得  <a href="#8ff726619b90269d1daf216821f60bb1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#58fc76f0c3f5ee97d16225ea4d479441">UnorderedMap_bucket_count</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケット数を取得  <a href="#58fc76f0c3f5ee97d16225ea4d479441"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#2f45c595d5e19ac01ed99eba721b3e04">UnorderedMap_bucket_size</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の要素数を取得  <a href="#2f45c595d5e19ac01ed99eba721b3e04"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#0bc1e80dc8d3b450f78bccab977f518c">UnorderedMap_bucket</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, KeyT key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケットのインデックスを取得  <a href="#0bc1e80dc8d3b450f78bccab977f518c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#7fd5373f5666a7048ffce358db069d7c">UnorderedMap_bucket_begin</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の最初の要素のローカルイテレータ  <a href="#7fd5373f5666a7048ffce358db069d7c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#95d6bef06d82403fa59553a8f4043f53">UnorderedMap_bucket_end</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">一つのバケットの中の最後の要素の次のローカルイテレータ  <a href="#95d6bef06d82403fa59553a8f4043f53"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#01520170185814367d425d8f74b52af3">UnorderedMap_bucket_next</a> (<a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のローカルイテレータ  <a href="#01520170185814367d425d8f74b52af3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#8897a382add177498188d383befec194">UnorderedMap_load_factor</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターを取得  <a href="#8897a382add177498188d383befec194"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#9c35ff164092575f8a7aaaeb813f67b5">UnorderedMap_get_max_load_factor</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターの上限を取得  <a href="#9c35ff164092575f8a7aaaeb813f67b5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#bdc231708a70251bf8ff0fe9262ee543">UnorderedMap_set_max_load_factor</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, float z)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ロードファクターの上限を設定  <a href="#bdc231708a70251bf8ff0fe9262ee543"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#ccf23ddd57c5ae85b92d3f8cbcf8a545">UnorderedMap_rehash</a> (<a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *self, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バケットを拡張して再ハッシュ  <a href="#ccf23ddd57c5ae85b92d3f8cbcf8a545"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#2a263e59a5ba5dd9a576b6eafa52ada6">UnorderedMap_hash_string</a> (const char *key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">文字列用ハッシュ関数  <a href="#2a263e59a5ba5dd9a576b6eafa52ada6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#a7f78bfdcae00928b1ce62652834813f">UnorderedMap_hash_wstring</a> (const wchar_t *key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワイド文字列用ハッシュ関数  <a href="#a7f78bfdcae00928b1ce62652834813f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#a31337b94060c8428fb8771d46044737">UnorderedMap_hash_char</a> (char key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">char用ハッシュ関数  <a href="#a31337b94060c8428fb8771d46044737"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#f1b0856974a01b6b2ca6c86e7ebfc617">UnorderedMap_hash_schar</a> (signed char key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">signed char用ハッシュ関数  <a href="#f1b0856974a01b6b2ca6c86e7ebfc617"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#6397e3c696281ed05ffe039589d54d71">UnorderedMap_hash_uchar</a> (unsigned char key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned char用ハッシュ関数  <a href="#6397e3c696281ed05ffe039589d54d71"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#579c6eb5d4672804da68e14e77b61808">UnorderedMap_hash_short</a> (short key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">short用ハッシュ関数  <a href="#579c6eb5d4672804da68e14e77b61808"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#091ff4e5148ed67dfb8d12c2d03a6a47">UnorderedMap_hash_ushort</a> (unsigned short key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned short用ハッシュ関数  <a href="#091ff4e5148ed67dfb8d12c2d03a6a47"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#385b468b5904eaa71cb684ea31e61a52">UnorderedMap_hash_int</a> (int key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">int用ハッシュ関数  <a href="#385b468b5904eaa71cb684ea31e61a52"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#139dd73f21af16a4d4053b2ebd2dac3c">UnorderedMap_hash_uint</a> (unsigned int key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned int用ハッシュ関数  <a href="#139dd73f21af16a4d4053b2ebd2dac3c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#bc048649ac47a48e72d75b651d9467c2">UnorderedMap_hash_long</a> (long key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">long用ハッシュ関数  <a href="#bc048649ac47a48e72d75b651d9467c2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unordered__map.html#d2900bbc51773d4fd0061dacad3dfdda">UnorderedMap_hash_ulong</a> (unsigned long key)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">unsigned long用ハッシュ関数  <a href="#d2900bbc51773d4fd0061dacad3dfdda"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+unordered_mapはmapと同様に、キーと値のペアを要素とする連想コンテナである。 mapは二分木で実装されるのに対し、unordered_mapはハッシュテーブルで実装される。 同じキーの要素を2個以上挿入することはできない。 挿入した要素のキーは読み出し専用となる。 要素の挿入・削除・キーの検索の計算量は大抵の場合O(1)であるが、最悪の場合O(N)となる。<p>
+unordered_multimapはキーの重複が許されることと、キーとペアになる値の直接アクセスが不可能であることを除き、unordered_mapと同じである。<p>
+ハッシュテーブルの実装において、ハッシュ値の衝突はチェイン法によって解決する。 チェイン法で使われるリンクリストを<b>バケット</b> と呼ぶこととする。 また、バケットの平均要素数(全要素数 / バケット数)を<b>ロードファクター</b> と呼ぶ。 要素挿入後のロードファクターが、設定されているロードファクターの上限を超える場合、 自動的にバケットを拡張して再ハッシュが行われる。<p>
+unordered_map/unordered_multimapを使うには、&lt;cstl/unordered_map.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/unordered_map.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_UNORDERED_MAP_INTERFACE(Name, KeyType, ValueType)</span>
+<span class="preprocessor"></span><span class="preprocessor">#define CSTL_UNORDERED_MAP_IMPLEMENT(Name, KeyType, ValueType, Hasher, Compare)</span>
+<span class="preprocessor"></span>
+<span class="preprocessor">#define CSTL_UNORDERED_MULTIMAP_INTERFACE(Name, KeyType, ValueType)</span>
+<span class="preprocessor">#define CSTL_UNORDERED_MULTIMAP_IMPLEMENT(Name, KeyType, ValueType, Hasher, Compare)</span>
+</pre></div><p>
+<b><a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE()</a></b> は任意の名前と要素の型のunordered_mapのインターフェイスを展開する。 <b><a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<b><a class="el" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7" title="unordered_multimap用インターフェイスマクロ">CSTL_UNORDERED_MULTIMAP_INTERFACE()</a></b> は任意の名前と要素の型のunordered_multimapのインターフェイスを展開する。 <b><a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;string.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/unordered_map.h&gt;</span>
+
+<span class="comment">/* unordered_mapのインターフェイスと実装を展開 */</span>
+<a class="code" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE</a>(StrIntUMap, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>)
+<a class="code" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT</a>(StrIntUMap, const <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, 
+        StrIntUMap_hash_string, strcmp)
+
+<span class="comment">/* unordered_multimapのインターフェイスと実装を展開 */</span>
+<a class="code" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7" title="unordered_multimap用インターフェイスマクロ">CSTL_UNORDERED_MULTIMAP_INTERFACE</a>(IntIntUMMap, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>)
+<a class="code" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT</a>(IntIntUMMap, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, 
+        StrIntUMap_hash_int, <a class="code" href="unordered__set.html#f4ba8cc04fed7b21bc61e4aeaea816a9" title="整数比較">CSTL_EQUAL_TO</a>)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    { <span class="comment">/* unordered_map */</span>
+        <span class="comment">/* イテレータ */</span>
+        StrIntUMapIterator pos;
+        <span class="comment">/* キーが文字列、値がintのunordered_mapを生成。</span>
+<span class="comment">         * 型名・関数のプレフィックスはStrIntUMapとなる。 */</span>
+        StrIntUMap *umap = StrIntUMap_new();
+
+        <span class="comment">/* 要素を挿入 */</span>
+        StrIntUMap_insert(umap, <span class="stringliteral">"aaa"</span>, 1, NULL);
+        StrIntUMap_insert(umap, <span class="stringliteral">"bbb"</span>, 2, NULL);
+        <span class="comment">/* キーによる値の読み書き */</span>
+        printf(<span class="stringliteral">"%d\n"</span>, *StrIntUMap_at(umap, <span class="stringliteral">"aaa"</span>));
+        *StrIntUMap_at(umap, <span class="stringliteral">"bbb"</span>) = 3;
+        *StrIntUMap_at(umap, <span class="stringliteral">"ccc"</span>) = 4; <span class="comment">/* 存在しないキーの要素は自動的に挿入 */</span>
+        <span class="comment">/* 要素数 */</span>
+        printf(<span class="stringliteral">"size: %d\n"</span>, StrIntUMap_size(umap));
+        <span class="keywordflow">for</span> (pos = StrIntUMap_begin(umap); pos != StrIntUMap_end(umap); 
+                pos = StrIntUMap_next(pos)) {
+            <span class="comment">/* イテレータによる要素の読み書き */</span>
+            printf(<span class="stringliteral">"%s: %d,"</span>, *StrIntUMap_key(pos), *StrIntUMap_value(pos));
+            *StrIntUMap_value(pos) += 1;
+            printf(<span class="stringliteral">"%d\n"</span>, *StrIntUMap_value(pos));
+        }
+
+        <span class="comment">/* 使い終わったら破棄 */</span>
+        StrIntUMap_delete(umap);
+    }
+    { <span class="comment">/* unordered_multimap */</span>
+        <span class="comment">/* イテレータ */</span>
+        IntIntUMMapIterator pos;
+        IntIntUMMapIterator first, last;
+        <span class="comment">/* キーがint、値がintのunordered_multimapを生成。</span>
+<span class="comment">         * 型名・関数のプレフィックスはIntIntUMMapとなる。 */</span>
+        IntIntUMMap *umap = IntIntUMMap_new();
+
+        <span class="comment">/* 要素を挿入 */</span>
+        IntIntUMMap_insert(umap, 1, 1);
+        IntIntUMMap_insert(umap, 2, 2);
+        IntIntUMMap_insert(umap, 1, 3); <span class="comment">/* 重複したキーを挿入できる */</span>
+        <span class="comment">/* 要素数 */</span>
+        printf(<span class="stringliteral">"size: %d\n"</span>, IntIntUMMap_size(umap));
+
+        <span class="comment">/* キーが1の要素を探索 */</span>
+        IntIntUMMap_equal_range(umap, 1, &amp;first, &amp;last);
+        <span class="keywordflow">for</span> (pos = first; pos != last; pos = IntIntUMMap_next(pos)) {
+            <span class="comment">/* イテレータによる要素の読み書き */</span>
+            printf(<span class="stringliteral">"%d: %d,"</span>, *IntIntUMMap_key(pos), *IntIntUMMap_value(pos));
+            *IntIntUMMap_value(pos) += 1;
+            printf(<span class="stringliteral">"%d\n"</span>, *IntIntUMMap_value(pos));
+        }
+
+        <span class="comment">/* 使い終わったら破棄 */</span>
+        IntIntUMMap_delete(umap);
+    }
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE(Name, KeyType, ValueType)</a></b> , <b><a class="el" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7" title="unordered_multimap用インターフェイスマクロ">CSTL_UNORDERED_MULTIMAP_INTERFACE(Name, KeyType, ValueType)</a></b> の<em>Name</em> に<b>UnorderedMap</b> , <em>KeyType</em> に<b>KeyT</b> , <em>ValueType</em> に<b>ValueT</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>unordered_map専用/unordered_multimap専用と記した関数以外の関数は、unordered_map/unordered_multimap共通の関数である。 <p>
+コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="74ca754231304c0372dadb0d17a3e4c5"></a><!-- doxytag: member="unordered_map::CSTL_UNORDERED_MAP_INTERFACE" ref="74ca754231304c0372dadb0d17a3e4c5" args="(Name, KeyType, ValueType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MAP_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_map用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のunordered_mapのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。unordered_mapの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>KeyType</em>&nbsp;</td><td>任意の要素のキーの型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ValueType</em>&nbsp;</td><td>任意の要素の値の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> の引数と同じものを指定すること。 <p>
+<em>KeyType</em> , <em>ValueType</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>KeyType</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="87717f51ffa27ca81972343f910b046c"></a><!-- doxytag: member="unordered_map::CSTL_UNORDERED_MAP_IMPLEMENT" ref="87717f51ffa27ca81972343f910b046c" args="(Name, KeyType, ValueType, Hasher, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MAP_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Hasher,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_map用実装マクロ 
+<p>
+<a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。unordered_mapの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>KeyType</em>&nbsp;</td><td>任意の要素のキーの型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ValueType</em>&nbsp;</td><td>任意の要素の値の型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Hasher</em>&nbsp;</td><td>ハッシュ関数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Compare</em>&nbsp;</td><td>要素のキーを比較する関数またはマクロ</td></tr>
+  </table>
+</dl>
+<ul>
+<li><em>KeyType</em> が整数型の場合、 CSTL_EQUAL_TO を<em>Compare</em> に指定する。 <em>Hasher</em> には以下のハッシュ関数を指定する(ハッシュ関数の<b>Name</b> は引数に指定した<em>Name</em> に置き換えること)。<ul>
+<li><em>KeyType</em> がcharの場合、<b>Name_hash_char。</b> </li><li><em>KeyType</em> がsigned charの場合、<b>Name_hash_schar。</b> </li><li><em>KeyType</em> がunsigned charの場合、<b>Name_hash_uchar。</b> </li><li><em>KeyType</em> がshortの場合、<b>Name_hash_short。</b> </li><li><em>KeyType</em> がunsigned shortの場合、<b>Name_hash_ushort。</b> </li><li><em>KeyType</em> がintの場合、<b>Name_hash_int。</b> </li><li><em>KeyType</em> がunsigned intの場合、<b>Name_hash_uint。</b> </li><li><em>KeyType</em> がlongの場合、<b>Name_hash_long。</b> </li><li><em>KeyType</em> がunsigned longの場合、<b>Name_hash_ulong。</b> </li></ul>
+</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> が文字列型(const char *)の場合、 strcmp を<em>Compare</em> に指定する。 <b>Name_hash_string</b> を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> がワイド文字列型(const wchar_t *)の場合、 wcscmp を<em>Compare</em> に指定する。 <b>Name_hash_wstring</b> を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>KeyType</em> がその他の型の場合、 <div class="fragment"><pre class="fragment">   <span class="keywordtype">int</span> comp(KeyType x, KeyType y);
+</pre></div> のような引数と戻り値を持ち、 x == yならば0を、x != yならば非0の整数を返す比較関数またはマクロを<em>Compare</em> に指定する。 <div class="fragment"><pre class="fragment">   <span class="keywordtype">size_t</span> hash(KeyType x);
+</pre></div> のような引数と戻り値を持つハッシュ関数を<em>Hasher</em> に指定する。</li></ul>
+<p>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd><em>Hasher</em> と <em>Compare</em> 以外の引数は <a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE()</a> の引数と同じものを指定すること。 <p>
+<em>KeyType</em> , <em>ValueType</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>KeyType</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6f4b3230a7045f70e36b2a092485d8c7"></a><!-- doxytag: member="unordered_map::CSTL_UNORDERED_MULTIMAP_INTERFACE" ref="6f4b3230a7045f70e36b2a092485d8c7" args="(Name, KeyType, ValueType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MULTIMAP_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_multimap用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のunordered_multimapのインターフェイスを展開する。<p>
+使用方法は <a class="el" href="unordered__map.html#74ca754231304c0372dadb0d17a3e4c5" title="unordered_map用インターフェイスマクロ">CSTL_UNORDERED_MAP_INTERFACE()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="b5086171f513bdac4858157e1a4cd9b6"></a><!-- doxytag: member="unordered_map::CSTL_UNORDERED_MULTIMAP_IMPLEMENT" ref="b5086171f513bdac4858157e1a4cd9b6" args="(Name, KeyType, ValueType, Hasher, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_UNORDERED_MULTIMAP_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueType,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Hasher,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_multimap用実装マクロ 
+<p>
+<a class="el" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7" title="unordered_multimap用インターフェイスマクロ">CSTL_UNORDERED_MULTIMAP_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+使用方法は <a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="f4ba8cc04fed7b21bc61e4aeaea816a9"></a><!-- doxytag: member="unordered_map::CSTL_EQUAL_TO" ref="f4ba8cc04fed7b21bc61e4aeaea816a9" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_EQUAL_TO          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+整数比較 
+<p>
+キーに整数型を指定した場合、 <a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#6f4b3230a7045f70e36b2a092485d8c7" title="unordered_multimap用インターフェイスマクロ">CSTL_UNORDERED_MULTIMAP_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目のキー</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>非0</em>&nbsp;</td><td><em>x</em> != <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="7d298e24bd6615c0c24ac1dabb6dc511"></a><!-- doxytag: member="unordered_map::UnorderedMap" ref="7d298e24bd6615c0c24ac1dabb6dc511" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> <a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unordered_map/unordered_multimapの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 UnorderedMap_new*() から返されたUnorderedMap構造体へのポインタをunordered_mapオブジェクトという。 
+</div>
+</div><p>
+<a class="anchor" name="e6ef81fadbb5bd4f71a6e0dfc201eac7"></a><!-- doxytag: member="unordered_map::UnorderedMapIterator" ref="e6ef81fadbb5bd4f71a6e0dfc201eac7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータ 
+<p>
+要素の位置を示す。 イテレータ同士の比較は、 == , != が使用できる。&lt; , &gt; , &lt;= , &gt;= は使用できない。<p>
+以下、関数から返されたイテレータを有効なイテレータという。 未初期化のイテレータ、または削除された要素のイテレータ、または値が0のイテレータを無効なイテレータという。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<a class="anchor" name="938a0197324ad839394f9fb2c9a820a8"></a><!-- doxytag: member="unordered_map::UnorderedMapLocalIterator" ref="938a0197324ad839394f9fb2c9a820a8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ローカルイテレータ 
+<p>
+一つのバケットの中の要素を巡回するためのイテレータ。 複数のバケットにまたがって巡回することはできない。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="4e57903631e8b6eaa232eea2b6414cd7"></a><!-- doxytag: member="unordered_map::UnorderedMap_new" ref="4e57903631e8b6eaa232eea2b6414cd7" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a>* UnorderedMap_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のunordered_map/unordered_multimapを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、unordered_mapオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="335cb2d840b83a26b30b7b98b8e5bb22"></a><!-- doxytag: member="unordered_map::UnorderedMap_new_rehash" ref="335cb2d840b83a26b30b7b98b8e5bb22" args="(size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a>* UnorderedMap_new_rehash           </td>
+          <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケット数を指定して生成 
+<p>
+少なくとも <em>n</em> 個のバケットを確保し、 要素数が0のunordered_map/unordered_multimapを生成する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>バケット数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、unordered_mapオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2730eaf179741d2b055f4679a0d53c1c"></a><!-- doxytag: member="unordered_map::UnorderedMap_delete" ref="2730eaf179741d2b055f4679a0d53c1c" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedMap_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="52fdaa818f20945ed1ad248c564a1125"></a><!-- doxytag: member="unordered_map::UnorderedMap_size" ref="52fdaa818f20945ed1ad248c564a1125" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d7802550119c22fd193543442b2ceb85"></a><!-- doxytag: member="unordered_map::UnorderedMap_empty" ref="d7802550119c22fd193543442b2ceb85" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedMap_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bee8c2e0af21e4bd1503dcb793411d62"></a><!-- doxytag: member="unordered_map::UnorderedMap_begin" ref="bee8c2e0af21e4bd1503dcb793411d62" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f68976489ba2ad2e11a83ead7a2cf839"></a><!-- doxytag: member="unordered_map::UnorderedMap_end" ref="f68976489ba2ad2e11a83ead7a2cf839" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素の次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素の次のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6c7cba39bb67f197acb706fb3b7ca0d7"></a><!-- doxytag: member="unordered_map::UnorderedMap_next" ref="6c7cba39bb67f197acb706fb3b7ca0d7" args="(UnorderedMapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839" title="最後の要素の次のイテレータ">UnorderedMap_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5976c69ef7b261ba06e67a546700e6af"></a><!-- doxytag: member="unordered_map::UnorderedMap_key" ref="5976c69ef7b261ba06e67a546700e6af" args="(UnorderedMapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyT const* UnorderedMap_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素のキーのアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ。<em>pos</em> の型は UnorderedMapLocalIterator でもよい。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素のキーへのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839" title="最後の要素の次のイテレータ">UnorderedMap_end()</a> または <a class="el" href="unordered__map.html#95d6bef06d82403fa59553a8f4043f53" title="一つのバケットの中の最後の要素の次のローカルイテレータ...">UnorderedMap_bucket_end()</a> でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値のポインタの参照先はconstである。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="058fb2bc4fbea650b7b48009e73b1d79"></a><!-- doxytag: member="unordered_map::UnorderedMap_value" ref="058fb2bc4fbea650b7b48009e73b1d79" args="(UnorderedMapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueT* UnorderedMap_value           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素の値のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ。<em>pos</em> の型は UnorderedMapLocalIterator でもよい。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の値へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839" title="最後の要素の次のイテレータ">UnorderedMap_end()</a> または <a class="el" href="unordered__map.html#95d6bef06d82403fa59553a8f4043f53" title="一つのバケットの中の最後の要素の次のローカルイテレータ...">UnorderedMap_bucket_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="060550af0e60c61134456a45713d7127"></a><!-- doxytag: member="unordered_map::UnorderedMap_at" ref="060550af0e60c61134456a45713d7127" args="(UnorderedMap *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueT* UnorderedMap_at           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+キーとペアになる値のアクセス(unordered_map専用) 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>key</em> というキーの要素の値へのポインタを返す。 <p>
+<em>self</em> が<em>key</em> というキーの要素を持っていない場合、<em>key</em> というキーの新しい要素(値は不定)を挿入し、その要素の値へのポインタを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わずNULLを返す。</dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>新しい要素を挿入しようとしてメモリ不足で失敗した場合、戻り値のNULLポインタを逆参照しないように注意すること。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_mapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d4663c04d03a49d9035c1c8ef03efd25"></a><!-- doxytag: member="unordered_map::UnorderedMap_insert" ref="d4663c04d03a49d9035c1c8ef03efd25" args="(UnorderedMap *self, KeyT key, ValueT value, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(unordered_map専用) 
+<p>
+<em>key</em> と<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>key</em> というキーの要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_mapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fc9ace0a4cdcc19f7a1d9c028ed36db0"></a><!-- doxytag: member="unordered_map::UnorderedMap_insert_ref" ref="fc9ace0a4cdcc19f7a1d9c028ed36db0" args="(UnorderedMap *self, KeyT key, ValueT const *value, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT const *&nbsp;</td>
+          <td class="paramname"> <em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入(unordered_map専用) 
+<p>
+<em>key</em> と*<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>key</em> というキーの要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>value</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_mapのみで提供される。 <p>
+ValueT が構造体型の場合、 <a class="el" href="unordered__map.html#d4663c04d03a49d9035c1c8ef03efd25" title="要素を挿入(unordered_map専用)">UnorderedMap_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eb8122c6936f0aeafca22f70204e45b3"></a><!-- doxytag: member="unordered_map::UnorderedMap_insert" ref="eb8122c6936f0aeafca22f70204e45b3" args="(UnorderedMap *self, KeyT key, ValueT value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(unordered_multimap専用) 
+<p>
+<em>key</em> と<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。 <em>self</em> が既に<em>key</em> というキーの要素を持っている場合、その要素と同じバケットに挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_multimapのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9cb62269f67c57f165e8292a0de94b99"></a><!-- doxytag: member="unordered_map::UnorderedMap_insert_ref" ref="9cb62269f67c57f165e8292a0de94b99" args="(UnorderedMap *self, KeyT key, ValueT const *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValueT const *&nbsp;</td>
+          <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入(unordered_multimap専用) 
+<p>
+<em>key</em> と*<em>value</em> のコピーのペアを要素として<em>self</em> に挿入する。 <em>self</em> が既に<em>key</em> というキーの要素を持っている場合、その要素と同じバケットに挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>挿入する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>挿入する要素の値へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>value</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はunordered_multimapのみで提供される。 <p>
+ValueT が構造体型の場合、 <a class="el" href="unordered__map.html#d4663c04d03a49d9035c1c8ef03efd25" title="要素を挿入(unordered_map専用)">UnorderedMap_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="48cc486aa8024197560073ba3508ef68"></a><!-- doxytag: member="unordered_map::UnorderedMap_insert_range" ref="48cc486aa8024197560073ba3508ef68" args="(UnorderedMap *self, UnorderedMapIterator first, UnorderedMapIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedMap_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+[<em>first</em>, <em>last</em>)の範囲の要素のコピーを<em>self</em> に挿入する。 unordered_multimapの場合、[<em>first</em>, <em>last</em>)の要素は<em>self</em> が持つ要素でもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>コピー元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>コピー元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2c78df970169c7020efa0903cac84908"></a><!-- doxytag: member="unordered_map::UnorderedMap_erase" ref="2c78df970169c7020efa0903cac84908" args="(UnorderedMap *self, UnorderedMapIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>pos</em> が示す位置の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>削除する要素の位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839" title="最後の要素の次のイテレータ">UnorderedMap_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5235980236bc2dc6fadfb2fb5017c5ae"></a><!-- doxytag: member="unordered_map::UnorderedMap_erase_range" ref="5235980236bc2dc6fadfb2fb5017c5ae" args="(UnorderedMap *self, UnorderedMapIterator first, UnorderedMapIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_erase_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を削除 
+<p>
+<em>self</em> の[<em>first</em>, <em>last</em>)の範囲の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>削除する範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>削除する範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>last</em> </dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="808ddb76f9e5e3a91eb899462eb9534a"></a><!-- doxytag: member="unordered_map::UnorderedMap_erase_key" ref="808ddb76f9e5e3a91eb899462eb9534a" args="(UnorderedMap *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_erase_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素を削除 
+<p>
+<em>self</em> の<em>key</em> というキーの要素をすべて削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>削除する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6aa95fb8ad4226ec0ed83614f4479217"></a><!-- doxytag: member="unordered_map::UnorderedMap_clear" ref="6aa95fb8ad4226ec0ed83614f4479217" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedMap_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="388d23dc24aceef0850909e1e050662a"></a><!-- doxytag: member="unordered_map::UnorderedMap_swap" ref="388d23dc24aceef0850909e1e050662a" args="(UnorderedMap *self, UnorderedMap *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedMap_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するunordered_mapオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d19c1af4de698ae962e6713fafc3595e"></a><!-- doxytag: member="unordered_map::UnorderedMap_count" ref="d19c1af4de698ae962e6713fafc3595e" args="(UnorderedMap *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素をカウント 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>カウントする要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>key</em> というキーの要素の数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ec0ef886670d5215c383d7aaeade4634"></a><!-- doxytag: member="unordered_map::UnorderedMap_find" ref="ec0ef886670d5215c383d7aaeade4634" args="(UnorderedMap *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> UnorderedMap_find           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素を検索 
+<p>
+<em>self</em> の<em>key</em> というキーの最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 UnorderedMap_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8ff726619b90269d1daf216821f60bb1"></a><!-- doxytag: member="unordered_map::UnorderedMap_equal_range" ref="8ff726619b90269d1daf216821f60bb1" args="(UnorderedMap *self, KeyT key, UnorderedMapIterator *first, UnorderedMapIterator *last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedMap_equal_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#e6ef81fadbb5bd4f71a6e0dfc201eac7">UnorderedMapIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定キーの要素の範囲を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>検索する要素のキー </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td><em>key</em> というキーの最初の要素のイテレータを格納する変数へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td><em>key</em> というキーの最後の要素の次のイテレータを格納する変数へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> がNULLでないこと。 <p>
+<em>last</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>self</em> が<em>key</em> というキーの要素を持たない場合、*<em>first</em> , *<em>last</em> ともにUnorderedMap_end(<em>self</em>)が格納される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="58fc76f0c3f5ee97d16225ea4d479441"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket_count" ref="58fc76f0c3f5ee97d16225ea4d479441" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_bucket_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケット数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> のバケット数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2f45c595d5e19ac01ed99eba721b3e04"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket_size" ref="2f45c595d5e19ac01ed99eba721b3e04" args="(UnorderedMap *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_bucket_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の要素数</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedMap_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0bc1e80dc8d3b450f78bccab977f518c"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket" ref="0bc1e80dc8d3b450f78bccab977f518c" args="(UnorderedMap *self, KeyT key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_bucket           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyT&nbsp;</td>
+          <td class="paramname"> <em>key</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケットのインデックスを取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>要素のキー</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>key</em> というキーが挿入されるバケットのインデックス </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7fd5373f5666a7048ffce358db069d7c"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket_begin" ref="7fd5373f5666a7048ffce358db069d7c" args="(UnorderedMap *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a> UnorderedMap_bucket_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の最初の要素のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の最初の要素のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedMap_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="95d6bef06d82403fa59553a8f4043f53"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket_end" ref="95d6bef06d82403fa59553a8f4043f53" args="(UnorderedMap *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a> UnorderedMap_bucket_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+一つのバケットの中の最後の要素の次のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>バケットのインデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>idx</em> 番目のバケットの中の最後の要素の次のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が UnorderedMap_bucket_count(<em>self</em>) より小さいこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="01520170185814367d425d8f74b52af3"></a><!-- doxytag: member="unordered_map::UnorderedMap_bucket_next" ref="01520170185814367d425d8f74b52af3" args="(UnorderedMapLocalIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a> UnorderedMap_bucket_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#938a0197324ad839394f9fb2c9a820a8">UnorderedMapLocalIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のローカルイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>ローカルイテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のローカルイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なローカルイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="unordered__map.html#f68976489ba2ad2e11a83ead7a2cf839" title="最後の要素の次のイテレータ">UnorderedMap_end()</a> または <a class="el" href="unordered__map.html#95d6bef06d82403fa59553a8f4043f53" title="一つのバケットの中の最後の要素の次のローカルイテレータ...">UnorderedMap_bucket_end()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8897a382add177498188d383befec194"></a><!-- doxytag: member="unordered_map::UnorderedMap_load_factor" ref="8897a382add177498188d383befec194" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnorderedMap_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターを取得 
+<p>
+バケットの平均要素数(全要素数 / バケット数)をロードファクターと呼ぶ。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> のロードファクター </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9c35ff164092575f8a7aaaeb813f67b5"></a><!-- doxytag: member="unordered_map::UnorderedMap_get_max_load_factor" ref="9c35ff164092575f8a7aaaeb813f67b5" args="(UnorderedMap *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnorderedMap_get_max_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターの上限を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ロードファクターの上限 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bdc231708a70251bf8ff0fe9262ee543"></a><!-- doxytag: member="unordered_map::UnorderedMap_set_max_load_factor" ref="bdc231708a70251bf8ff0fe9262ee543" args="(UnorderedMap *self, float z)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnorderedMap_set_max_load_factor           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>z</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ロードファクターの上限を設定 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>z</em>&nbsp;</td><td>設定するロードファクターの上限 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ccf23ddd57c5ae85b92d3f8cbcf8a545"></a><!-- doxytag: member="unordered_map::UnorderedMap_rehash" ref="ccf23ddd57c5ae85b92d3f8cbcf8a545" args="(UnorderedMap *self, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnorderedMap_rehash           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unordered__map.html#7d298e24bd6615c0c24ac1dabb6dc511">UnorderedMap</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+バケットを拡張して再ハッシュ 
+<p>
+バケット数を 少なくとも <em>n</em> 個に拡張し、全要素をハッシュ関数によって再び振り分ける。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>unordered_mapオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>バケット数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>バケットの拡張に成功した場合、非0を返す。 <p>
+<em>n</em> が<em>self</em> の現在のバケット数以下の場合、<em>self</em> の変更を行わず非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2a263e59a5ba5dd9a576b6eafa52ada6"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_string" ref="2a263e59a5ba5dd9a576b6eafa52ada6" args="(const char *key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_string           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+文字列用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に const char * を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a7f78bfdcae00928b1ce62652834813f"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_wstring" ref="a7f78bfdcae00928b1ce62652834813f" args="(const wchar_t *key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_wstring           </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ワイド文字列用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に const wchar_t * を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a31337b94060c8428fb8771d46044737"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_char" ref="a31337b94060c8428fb8771d46044737" args="(char key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_char           </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f1b0856974a01b6b2ca6c86e7ebfc617"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_schar" ref="f1b0856974a01b6b2ca6c86e7ebfc617" args="(signed char key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_schar           </td>
+          <td>(</td>
+          <td class="paramtype">signed char&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+signed char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に signed char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6397e3c696281ed05ffe039589d54d71"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_uchar" ref="6397e3c696281ed05ffe039589d54d71" args="(unsigned char key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_uchar           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned char用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に unsigned char を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="579c6eb5d4672804da68e14e77b61808"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_short" ref="579c6eb5d4672804da68e14e77b61808" args="(short key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_short           </td>
+          <td>(</td>
+          <td class="paramtype">short&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+short用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に short を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="091ff4e5148ed67dfb8d12c2d03a6a47"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_ushort" ref="091ff4e5148ed67dfb8d12c2d03a6a47" args="(unsigned short key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_ushort           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned short用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に unsigned short を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="385b468b5904eaa71cb684ea31e61a52"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_int" ref="385b468b5904eaa71cb684ea31e61a52" args="(int key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_int           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+int用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に int を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="139dd73f21af16a4d4053b2ebd2dac3c"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_uint" ref="139dd73f21af16a4d4053b2ebd2dac3c" args="(unsigned int key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_uint           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned int用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に unsigned int を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bc048649ac47a48e72d75b651d9467c2"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_long" ref="bc048649ac47a48e72d75b651d9467c2" args="(long key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_long           </td>
+          <td>(</td>
+          <td class="paramtype">long&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+long用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に long を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d2900bbc51773d4fd0061dacad3dfdda"></a><!-- doxytag: member="unordered_map::UnorderedMap_hash_ulong" ref="d2900bbc51773d4fd0061dacad3dfdda" args="(unsigned long key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnorderedMap_hash_ulong           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>key</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+unsigned long用ハッシュ関数 
+<p>
+<a class="el" href="unordered__map.html#87717f51ffa27ca81972343f910b046c" title="unordered_map用実装マクロ">CSTL_UNORDERED_MAP_IMPLEMENT()</a> , <a class="el" href="unordered__map.html#b5086171f513bdac4858157e1a4cd9b6" title="unordered_multimap用実装マクロ">CSTL_UNORDERED_MULTIMAP_IMPLEMENT()</a> の引数<em>KeyType</em> に unsigned long を指定した場合、 引数<em>Hasher</em> にこの関数を指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>キー </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>ハッシュ値 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

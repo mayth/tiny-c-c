@@ -1,0 +1,1298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: set</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>set</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc">CSTL_SET_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">set用インターフェイスマクロ  <a href="#8099ada0bc09290d17c4970a5f653cdc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4">CSTL_SET_IMPLEMENT</a>(Name, Type, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">set用実装マクロ  <a href="#93408b1b5a8756fa1997825cf4431ee4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0">CSTL_MULTISET_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">multiset用インターフェイスマクロ  <a href="#7b0a47f7ce59135b0b3e9496518a4fc0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#ec932a7ca4add40e923daf766e1f74fe">CSTL_MULTISET_IMPLEMENT</a>(Name, Type, Compare)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">multiset用実装マクロ  <a href="#ec932a7ca4add40e923daf766e1f74fe"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#b259d85f7b994c66cf246b0533e5cac6">CSTL_LESS</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &lt; (y) ? -1 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">昇順指定  <a href="#b259d85f7b994c66cf246b0533e5cac6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#aae9080a257d1a3a880210d66d98d556">CSTL_GREATER</a>(x, y)&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &gt; (y) ? -1 : 1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">降順指定  <a href="#aae9080a257d1a3a880210d66d98d556"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">set/multisetの型  <a href="#e18711cd0f4e4e8356608ed79326276b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef PRIVATE_TYPE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータ  <a href="#023b85e55ab87ae50951737f2b190963"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#8ea0380535c973df8622d874d622b37e">Set_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#8ea0380535c973df8622d874d622b37e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#270d5ff664d9e21fa67be5c608dbc896">Set_delete</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#270d5ff664d9e21fa67be5c608dbc896"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#c2eda60112a30447f7a239845d0c3fb3">Set_size</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#c2eda60112a30447f7a239845d0c3fb3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#0e06c56dc62d1a65be09d09f4bfb5642">Set_empty</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#0e06c56dc62d1a65be09d09f4bfb5642"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#88545bfba3c7710f5c0c77ec635f75d0">Set_begin</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のイテレータ  <a href="#88545bfba3c7710f5c0c77ec635f75d0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#3119669c573352df8467cbdb9171c5de">Set_end</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素の次のイテレータ  <a href="#3119669c573352df8467cbdb9171c5de"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#be6ab5e9ed74e0c5b486da2d7162c889">Set_rbegin</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素のイテレータ  <a href="#be6ab5e9ed74e0c5b486da2d7162c889"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#72d948abd9a3faa3546be849e36a9127">Set_rend</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素の前のイテレータ  <a href="#72d948abd9a3faa3546be849e36a9127"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#790207f6a246beeb7d06bde6b172339b">Set_next</a> (<a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">次のイテレータ  <a href="#790207f6a246beeb7d06bde6b172339b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#09c52ae1347fcfc1f19907c3cad85e09">Set_prev</a> (<a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">前のイテレータ  <a href="#09c52ae1347fcfc1f19907c3cad85e09"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T const *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#07c3adcff843ca66b3fd371a35e03964">Set_data</a> (<a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イテレータによる要素のアクセス  <a href="#07c3adcff843ca66b3fd371a35e03964"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#eb37330a5c80def70e080a9335c6dba9">Set_insert</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data, int *success)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(set専用)  <a href="#eb37330a5c80def70e080a9335c6dba9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#cb4afdda17efb5c42ab0a0cfb72bb823">Set_insert</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入(multiset専用)  <a href="#cb4afdda17efb5c42ab0a0cfb72bb823"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#4d4af3a2b16321e05ca0d566a9b9bd41">Set_insert_range</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> first, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#4d4af3a2b16321e05ca0d566a9b9bd41"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#fd36407022efe8ade12a0b914ce9e40d">Set_erase</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#fd36407022efe8ade12a0b914ce9e40d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#aae4564e1dd3ba5babc61450c9022f13">Set_erase_range</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> first, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を削除  <a href="#aae4564e1dd3ba5babc61450c9022f13"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#b8d21f07dd6d7cf7b391e364680be5e4">Set_erase_key</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素を削除  <a href="#b8d21f07dd6d7cf7b391e364680be5e4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#56e7f96fee189cb395a3fbe5da7dc82b">Set_clear</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#56e7f96fee189cb395a3fbe5da7dc82b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#3860777c98e1931ac68e82d24c4b805b">Set_swap</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, <a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#3860777c98e1931ac68e82d24c4b805b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#3852238fa7151f6c157d67998049545a">Set_count</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素をカウント  <a href="#3852238fa7151f6c157d67998049545a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#98a795da1b521e2e1fc44141bb49a3a3">Set_find</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素を検索  <a href="#98a795da1b521e2e1fc44141bb49a3a3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#921fb0f27f434cefc09742691ce61f0b">Set_lower_bound</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の位置の検索  <a href="#921fb0f27f434cefc09742691ce61f0b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#feed6e7a6a63ec8024652678bcc13131">Set_upper_bound</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の位置の検索  <a href="#feed6e7a6a63ec8024652678bcc13131"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="set.html#422baa9d5425a429a64990ac2472bc8e">Set_equal_range</a> (<a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *self, T data, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> *first, <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> *last)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定した値の要素の範囲を取得  <a href="#422baa9d5425a429a64990ac2472bc8e"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+setは要素の集合を実現する連想コンテナである。 要素を挿入すると、自動的にソートされる。同じ値の要素を2個以上挿入することはできない。 挿入した要素は読み出し専用となる。 要素の挿入・削除・検索の計算量はO(log N)である。<p>
+multisetは要素の重複が許されることを除き、setと同じである。<p>
+set/multisetを使うには、&lt;cstl/set.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/set.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_SET_INTERFACE(Name, Type)</span>
+<span class="preprocessor"></span><span class="preprocessor">#define CSTL_SET_IMPLEMENT(Name, Type, Compare)</span>
+<span class="preprocessor"></span>
+<span class="preprocessor">#define CSTL_MULTISET_INTERFACE(Name, Type)</span>
+<span class="preprocessor">#define CSTL_MULTISET_IMPLEMENT(Name, Type, Compare)</span>
+</pre></div><p>
+<b><a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE()</a></b> は任意の名前と要素の型のsetのインターフェイスを展開する。 <b><a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<b><a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0" title="multiset用インターフェイスマクロ">CSTL_MULTISET_INTERFACE()</a></b> は任意の名前と要素の型のmultisetのインターフェイスを展開する。 <b><a class="el" href="set.html#ec932a7ca4add40e923daf766e1f74fe" title="multiset用実装マクロ">CSTL_MULTISET_IMPLEMENT()</a></b> はその実装を展開する。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/set.h&gt;</span>
+
+<span class="comment">/* setのインターフェイスと実装を展開 */</span>
+<a class="code" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE</a>(IntSet, <span class="keywordtype">int</span>)
+<a class="code" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT</a>(IntSet, <span class="keywordtype">int</span>, <a class="code" href="set.html#b259d85f7b994c66cf246b0533e5cac6" title="昇順指定">CSTL_LESS</a>)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    <span class="keywordtype">int</span> i;
+    <span class="comment">/* イテレータ */</span>
+    IntSetIterator pos;
+    <span class="comment">/* intのsetを生成。</span>
+<span class="comment">     * 型名・関数のプレフィックスはIntSetとなる。 */</span>
+    IntSet *<span class="keyword">set</span> = IntSet_new();
+
+    <span class="comment">/* 要素を挿入 */</span>
+    <span class="keywordflow">for</span> (i = 0; i &lt; 64; i++) {
+        IntSet_insert(<span class="keyword">set</span>, i, NULL);
+    }
+    <span class="comment">/* 要素数 */</span>
+    printf(<span class="stringliteral">"size: %d\n"</span>, IntSet_size(<span class="keyword">set</span>));
+    <span class="keywordflow">for</span> (pos = IntSet_begin(<span class="keyword">set</span>); pos != IntSet_end(<span class="keyword">set</span>); 
+            pos = IntSet_next(pos)) {
+        <span class="comment">/* イテレータによる要素の読み出し(書き換えはできない) */</span>
+        printf(<span class="stringliteral">"%d, "</span>, *IntSet_data(pos));
+    }
+    printf(<span class="stringliteral">"\n"</span>);
+
+    <span class="comment">/* 3以上の要素を削除 */</span>
+    IntSet_erase_range(<span class="keyword">set</span>, IntSet_find(<span class="keyword">set</span>, 3), IntSet_end(<span class="keyword">set</span>));
+
+    <span class="keywordflow">for</span> (pos = IntSet_begin(<span class="keyword">set</span>); pos != IntSet_end(<span class="keyword">set</span>); 
+            pos = IntSet_next(pos)) {
+        <span class="comment">/* イテレータによる要素の読み出し(書き換えはできない) */</span>
+        printf(<span class="stringliteral">"%d, "</span>, *IntSet_data(pos));
+    }
+    printf(<span class="stringliteral">"\n"</span>);
+
+    <span class="comment">/* 使い終わったら破棄 */</span>
+    IntSet_delete(<span class="keyword">set</span>);
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE(Name, Type)</a></b> , <b><a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0" title="multiset用インターフェイスマクロ">CSTL_MULTISET_INTERFACE(Name, Type)</a></b> の<em>Name</em> に<b>Set</b> , <em>Type</em> に<b>T</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>set専用/multiset専用と記した関数以外の関数は、set/multiset共通の関数である。 <p>
+コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="8099ada0bc09290d17c4970a5f653cdc"></a><!-- doxytag: member="set::CSTL_SET_INTERFACE" ref="8099ada0bc09290d17c4970a5f653cdc" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_SET_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+set用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のsetのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。setの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>Type</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="93408b1b5a8756fa1997825cf4431ee4"></a><!-- doxytag: member="set::CSTL_SET_IMPLEMENT" ref="93408b1b5a8756fa1997825cf4431ee4" args="(Name, Type, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_SET_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+set用実装マクロ 
+<p>
+<a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。setの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Compare</em>&nbsp;</td><td>要素を比較する関数またはマクロ</td></tr>
+  </table>
+</dl>
+<ul>
+<li><em>Type</em> が整数型の場合、 要素のソートの順序を昇順にするならば CSTL_LESS を、降順にするならば CSTL_GREATER を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>Type</em> が文字列型(const char *)の場合、 strcmp を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>Type</em> がワイド文字列型(const wchar_t *)の場合、 wcscmp を<em>Compare</em> に指定する。</li></ul>
+<p>
+<ul>
+<li><em>Type</em> がその他の型の場合、 <div class="fragment"><pre class="fragment">   <span class="keywordtype">int</span> comp(Type x, Type y);
+</pre></div> のような引数と戻り値を持ち、 x == yならば0を、x &lt; yならば正または負の整数を、x &gt; yならばx &lt; yの場合と逆の符号の整数を 返す比較関数またはマクロを<em>Compare</em> に指定する。</li></ul>
+<p>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd><em>Compare</em> 以外の引数は <a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>Type</em> に構造体型を指定することは、構造体コピーによってパフォーマンスが低下する可能性があるため推奨されない。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7b0a47f7ce59135b0b3e9496518a4fc0"></a><!-- doxytag: member="set::CSTL_MULTISET_INTERFACE" ref="7b0a47f7ce59135b0b3e9496518a4fc0" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MULTISET_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+multiset用インターフェイスマクロ 
+<p>
+任意の名前と要素の型のmultisetのインターフェイスを展開する。<p>
+使用方法は <a class="el" href="set.html#8099ada0bc09290d17c4970a5f653cdc" title="set用インターフェイスマクロ">CSTL_SET_INTERFACE()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="ec932a7ca4add40e923daf766e1f74fe"></a><!-- doxytag: member="set::CSTL_MULTISET_IMPLEMENT" ref="ec932a7ca4add40e923daf766e1f74fe" args="(Name, Type, Compare)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_MULTISET_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+multiset用実装マクロ 
+<p>
+<a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0" title="multiset用インターフェイスマクロ">CSTL_MULTISET_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+使用方法は <a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT()</a>と同じである。 
+</div>
+</div><p>
+<a class="anchor" name="b259d85f7b994c66cf246b0533e5cac6"></a><!-- doxytag: member="set::CSTL_LESS" ref="b259d85f7b994c66cf246b0533e5cac6" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_LESS          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &lt; (y) ? -1 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+昇順指定 
+<p>
+要素を昇順にソートする場合、 <a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT()</a> , <a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0" title="multiset用インターフェイスマクロ">CSTL_MULTISET_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目の値</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負の値</em>&nbsp;</td><td><em>x</em> &lt; <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>正の値</em>&nbsp;</td><td><em>x</em> &gt; <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="aae9080a257d1a3a880210d66d98d556"></a><!-- doxytag: member="set::CSTL_GREATER" ref="aae9080a257d1a3a880210d66d98d556" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_GREATER          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((x) == (y) ? 0 : (x) &gt; (y) ? -1 : 1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+降順指定 
+<p>
+要素を降順にソートする場合、 <a class="el" href="set.html#93408b1b5a8756fa1997825cf4431ee4" title="set用実装マクロ">CSTL_SET_IMPLEMENT()</a> , <a class="el" href="set.html#7b0a47f7ce59135b0b3e9496518a4fc0" title="multiset用インターフェイスマクロ">CSTL_MULTISET_INTERFACE()</a> の <em>Compare</em> 引数に指定する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>1つ目の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>2つ目の値</td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>戻り値:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>0</em>&nbsp;</td><td><em>x</em> == <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>負の値</em>&nbsp;</td><td><em>x</em> &gt; <em>y</em> の場合 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>正の値</em>&nbsp;</td><td><em>x</em> &lt; <em>y</em> の場合 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="e18711cd0f4e4e8356608ed79326276b"></a><!-- doxytag: member="set::Set" ref="e18711cd0f4e4e8356608ed79326276b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> <a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+set/multisetの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 <a class="el" href="set.html#8ea0380535c973df8622d874d622b37e" title="生成">Set_new()</a> から返されたSet構造体へのポインタをsetオブジェクトという。 
+</div>
+</div><p>
+<a class="anchor" name="023b85e55ab87ae50951737f2b190963"></a><!-- doxytag: member="set::SetIterator" ref="023b85e55ab87ae50951737f2b190963" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PRIVATE_TYPE* <a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータ 
+<p>
+要素の位置を示す。 イテレータ同士の比較は、 == , != が使用できる。&lt; , &gt; , &lt;= , &gt;= は使用できない。<p>
+以下、関数から返されたイテレータを有効なイテレータという。 未初期化のイテレータ、または削除された要素のイテレータ、または値が0のイテレータを無効なイテレータという。<p>
+PRIVATE_TYPEは非公開の型である。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="8ea0380535c973df8622d874d622b37e"></a><!-- doxytag: member="set::Set_new" ref="8ea0380535c973df8622d874d622b37e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a>* Set_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のset/multisetを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、setオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="270d5ff664d9e21fa67be5c608dbc896"></a><!-- doxytag: member="set::Set_delete" ref="270d5ff664d9e21fa67be5c608dbc896" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c2eda60112a30447f7a239845d0c3fb3"></a><!-- doxytag: member="set::Set_size" ref="c2eda60112a30447f7a239845d0c3fb3" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Set_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0e06c56dc62d1a65be09d09f4bfb5642"></a><!-- doxytag: member="set::Set_empty" ref="0e06c56dc62d1a65be09d09f4bfb5642" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Set_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="88545bfba3c7710f5c0c77ec635f75d0"></a><!-- doxytag: member="set::Set_begin" ref="88545bfba3c7710f5c0c77ec635f75d0" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_begin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3119669c573352df8467cbdb9171c5de"></a><!-- doxytag: member="set::Set_end" ref="3119669c573352df8467cbdb9171c5de" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_end           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素の次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素の次のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="be6ab5e9ed74e0c5b486da2d7162c889"></a><!-- doxytag: member="set::Set_rbegin" ref="be6ab5e9ed74e0c5b486da2d7162c889" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_rbegin           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="72d948abd9a3faa3546be849e36a9127"></a><!-- doxytag: member="set::Set_rend" ref="72d948abd9a3faa3546be849e36a9127" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_rend           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素の前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素の前のイテレータ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="790207f6a246beeb7d06bde6b172339b"></a><!-- doxytag: member="set::Set_next" ref="790207f6a246beeb7d06bde6b172339b" args="(SetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_next           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+次のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="set.html#3119669c573352df8467cbdb9171c5de" title="最後の要素の次のイテレータ">Set_end()</a> または <a class="el" href="set.html#72d948abd9a3faa3546be849e36a9127" title="最初の要素の前のイテレータ">Set_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="09c52ae1347fcfc1f19907c3cad85e09"></a><!-- doxytag: member="set::Set_prev" ref="09c52ae1347fcfc1f19907c3cad85e09" args="(SetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_prev           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+前のイテレータ 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素の前のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="set.html#3119669c573352df8467cbdb9171c5de" title="最後の要素の次のイテレータ">Set_end()</a> または <a class="el" href="set.html#72d948abd9a3faa3546be849e36a9127" title="最初の要素の前のイテレータ">Set_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="07c3adcff843ca66b3fd371a35e03964"></a><!-- doxytag: member="set::Set_data" ref="07c3adcff843ca66b3fd371a35e03964" args="(SetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const* Set_data           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+イテレータによる要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>イテレータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>pos</em> が示す位置の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="set.html#3119669c573352df8467cbdb9171c5de" title="最後の要素の次のイテレータ">Set_end()</a> または <a class="el" href="set.html#72d948abd9a3faa3546be849e36a9127" title="最初の要素の前のイテレータ">Set_rend()</a> でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値のポインタの参照先はconstである。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eb37330a5c80def70e080a9335c6dba9"></a><!-- doxytag: member="set::Set_insert" ref="eb37330a5c80def70e080a9335c6dba9" args="(Set *self, T data, int *success)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>success</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(set専用) 
+<p>
+<em>data</em> のコピーを<em>self</em> に挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>success</em>&nbsp;</td><td>成否を格納する変数へのポインタ。ただし、NULLを指定した場合はアクセスしない。</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、*<em>success</em> に非0の値を格納し、新しい要素のイテレータを返す。 <p>
+<em>self</em> が既に<em>data</em> という値の要素を持っている場合、挿入を行わず、*<em>success</em> に0を格納し、その要素のイテレータを返す。 <p>
+メモリ不足の場合、*<em>success</em> に0を格納し、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はsetのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cb4afdda17efb5c42ab0a0cfb72bb823"></a><!-- doxytag: member="set::Set_insert" ref="cb4afdda17efb5c42ab0a0cfb72bb823" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入(multiset専用) 
+<p>
+<em>data</em> のコピーを<em>self</em> に挿入する。 <em>self</em> が既に<em>data</em> という値の要素を持っている場合、その値の一番最後の位置に挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、新しい要素のイテレータを返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>この関数はmultisetのみで提供される。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4d4af3a2b16321e05ca0d566a9b9bd41"></a><!-- doxytag: member="set::Set_insert_range" ref="4d4af3a2b16321e05ca0d566a9b9bd41" args="(Set *self, SetIterator first, SetIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Set_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+[<em>first</em>, <em>last</em>)の範囲の要素のコピーを<em>self</em> に挿入する。 multisetの場合、[<em>first</em>, <em>last</em>)の要素は<em>self</em> が持つ要素でもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>コピー元の範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>コピー元の範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fd36407022efe8ade12a0b914ce9e40d"></a><!-- doxytag: member="set::Set_erase" ref="fd36407022efe8ade12a0b914ce9e40d" args="(Set *self, SetIterator pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>pos</em> が示す位置の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>削除する要素の位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した要素の次のイテレータ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>pos</em> が<em>self</em> の有効なイテレータであること。 <p>
+<em>pos</em> が <a class="el" href="set.html#3119669c573352df8467cbdb9171c5de" title="最後の要素の次のイテレータ">Set_end()</a> または <a class="el" href="set.html#72d948abd9a3faa3546be849e36a9127" title="最初の要素の前のイテレータ">Set_rend()</a> でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="aae4564e1dd3ba5babc61450c9022f13"></a><!-- doxytag: member="set::Set_erase_range" ref="aae4564e1dd3ba5babc61450c9022f13" args="(Set *self, SetIterator first, SetIterator last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_erase_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a>&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を削除 
+<p>
+<em>self</em> の[<em>first</em>, <em>last</em>)の範囲の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td>削除する範囲の開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td>削除する範囲の終了位置</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>last</em> </dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd>[<em>first</em>, <em>last</em>)が<em>self</em> の有効なイテレータであること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b8d21f07dd6d7cf7b391e364680be5e4"></a><!-- doxytag: member="set::Set_erase_key" ref="b8d21f07dd6d7cf7b391e364680be5e4" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Set_erase_key           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素を削除 
+<p>
+<em>self</em> の<em>data</em> という値の要素をすべて削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>削除する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>削除した数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="56e7f96fee189cb395a3fbe5da7dc82b"></a><!-- doxytag: member="set::Set_clear" ref="56e7f96fee189cb395a3fbe5da7dc82b" args="(Set *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3860777c98e1931ac68e82d24c4b805b"></a><!-- doxytag: member="set::Set_swap" ref="3860777c98e1931ac68e82d24c4b805b" args="(Set *self, Set *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するsetオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3852238fa7151f6c157d67998049545a"></a><!-- doxytag: member="set::Set_count" ref="3852238fa7151f6c157d67998049545a" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Set_count           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素をカウント 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>カウントする要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>data</em> という値の要素の数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="98a795da1b521e2e1fc44141bb49a3a3"></a><!-- doxytag: member="set::Set_find" ref="98a795da1b521e2e1fc44141bb49a3a3" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_find           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素を検索 
+<p>
+<em>self</em> の<em>data</em> という値の最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Set_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="921fb0f27f434cefc09742691ce61f0b"></a><!-- doxytag: member="set::Set_lower_bound" ref="921fb0f27f434cefc09742691ce61f0b" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_lower_bound           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の位置の検索 
+<p>
+ソートの基準に従い、<em>self</em> の<em>data</em> <b>以上</b> の値の最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Set_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="feed6e7a6a63ec8024652678bcc13131"></a><!-- doxytag: member="set::Set_upper_bound" ref="feed6e7a6a63ec8024652678bcc13131" args="(Set *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> Set_upper_bound           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の位置の検索 
+<p>
+ソートの基準に従い、<em>self</em> の<em>data</em> <b>より大きい</b> 値の最初の要素を検索する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>見つかった場合、その要素のイテレータを返す。 <p>
+見つからない場合、 Set_end(<em>self</em>) を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="422baa9d5425a429a64990ac2472bc8e"></a><!-- doxytag: member="set::Set_equal_range" ref="422baa9d5425a429a64990ac2472bc8e" args="(Set *self, T data, SetIterator *first, SetIterator *last)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set_equal_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set.html#e18711cd0f4e4e8356608ed79326276b">Set</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="set.html#023b85e55ab87ae50951737f2b190963">SetIterator</a> *&nbsp;</td>
+          <td class="paramname"> <em>last</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定した値の要素の範囲を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>setオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>検索する要素の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>first</em>&nbsp;</td><td><em>data</em> という値の最初の要素のイテレータを格納する変数へのポインタ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>last</em>&nbsp;</td><td><em>data</em> という値の最後の要素の次のイテレータを格納する変数へのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>first</em> がNULLでないこと。 <p>
+<em>last</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd><em>self</em> が<em>data</em> という値の要素を持たない場合、*<em>first</em> , *<em>last</em> ともにSet_end(<em>self</em>)が格納される。 </dd></dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>

@@ -3,11 +3,16 @@
 
 #define MAX_SYMBOL_LEN (128)
 
-#include "trie.h"
-#include "list.h"
-
 typedef struct AST_ AST;
+typedef struct symbol_ Symbol;
 typedef enum code_ CodeType;
+
+#include "cstl/vector.h"
+#include "cstl/unordered_map.h"
+
+CSTL_VECTOR_INTERFACE(ASTVector, AST)
+CSTL_VECTOR_INTERFACE(SymbolVector, Symbol)
+CSTL_UNORDERED_MAP_INTERFACE(StrSymMap, const char *, Symbol)
 
 enum code_ {
     ETC_LIST,
@@ -31,17 +36,17 @@ typedef enum symbol_type {
     SYM_FUNC
 } SymbolType;
 
-typedef struct symbol_ {
+struct symbol_ {
     SymbolType type;
     char *name;
     union {
         int value;
         struct {
-            List *params;
+            SymbolVector *params;
             AST *body;
         } func;
     } un;
-} Symbol;
+};
 
 #define SYM_value un.value
 #define SYM_param un.func.params
@@ -54,13 +59,10 @@ struct AST_ {
         int value;
 
         /* For symbol */
-        struct {
-            char *name;
-            Symbol *symbol;
-        } symbol;
+        Symbol *symbol;
 
         /* For list */
-        List *list;
+        ASTVector *list;
         
         /* For others (inner node) */
         struct {
@@ -70,7 +72,6 @@ struct AST_ {
     } un;
 };
 
-
 /* Normal Expression */
 AST *AST_makeValue(int v);
 AST *AST_makeBinary(CodeType type, AST *left, AST *right);
@@ -79,7 +80,6 @@ AST *AST_makeUnary(CodeType type, AST *node);
 /* Symbol Definition */
 AST *AST_makeSymbol(char *name);
 Symbol *AST_lookupSymbol(char *name);
-Symbol *AST_lookupSymbolOrDie(char *name);
 /* Declarations */
 AST *AST_makeFunction(AST *name, AST *params, AST *body);
 AST *AST_defineVariables(AST *name);
@@ -93,7 +93,7 @@ AST *AST_getList(AST *p, unsigned long index);
 
 Symbol *Symbol_new(char *name);
 
-extern Trie *SymbolTable;
+extern StrSymMap *SymbolTable;
 
 #define AST_value un.value
 /* For Unary Expression */
@@ -103,11 +103,11 @@ extern Trie *SymbolTable;
 #define AST_right un.inner.right
 #define AST_list un.list
 /* For Symbol Expression */
-#define AST_symbol_name un.symbol.name
-#define AST_symbol un.symbol.symbol
+#define AST_symbol un.symbol
 
 /* called from parser */
 void AST_declareVariable(AST *name, AST *expr);
+
 
 #endif
 

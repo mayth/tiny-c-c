@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
-#include "trie.h"
 #include "lexer.h"
 #include "AST.h"
 %}

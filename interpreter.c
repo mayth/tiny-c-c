@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
-#include "list.h"
+#include "cstl/vector.h"
 #include "stack.h"
 #include "AST.h"
 
@@ -20,10 +20,10 @@ static Stack *Env = NULL;
 int yydebug;
 int yyparse();
 int executeProgram();
-int executeFunction(const AST *body, List *args, List *param);
-int callFunction(const AST *ast, List *args);
-int callFunction_(const Symbol *sym, List *args);
-int executeStatements(List *statements);
+int executeFunction(const AST *body, ASTVector *args, SymbolVector *param);
+int callFunction(const AST *ast, ASTVector *args);
+int callFunction_(const Symbol *sym, ASTVector *args);
+int executeStatements(ASTVector *statements);
 bool executeStatement(AST *ast);
 int executeExpression(AST *expr);
 int resolveSymbol(const Symbol *symbol);
@@ -31,7 +31,7 @@ int bindSymbol(Symbol *symbol, const int value);
 
 int main() {
     yydebug = 0;
-    SymbolTable = trie_new();
+    SymbolTable = StrSymMap_new();
     Env = Stack_new();
     printf("*** start parsing ***\n");
     int result = yyparse();
@@ -47,32 +47,32 @@ int main() {
 }
 
 int executeProgram() {
-    Symbol *main = AST_lookupSymbolOrDie("main");
+    Symbol *main = AST_lookupSymbol("main");
+    if (!main) {
+        fprintf(stderr, "Could not find 'main'\n");
+        exit(EXIT_FAILURE);
+    }
     if (main->type != SYM_FUNC) {
         fprintf(stderr, "'main' is not a function.\n");
-        abort();
+        exit(EXIT_FAILURE);
     }
     return callFunction_(main, NULL);
 }
 
 // args : List<Expression>
 // params : List<Symbol>
-int bindArgs(List *args, List *params) {
-    unsigned long argc = List_size(args);
-    if (argc != List_size(params)) {
-        fprintf(stderr, "Argument Error (%lu args given, but expects %lu)\n", argc, List_size(params));
+int bindArgs(ASTVector *args, SymbolVector *params) {
+    unsigned long argc = ASTVector_size(args);
+    if (argc != SymbolVector_size(params)) {
+        fprintf(stderr, "Argument Error (%lu args given, but expects %lu)\n", argc, SymbolVector_size(params));
         abort();
     }
-    ListIterator *args_iter = List_iterator(args);
-    ListIterator *params_iter = List_iterator(params);
-    while (ListIter_move_next(args_iter) && ListIter_move_next(params_iter)) {
-        AST *expr = (AST *)ListIter_current(args_iter);
-        Symbol *symbol = (Symbol *)ListIter_current(params_iter);
+    for (unsigned long i = 0; i < argc; ++i) {
+        AST *expr = ASTVector_at(args, i);
+        Symbol *symbol = SymbolVector_at(params, i);
         Environment *e = Environment_new(symbol, executeExpression(expr));
         Stack_push(Env, e);
     }
-    ListIter_delete(args_iter);
-    ListIter_delete(params_iter);
     return argc;
 }
 
@@ -82,9 +82,9 @@ void unbindArgs(const int argc) {
     }
 }
 
-int executeFunction(const AST *body, List *args, List *params) {
+int executeFunction(const AST *body, ASTVector *args, SymbolVector *params) {
     assert(body->code == ETC_LIST);
-    bool isExistParam = !List_is_empty(params);
+    bool isExistParam = !SymbolVector_empty(params);
     int argc = 0;
     if (isExistParam) bindArgs(args, params);
     executeStatements(body->AST_list);
@@ -92,14 +92,14 @@ int executeFunction(const AST *body, List *args, List *params) {
     return return_value;
 }
 
-int callFunction_(const Symbol *sym, List *args) {
+int callFunction_(const Symbol *sym, ASTVector *args) {
     return executeFunction(sym->SYM_body, args, sym->SYM_param);
 }
 
-int callFunction(const AST *ast, List *args) {
+int callFunction(const AST *ast, ASTVector *args) {
     Symbol *sym = ast->AST_symbol;
     if (sym->type == SYM_UNBOUND) {
-        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", ast->AST_symbol_name);
+        fprintf(stderr, "[func] Used an undefined or uninitialized symbol: %s\n", ast->AST_symbol->name);
         abort();
     }
     return callFunction_(sym, args);
@@ -146,13 +146,12 @@ void executePrint(AST *ast) {
     printf("%d\n", executeExpression(ast->AST_unary));
 }
 
-int executeStatements(List *statements) {
-    ListIterator *iter = List_iterator(statements);
-    while (ListIter_move_next(iter)) {
-        if (!executeStatement((AST *)ListIter_current(iter)))
+int executeStatements(ASTVector *statements) {
+    const size_t n = ASTVector_size(statements);
+    for (size_t i = 0; i < n; ++i) {
+        if (!executeStatement(ASTVector_at(statements, i)))
             break;
     }
-    ListIter_delete(iter);
     return return_value;
 }
 

@@ -1,0 +1,1198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CSTL: vector</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.3 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>メインページ</span></a></li>
+    <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+  </ul>
+</div>
+<h1>vector</h1><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>マクロ定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158">CSTL_VECTOR_INTERFACE</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">インターフェイスマクロ  <a href="#1637bbcd6467c527a824d20f57b77158"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#d10a71aa4b5f9a4ec9232461e3140c8f">CSTL_VECTOR_IMPLEMENT</a>(Name, Type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">実装マクロ  <a href="#d10a71aa4b5f9a4ec9232461e3140c8f"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>型定義</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef struct <a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">vectorの型  <a href="#3feb986d187bdc63289fddab34c9cca0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#fba04b48c9cd3c2a2a0a5eb8c5991ae5">Vector_new</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">生成  <a href="#fba04b48c9cd3c2a2a0a5eb8c5991ae5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#bbff0e84ef40dc354ee75ed23dc9f052">Vector_new_reserve</a> (size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">許容量を予約して生成  <a href="#bbff0e84ef40dc354ee75ed23dc9f052"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#8fc22b8eaf2217e39ad4931274a9caa0">Vector_delete</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">破棄  <a href="#8fc22b8eaf2217e39ad4931274a9caa0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#3b1a33beddab31b4c84e3d5240cbf662">Vector_size</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を取得  <a href="#3b1a33beddab31b4c84e3d5240cbf662"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#cd2215e787ce21de7ec12b85456cb6e6">Vector_empty</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">空チェック  <a href="#cd2215e787ce21de7ec12b85456cb6e6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#a41f3c59ce098fad80cc6e91160930fc">Vector_capacity</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">許容量を取得  <a href="#a41f3c59ce098fad80cc6e91160930fc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#7aa680fb7afe36ab623604dbc15ba670">Vector_reserve</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">許容量を予約  <a href="#7aa680fb7afe36ab623604dbc15ba670"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#1c475aa8db128f8fa83e88baeb591b13">Vector_shrink</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">許容量を縮小  <a href="#1c475aa8db128f8fa83e88baeb591b13"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#481e7f4cc600645600a557169c98ff9e">Vector_at</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">インデックスによる要素のアクセス  <a href="#481e7f4cc600645600a557169c98ff9e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#1b15a393a6a0cdc3318769757a8410cb">Vector_front</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最初の要素のアクセス  <a href="#1b15a393a6a0cdc3318769757a8410cb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#76b8c3bc50bdb866bdcaf7b21d33bb08">Vector_back</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素のアクセス  <a href="#76b8c3bc50bdb866bdcaf7b21d33bb08"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#0008b5691953fc7e20daebb954b58e12">Vector_insert</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を挿入  <a href="#0008b5691953fc7e20daebb954b58e12"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#a3d64cbcc64089bb3b3708fd3da724fd">Vector_insert_ref</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで要素を挿入  <a href="#a3d64cbcc64089bb3b3708fd3da724fd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#1e0837bde750e1bc6f8d1ae3c66007bd">Vector_insert_n</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, size_t n, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">複数個の要素を挿入  <a href="#1e0837bde750e1bc6f8d1ae3c66007bd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#ff369fc70625e679056e050b6680a903">Vector_insert_n_ref</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, size_t n, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで複数個の要素を挿入  <a href="#ff369fc70625e679056e050b6680a903"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#43ab15965c8620d53b67cc95617181f0">Vector_insert_array</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, T const *data, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">配列の要素を挿入  <a href="#43ab15965c8620d53b67cc95617181f0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#473716caedeb129cfb01267e4f51fdc9">Vector_insert_range</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, <a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *x, size_t xidx, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定範囲の要素を挿入  <a href="#473716caedeb129cfb01267e4f51fdc9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#66c1987a829ba112fda4529e69c19455">Vector_push_back</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">末尾に要素を挿入  <a href="#66c1987a829ba112fda4529e69c19455"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#6c2e3c2476409114dc535d37dda1bec4">Vector_push_back_ref</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, T const *data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">参照渡しで末尾に要素を挿入  <a href="#6c2e3c2476409114dc535d37dda1bec4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#2d1cd01bf148cbe8d6d0151aa7eea57f">Vector_erase</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t idx, size_t n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素を削除  <a href="#2d1cd01bf148cbe8d6d0151aa7eea57f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#cf9a885d370a179e645df9501ae54368">Vector_pop_back</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">最後の要素を削除  <a href="#cf9a885d370a179e645df9501ae54368"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#70e7e05ee5b6c08bd5eab46ce1f311bd">Vector_clear</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">全要素を削除  <a href="#70e7e05ee5b6c08bd5eab46ce1f311bd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#b2c45d12b1f3d5be44001043bf13e95f">Vector_resize</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, size_t n, T data)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">要素数を変更  <a href="#b2c45d12b1f3d5be44001043bf13e95f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector.html#cd9eb3d98f65f0f648bffbe3c51b626b">Vector_swap</a> (<a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *self, <a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">交換  <a href="#cd9eb3d98f65f0f648bffbe3c51b626b"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>説明</h2>
+vectorは可変長な配列である。許容量を超えた要素の追加をした場合、自動的に拡張する。 末尾での要素の挿入・削除の計算量がO(1)であり、それ以外の位置の要素の挿入・削除の計算量はO(N)である。 インデックスによる要素のランダムアクセスが可能。 また、内部データの連続性は保証される。<p>
+vectorを使うには、&lt;cstl/vector.h&gt;をインクルードし、以下のマクロを用いてコードを展開する必要がある。<p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;cstl/vector.h&gt;</span>
+
+<span class="preprocessor">#define CSTL_VECTOR_INTERFACE(Name, Type)</span>
+<span class="preprocessor">#define CSTL_VECTOR_IMPLEMENT(Name, Type)</span>
+</pre></div><p>
+<b><a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE()</a></b> は任意の名前と要素の型のvectorのインターフェイスを展開する。 <b><a class="el" href="vector.html#d10a71aa4b5f9a4ec9232461e3140c8f" title="実装マクロ">CSTL_VECTOR_IMPLEMENT()</a></b> はその実装を展開する。<p>
+また、<b><a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE()</a></b> を展開する前に、&lt;cstl/algorithm.h&gt;をインクルードすることにより、 <a href="algorithm.html">アルゴリズム</a>が使用可能となる。<p>
+<dl class="user" compact><dt><b>使用例:</b></dt><dd><div class="fragment"><pre class="fragment"><span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="preprocessor">#include &lt;cstl/vector.h&gt;</span>
+
+<span class="comment">/* vectorのインターフェイスと実装を展開 */</span>
+<a class="code" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE</a>(IntVector, <span class="keywordtype">int</span>)
+<a class="code" href="vector.html#d10a71aa4b5f9a4ec9232461e3140c8f" title="実装マクロ">CSTL_VECTOR_IMPLEMENT</a>(IntVector, <span class="keywordtype">int</span>)
+
+<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)
+{
+    <span class="keywordtype">int</span> i;
+    <span class="comment">/* intのvectorを生成。</span>
+<span class="comment">     * 型名・関数のプレフィックスはIntVectorとなる。 */</span>
+    IntVector *vec = IntVector_new();
+
+    <span class="keywordflow">for</span> (i = 0; i &lt; 64; i++) {
+        <span class="comment">/* 末尾から要素を追加。自動的に拡張する */</span>
+        IntVector_push_back(vec, i);
+    }
+
+    <span class="comment">/* 許容量の拡張 */</span>
+    printf(<span class="stringliteral">"capacity: %d\n"</span>, IntVector_capacity(vec));
+    IntVector_reserve(vec, 128);
+
+    <span class="keywordflow">for</span> (i = 0; i &lt; 64; i++) {
+        <span class="comment">/* 先頭に要素を挿入 */</span>
+        IntVector_insert(vec, 0, i);
+    }
+    <span class="comment">/* 要素数 */</span>
+    printf(<span class="stringliteral">"size: %d\n"</span>, IntVector_size(vec));
+    <span class="keywordflow">for</span> (i = 0; i &lt; IntVector_size(vec); i++) {
+        <span class="comment">/* インデックスによる要素の読み書き */</span>
+        printf(<span class="stringliteral">"%d,"</span>, *IntVector_at(vec, i));
+        *IntVector_at(vec, i) += 1;
+        printf(<span class="stringliteral">"%d\n"</span>, *IntVector_at(vec, i));
+    }
+
+    <span class="comment">/* 先頭から要素数の半分削除 */</span>
+    IntVector_erase(vec, 0, IntVector_size(vec) / 2);
+    printf(<span class="stringliteral">"size: %d\n"</span>, IntVector_size(vec));
+
+    <span class="comment">/* 使い終わったら破棄 */</span>
+    IntVector_delete(vec);
+    <span class="keywordflow">return</span> 0;
+}
+</pre></div></dd></dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>以下に説明する型定義・関数は、 <b><a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE(Name, Type)</a></b> の<em>Name</em> に<b>Vector</b> , <em>Type</em> に<b>T</b> を仮に指定した場合のものである。 実際に使用する際には、使用例のように適切な引数を指定すること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>コンパイラオプションによって、NDEBUGマクロが未定義かつCSTL_DEBUGマクロが定義されているならば、 assertマクロが有効になり、関数の事前条件に違反するとプログラムの実行を停止する。 </dd></dl>
+<hr><h2>マクロ定義</h2>
+<a class="anchor" name="1637bbcd6467c527a824d20f57b77158"></a><!-- doxytag: member="vector::CSTL_VECTOR_INTERFACE" ref="1637bbcd6467c527a824d20f57b77158" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_VECTOR_INTERFACE          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+インターフェイスマクロ 
+<p>
+任意の名前と要素の型のvectorのインターフェイスを展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。vectorの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="vector.html#d10a71aa4b5f9a4ec9232461e3140c8f" title="実装マクロ">CSTL_VECTOR_IMPLEMENT()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d10a71aa4b5f9a4ec9232461e3140c8f"></a><!-- doxytag: member="vector::CSTL_VECTOR_IMPLEMENT" ref="d10a71aa4b5f9a4ec9232461e3140c8f" args="(Name, Type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSTL_VECTOR_IMPLEMENT          </td>
+          <td>(</td>
+          <td class="paramtype">Name,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+実装マクロ 
+<p>
+<a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE()</a>で展開したインターフェイスの実装を展開する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>既存の型と重複しない任意の名前。vectorの型名と関数のプレフィックスになる </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Type</em>&nbsp;</td><td>任意の要素の型 </td></tr>
+  </table>
+</dl>
+<dl class="attention" compact><dt><b>注意:</b></dt><dd>引数は <a class="el" href="vector.html#1637bbcd6467c527a824d20f57b77158" title="インターフェイスマクロ">CSTL_VECTOR_INTERFACE()</a>の引数と同じものを指定すること。 <p>
+<em>Type</em> を括弧で括らないこと。 </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>型定義</h2>
+<a class="anchor" name="3feb986d187bdc63289fddab34c9cca0"></a><!-- doxytag: member="vector::Vector" ref="3feb986d187bdc63289fddab34c9cca0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> <a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+vectorの型 
+<p>
+抽象データ型となっており、内部データメンバは非公開である。<p>
+以下、 Vector_new*() から返されたVector構造体へのポインタをvectorオブジェクトという。 
+</div>
+</div><p>
+<hr><h2>関数</h2>
+<a class="anchor" name="fba04b48c9cd3c2a2a0a5eb8c5991ae5"></a><!-- doxytag: member="vector::Vector_new" ref="fba04b48c9cd3c2a2a0a5eb8c5991ae5" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a>* Vector_new           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+生成 
+<p>
+要素数が0のvectorを生成する。<p>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、vectorオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bbff0e84ef40dc354ee75ed23dc9f052"></a><!-- doxytag: member="vector::Vector_new_reserve" ref="bbff0e84ef40dc354ee75ed23dc9f052" args="(size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a>* Vector_new_reserve           </td>
+          <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+許容量を予約して生成 
+<p>
+許容量(内部メモリの再割り当てを行わずに格納できる要素数)が<em>n</em> 個、 要素数が0のvectorを生成する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>許容量</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>生成に成功した場合、vectorオブジェクトを返す。 <p>
+メモリ不足の場合、NULLを返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8fc22b8eaf2217e39ad4931274a9caa0"></a><!-- doxytag: member="vector::Vector_delete" ref="8fc22b8eaf2217e39ad4931274a9caa0" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_delete           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+破棄 
+<p>
+<em>self</em> のすべての要素を削除し、<em>self</em> を破棄する。 <em>self</em> がNULLの場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3b1a33beddab31b4c84e3d5240cbf662"></a><!-- doxytag: member="vector::Vector_size" ref="3b1a33beddab31b4c84e3d5240cbf662" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector_size           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cd2215e787ce21de7ec12b85456cb6e6"></a><!-- doxytag: member="vector::Vector_empty" ref="cd2215e787ce21de7ec12b85456cb6e6" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_empty           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+空チェック 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の要素数が0の場合、非0を返す。 <p>
+<em>self</em> の要素数が1以上の場合、0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a41f3c59ce098fad80cc6e91160930fc"></a><!-- doxytag: member="vector::Vector_capacity" ref="a41f3c59ce098fad80cc6e91160930fc" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector_capacity           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+許容量を取得 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の許容量 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7aa680fb7afe36ab623604dbc15ba670"></a><!-- doxytag: member="vector::Vector_reserve" ref="7aa680fb7afe36ab623604dbc15ba670" args="(Vector *self, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_reserve           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+許容量を予約 
+<p>
+<em>self</em> の許容量を要素<em>n</em> 個の領域に拡張する。 <em>self</em> が持つ要素は維持され、拡張した領域の初期化はしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>許容量</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>拡張に成功した場合、非0を返す。 <p>
+<em>n</em> が<em>self</em> の現在の許容量以下の場合、<em>self</em> の変更を行わず非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1c475aa8db128f8fa83e88baeb591b13"></a><!-- doxytag: member="vector::Vector_shrink" ref="1c475aa8db128f8fa83e88baeb591b13" args="(Vector *self, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_shrink           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+許容量を縮小 
+<p>
+<em>self</em> の許容量を要素<em>n</em> 個の領域に縮小する。 <em>n</em> が<em>self</em> の現在の要素数以下の場合、<em>self</em> の許容量を要素数と同じにする。 <em>n</em> が<em>self</em> の現在の許容量以上の場合、何もしない。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>許容量 </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="481e7f4cc600645600a557169c98ff9e"></a><!-- doxytag: member="vector::Vector_at" ref="481e7f4cc600645600a557169c98ff9e" args="(Vector *self, size_t idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* Vector_at           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+インデックスによる要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>インデックス</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の<em>idx</em> 番目の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数より小さい値であること。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値は<em>self</em> の変更により無効となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1b15a393a6a0cdc3318769757a8410cb"></a><!-- doxytag: member="vector::Vector_front" ref="1b15a393a6a0cdc3318769757a8410cb" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* Vector_front           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最初の要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最初の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値は<em>self</em> の変更により無効となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="76b8c3bc50bdb866bdcaf7b21d33bb08"></a><!-- doxytag: member="vector::Vector_back" ref="76b8c3bc50bdb866bdcaf7b21d33bb08" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* Vector_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素のアクセス 
+<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd><em>self</em> の最後の要素へのポインタ</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。</dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>戻り値は<em>self</em> の変更により無効となる。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0008b5691953fc7e20daebb954b58e12"></a><!-- doxytag: member="vector::Vector_insert" ref="0008b5691953fc7e20daebb954b58e12" args="(Vector *self, size_t idx, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、<em>data</em> のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a3d64cbcc64089bb3b3708fd3da724fd"></a><!-- doxytag: member="vector::Vector_insert_ref" ref="a3d64cbcc64089bb3b3708fd3da724fd" args="(Vector *self, size_t idx, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、*<em>data</em> のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="vector.html#0008b5691953fc7e20daebb954b58e12" title="要素を挿入">Vector_insert()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1e0837bde750e1bc6f8d1ae3c66007bd"></a><!-- doxytag: member="vector::Vector_insert_n" ref="1e0837bde750e1bc6f8d1ae3c66007bd" args="(Vector *self, size_t idx, size_t n, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert_n           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+複数個の要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、<em>data</em> のコピーを<em>n</em> 個挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ff369fc70625e679056e050b6680a903"></a><!-- doxytag: member="vector::Vector_insert_n_ref" ref="ff369fc70625e679056e050b6680a903" args="(Vector *self, size_t idx, size_t n, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert_n_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで複数個の要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、*<em>data</em> のコピーを<em>n</em> 個挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="vector.html#1e0837bde750e1bc6f8d1ae3c66007bd" title="複数個の要素を挿入">Vector_insert_n()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="43ab15965c8620d53b67cc95617181f0"></a><!-- doxytag: member="vector::Vector_insert_array" ref="43ab15965c8620d53b67cc95617181f0" args="(Vector *self, size_t idx, T const *data, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert_array           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+配列の要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、<em>data</em> という配列から<em>n</em> 個の要素のコピーを挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータの配列 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>挿入するデータの個数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> が<em>self</em> の要素数以下の値であること。 <p>
+<em>data</em> がNULLでないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="473716caedeb129cfb01267e4f51fdc9"></a><!-- doxytag: member="vector::Vector_insert_range" ref="473716caedeb129cfb01267e4f51fdc9" args="(Vector *self, size_t idx, Vector *x, size_t xidx, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_insert_range           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>xidx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+指定範囲の要素を挿入 
+<p>
+<em>self</em> の<em>idx</em> 番目の位置に、<em>x</em> の<em>xidx</em> 番目から<em>n</em> 個の要素のコピーを挿入する。 <em>self</em> と<em>x</em> は同じオブジェクトでもよい。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>挿入する位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>コピー元のvectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>xidx</em>&nbsp;</td><td><em>x</em> のコピー開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>コピーする要素数</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>xidx</em> + <em>n</em> が<em>x</em> の要素数以下の値であること。 <p>
+<em>idx</em> が<em>self</em> の要素数以下の値であること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="66c1987a829ba112fda4529e69c19455"></a><!-- doxytag: member="vector::Vector_push_back" ref="66c1987a829ba112fda4529e69c19455" args="(Vector *self, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_push_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+末尾に要素を挿入 
+<p>
+<em>data</em> のコピーを<em>self</em> の最後の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6c2e3c2476409114dc535d37dda1bec4"></a><!-- doxytag: member="vector::Vector_push_back_ref" ref="6c2e3c2476409114dc535d37dda1bec4" args="(Vector *self, T const *data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_push_back_ref           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+参照渡しで末尾に要素を挿入 
+<p>
+*<em>data</em> のコピーを<em>self</em> の最後の要素として挿入する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータへのポインタ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>挿入に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。</dd></dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>data</em> がNULLでないこと。 </dd></dl>
+<dl class="note" compact><dt><b>覚え書き:</b></dt><dd>T が構造体型の場合、 <a class="el" href="vector.html#66c1987a829ba112fda4529e69c19455" title="末尾に要素を挿入">Vector_push_back()</a> よりも速い。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2d1cd01bf148cbe8d6d0151aa7eea57f"></a><!-- doxytag: member="vector::Vector_erase" ref="2d1cd01bf148cbe8d6d0151aa7eea57f" args="(Vector *self, size_t idx, size_t n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_erase           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素を削除 
+<p>
+<em>self</em> の<em>idx</em> 番目から<em>n</em> 個の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>idx</em>&nbsp;</td><td>削除開始インデックス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>削除する要素数</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>idx</em> + <em>n</em> が<em>self</em> の要素数以下の値であること。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cf9a885d370a179e645df9501ae54368"></a><!-- doxytag: member="vector::Vector_pop_back" ref="cf9a885d370a179e645df9501ae54368" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_pop_back           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+最後の要素を削除 
+<p>
+<em>self</em> の最後の要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト</td></tr>
+  </table>
+</dl>
+<dl class="pre" compact><dt><b>事前条件:</b></dt><dd><em>self</em> が空でないこと。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="70e7e05ee5b6c08bd5eab46ce1f311bd"></a><!-- doxytag: member="vector::Vector_clear" ref="70e7e05ee5b6c08bd5eab46ce1f311bd" args="(Vector *self)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_clear           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+全要素を削除 
+<p>
+<em>self</em> のすべての要素を削除する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b2c45d12b1f3d5be44001043bf13e95f"></a><!-- doxytag: member="vector::Vector_resize" ref="b2c45d12b1f3d5be44001043bf13e95f" args="(Vector *self, size_t n, T data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector_resize           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+要素数を変更 
+<p>
+<em>self</em> の要素数を<em>n</em> 個に変更する。 <em>n</em> が<em>self</em> の現在の要素数以下の場合、要素数が<em>n</em> 個になるまで末尾から要素が削除される。 <em>n</em> が<em>self</em> の現在の要素数より大きい場合、要素数が<em>n</em> 個になるまで<em>data</em> のコピーが末尾から挿入される。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>要素数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>挿入するデータ</td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>戻り値:</b></dt><dd>要素数の変更に成功した場合、非0を返す。 <p>
+メモリ不足の場合、<em>self</em> の変更を行わず0を返す。 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cd9eb3d98f65f0f648bffbe3c51b626b"></a><!-- doxytag: member="vector::Vector_swap" ref="cd9eb3d98f65f0f648bffbe3c51b626b" args="(Vector *self, Vector *x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vector_swap           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vector.html#3feb986d187bdc63289fddab34c9cca0">Vector</a> *&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+交換 
+<p>
+<em>self</em> と<em>x</em> の内容を交換する。<p>
+<dl compact><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>self</em>&nbsp;</td><td>vectorオブジェクト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td><em>self</em> と内容を交換するvectorオブジェクト </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>
+<a href="http://sourceforge.jp/">
+	<img src="http://sourceforge.jp/sflogo.php?group_id=2739&type=1" width="96" height="31" border="0" alt="SourceForge.JP">
+</a>
+</body>
+</html>
