@@ -48,16 +48,16 @@ AST *AST_makeUnary(CodeType code, AST *node) {
   return p;
 }
 
-Symbol *AST_lookupSymbol(const char *name) {
+Symbol *AST_lookupSymbol(char *name) {
   Symbol *p = trie_search_leaf(SymbolTable, name);
   if (!p) {
-    p = Symbol_new();
+    p = Symbol_new(name);
     trie_store(SymbolTable, name, p);
   }
   return p;
 }
 
-Symbol *AST_lookupSymbolOrDie(const char *name) {
+Symbol *AST_lookupSymbolOrDie(char *name) {
   Symbol *p = trie_search_leaf(SymbolTable, name);
   if (!p) {
     fprintf(stderr, "Could not find the symbol '%s'\n", name);
@@ -66,18 +66,18 @@ Symbol *AST_lookupSymbolOrDie(const char *name) {
   return p;
 }
 
-Symbol *AST_newSymbol(const char *name) {
+Symbol *AST_newSymbol(char *name) {
   Symbol *p = trie_search_leaf(SymbolTable, name);
   if (p) {
     fprintf(stderr, "Symbol %s already exists.\n", name);
     abort();
   }
-  p = Symbol_new();
+  p = Symbol_new(name);
   trie_store(SymbolTable, name, p);
   return p;
 }
 
-AST *AST_makeSymbol(const char *name) {
+AST *AST_makeSymbol(char *name) {
   AST *p = AST_alloc();
   p->code = VAL_SYMBOL;
   p->AST_symbol_name = name;
@@ -135,8 +135,9 @@ Symbol *Symbol_alloc() {
   return p;
 }
 
-Symbol *Symbol_new() {
+Symbol *Symbol_new(char *name) {
   Symbol *p = Symbol_alloc();
   p->type = SYM_UNBOUND;
+  p->name = name;
   return p;
 }

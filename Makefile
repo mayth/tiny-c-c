@@ -10,8 +10,8 @@ SRCS := $(AST_SRCS) $(TRIE_SRCS) $(LIST_SRCS) $(STACK_SRCS) $(EXPR_SRCS)
 CC := clang
 CFLAGS=-Wall -std=c99 -g
 
-tiny-c: parser.o AST.o trie.o list.o interpreter.c
-	$(CC) $(CFLAGS) -o tiny-c parser.o AST.o trie.o list.o interpreter.c
+tiny-c: parser.o AST.o trie.o list.o stack.o interpreter.c
+	$(CC) $(CFLAGS) -o tiny-c parser.o AST.o trie.o list.o stack.o interpreter.c
 
 test-components: list-test trie-test stack-test
 
@@ -34,6 +34,9 @@ trie.o: $(TRIE_SRCS)
 
 list.o: $(LIST_SRCS)
 	$(CC) $(CFLAGS) -c list.c
+
+stack.o: $(STACK_SRCS)
+	$(CC) $(CFLAGS) -c stack.c
 
 parser.o: $(EXPR_SRCS)
 	yacc $(YACCFLAGS) parser.y

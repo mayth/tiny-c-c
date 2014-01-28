@@ -62,13 +62,13 @@ variable_declaration: VAR variable_names      { $$ = $2; }
 variable_names: SYMBOL ';'                    { $$ = AST_makeList($1); }
               | variable_names ',' SYMBOL ';' { $$ = AST_addList($1, $3); }
 
-expression: expression '+' expression { $$ = AST_makeBinary(OP_ADD, $1, $3); }
+expression: NUMBER
+          | SYMBOL /* variable ref */
+          | expression '+' expression { $$ = AST_makeBinary(OP_ADD, $1, $3); }
           | expression '-' expression { $$ = AST_makeBinary(OP_SUB, $1, $3); }
           | expression '*' expression { $$ = AST_makeBinary(OP_MUL, $1, $3); }
           | expression '/' expression { $$ = AST_makeBinary(OP_DIV, $1, $3); }
           | SYMBOL '(' argument_list ')' { $$ = AST_makeBinary(OP_CALL, $1, $3); }
-          | SYMBOL
-          | NUMBER
           | '(' expression ')' { $$ = $2; }
 
 argument_list: /* no args */  { $$ = AST_makeList(NULL); }

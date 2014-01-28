@@ -33,6 +33,7 @@ typedef enum symbol_type {
 
 typedef struct symbol_ {
     SymbolType type;
+    char *name;
     union {
         int value;
         struct {
@@ -54,7 +55,7 @@ struct AST_ {
 
         /* For symbol */
         struct {
-            const char *name;
+            char *name;
             Symbol *symbol;
         } symbol;
 
@@ -76,9 +77,9 @@ AST *AST_makeBinary(CodeType type, AST *left, AST *right);
 AST *AST_makeUnary(CodeType type, AST *node);
 
 /* Symbol Definition */
-AST *AST_makeSymbol(const char *name);
-Symbol *AST_lookupSymbol(const char *name);
-Symbol *AST_lookupSymbolOrDie(const char *name);
+AST *AST_makeSymbol(char *name);
+Symbol *AST_lookupSymbol(char *name);
+Symbol *AST_lookupSymbolOrDie(char *name);
 /* Declarations */
 AST *AST_makeFunction(AST *name, AST *params, AST *body);
 AST *AST_makeVariable(AST *name, AST *value);
@@ -89,7 +90,7 @@ AST *AST_addList(AST *p, AST *e);
 AST *AST_getList(AST *p, unsigned long index);
 
 
-Symbol *Symbol_new();
+Symbol *Symbol_new(char *name);
 
 extern Trie *SymbolTable;
 extern AST *Root;
