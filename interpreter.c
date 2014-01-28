@@ -39,19 +39,15 @@ int executeArrayAssign(AST *ast, AST *idx, AST *expr);
 int resolveSymbol(const Symbol *symbol, const size_t index);
 
 int main() {
-    yydebug = 1;
+    yydebug = 0;
     SymbolTable = StrSymMap_new();
     Env = Stack_new();
-    printf("*** start parsing ***\n");
     int result = yyparse();
     if (result != 0) {
-        fprintf(stderr, "!!! Errors on parsing");
+        fprintf(stderr, "!!! Errors on parsing\n");
         return EXIT_FAILURE;
     }
-    printf("*** parsed ***\n");
-    printf("*** start execution ***\n");
     result = executeProgram();
-    printf("*** finished execution ***\n");
     StrSymMap_delete(SymbolTable);
     SymbolTable = NULL;
     return result;
