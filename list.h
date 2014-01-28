@@ -18,17 +18,17 @@ struct list_node {
     ListNode *next;
 };
 
-typedef enum iteration_state {
-    ITST_UNKNOWN = 0,
-    ITST_BEFORE,
-    ITST_RUNNING,
-    ITST_AFTER
-} IterationState;
+typedef enum list_iteration_state_t {
+    LITST_UNKNOWN = 0,
+    LITST_BEFORE,
+    LITST_RUNNING,
+    LITST_AFTER
+} ListIterationState;
 
 typedef struct {
     List *list;
     ListNode *current;
-    IterationState state;
+    ListIterationState state;
 } ListIterator;
 
 List *List_new(VALUE_COMPARER comparer);

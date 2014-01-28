@@ -246,7 +246,7 @@ ListIterator *ListIter_new(List *list) {
     ListIterator *iter = ListIter_alloc();
     iter->list = list;
     iter->current = NULL;
-    iter->state = ITST_BEFORE;
+    iter->state = LITST_BEFORE;
     return iter;
 }
 
@@ -254,14 +254,14 @@ void ListIter_delete(ListIterator *iter) {
     if (iter) {
         iter->list = NULL;
         iter->current = NULL;
-        iter->state = ITST_UNKNOWN;
+        iter->state = LITST_UNKNOWN;
         free(iter);
     }
 }
 
 void *ListIter_current(ListIterator *iter) {
     assert(iter != NULL);
-    if (iter->state == ITST_RUNNING) {
+    if (iter->state == LITST_RUNNING) {
         return iter->current->value;
     } else {
         return NULL;
@@ -271,25 +271,25 @@ void *ListIter_current(ListIterator *iter) {
 bool ListIter_move_next(ListIterator *iter) {
     assert(iter != NULL);
     switch (iter->state) {
-        case ITST_BEFORE:
+        case LITST_BEFORE:
             if (iter->list->head) {
                 iter->current = iter->list->head;
-                iter->state = ITST_RUNNING;
+                iter->state = LITST_RUNNING;
                 return true;
             } else {
-                iter->state = ITST_AFTER;
+                iter->state = LITST_AFTER;
                 return false;
             }
-        case ITST_RUNNING:
+        case LITST_RUNNING:
             if (iter->current->next) {
                 iter->current = iter->current->next;
                 return true;
             } else {
                 iter->current = NULL;
-                iter->state = ITST_AFTER;
+                iter->state = LITST_AFTER;
                 return false;
             }
-        case ITST_AFTER:
+        case LITST_AFTER:
             return false;
         default:
             abort();    // invalid state
