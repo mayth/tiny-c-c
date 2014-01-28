@@ -144,6 +144,18 @@ int executeExpression(AST *expr) {
             return executeExpression(expr->AST_left) * executeExpression(expr->AST_right);
         case OP_DIV:
             return executeExpression(expr->AST_left) / executeExpression(expr->AST_right);
+        case OP_COMPARE_EQ:
+            return executeExpression(expr->AST_left) == executeExpression(expr->AST_right);
+        case OP_COMPARE_NEQ:
+            return executeExpression(expr->AST_left) != executeExpression(expr->AST_right);
+        case OP_COMPARE_LT:
+            return executeExpression(expr->AST_left) < executeExpression(expr->AST_right);
+        case OP_COMPARE_GT:
+            return executeExpression(expr->AST_left) > executeExpression(expr->AST_right);
+        case OP_COMPARE_LE:
+            return executeExpression(expr->AST_left) <= executeExpression(expr->AST_right);
+        case OP_COMPARE_GE:
+            return executeExpression(expr->AST_left) >= executeExpression(expr->AST_right);
         case OP_ASSIGN:
             return executeAssign(expr->AST_left, expr->AST_right);
         case OP_ASSIGN_ARRAY:

@@ -3,9 +3,14 @@
 #include <ctype.h>
 #include "AST.h"
 
-int yylex() {
+int take() {
     int c;
     while (isspace(c = getc(stdin))) { }
+    return c;
+}
+
+int yylex() {
+    int c = take();
     if (c == EOF) {
         return 0;
     }
@@ -14,7 +19,6 @@ int yylex() {
         case '-':
         case '*':
         case '/':
-        case '=':
         case '(':
         case ')':
         case '{':
@@ -23,6 +27,38 @@ int yylex() {
         case ']':
         case ';':
             return c;
+    }
+    if (c == '=') {
+        int next = getc(stdin);
+        if (next == '=') {
+            return OP_EQ;
+        }
+        ungetc(next, stdin);
+        return c;
+    }
+    if (c == '<') {
+        int next = getc(stdin);
+        if (next == '=') {
+            return OP_LE;
+        }
+        ungetc(next, stdin);
+        return c;
+    }
+    if (c == '>') {
+        int next = getc(stdin);
+        if (next == '=') {
+            return OP_GE;
+        }
+        ungetc(next, stdin);
+        return c;
+    }
+    if (c == '!') {
+        int next = getc(stdin);
+        if (next == '=') {
+            return OP_NEQ;
+        }
+        ungetc(next, stdin);
+        return c;
     }
     if (isdigit(c)) {
         int n;
@@ -41,19 +77,21 @@ int yylex() {
         }
         *s = '\0';
         ungetc(c, stdin);
+        int retval = 0;
         if (strcmp(str, "print") == 0) {
-            return PRINT;
+            retval = PRINT;
         } else if (strcmp(str, "var") == 0) {
-            return VAR;
+            retval = VAR;
         } else if (strcmp(str, "return") == 0) {
-            return RETURN;
+            retval = RETURN;
         } else if (strcmp(str, "for") == 0) {
-            return FOR;
+            retval = FOR;
         } else {
-            yylval.val = AST_makeSymbol(str);
-            return SYMBOL;
+            yylval.val = AST_makeSymbol(strdup(str));
+            retval = SYMBOL;
         }
         free(str);
+        return retval;
     }
     fprintf(stderr, "unexpected token %c\n", c);
     abort();

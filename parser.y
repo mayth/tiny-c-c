@@ -4,10 +4,15 @@
 %token FOR
 %token SYMBOL
 %token NUMBER
+%token OP_EQ
+%token OP_NEQ
+%token OP_LE
+%token OP_GE
 
 %right '='
 %left '+' '-'
 %left '*' '/'
+%nonassoc OP_EQ OP_NEQ OP_LE OP_GE '<' '>'
 
 %{
 #define YYDEBUG 1
@@ -95,6 +100,12 @@ expression: NUMBER
           | expression '-' expression { $$ = AST_makeBinary(OP_SUB, $1, $3); }
           | expression '*' expression { $$ = AST_makeBinary(OP_MUL, $1, $3); }
           | expression '/' expression { $$ = AST_makeBinary(OP_DIV, $1, $3); }
+          | expression '<' expression { $$ = AST_makeBinary(OP_COMPARE_LT, $1, $3); }
+          | expression '>' expression { $$ = AST_makeBinary(OP_COMPARE_GT, $1, $3); }
+          | expression OP_LE expression { $$ = AST_makeBinary(OP_COMPARE_LE, $1, $3); }
+          | expression OP_GE expression { $$ = AST_makeBinary(OP_COMPARE_GE, $1, $3); }
+          | expression OP_EQ expression { $$ = AST_makeBinary(OP_COMPARE_EQ, $1, $3); }
+          | expression OP_NEQ expression { $$ = AST_makeBinary(OP_COMPARE_NEQ, $1, $3); }
           | SYMBOL '(' argument_list ')' { $$ = AST_makeBinary(OP_CALL, $1, $3); }
           | '(' expression ')' { $$ = $2; }
 
